@@ -1,25 +1,11 @@
 <?php
 include "conexion.php";
-
-$u = $_POST["usuario"];
-$c = $_POST["contra"];
-
-//Evitacionalizacion de BT (small pp)
-$p = "SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login = '".$u."' AND pass = '".$c."';";
-$r = $con->query($p);
-
-if($r->num_rows > 0){
-  while($f = $r->fetch_assoc()){
-    if($f["permiso"]==2){
-      header("Location: /asterocritico/profesores.php");
-    }
-  }
+session_Start();
+if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
+	header("Location: /asterocritico");
 }else{
-  setcookie("error", "Datos incorrectos");
-  header("Location: /asterocritico");
+  //consultar si la sesion corresponde al tipo de usuario
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +28,8 @@ if($r->num_rows > 0){
   <nav class="navbar bg-dark-escom">
     <div class="container-fluid">
       <a class="navbar-brand text-light">Sistema de profesores</a>
-      <form action="logout" class="d-flex">
+      <form action="/asterocritico/" class="d-flex" method="post">
+        <input type="hidden" value="cerrarsesion" name="cs">
         <button class="btn btn-success" type="submit">Cerrar sesión</button>
       </form>
     </div>

@@ -1,3 +1,10 @@
+<?php
+session_Start();
+if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
+	header("Location: /asterocritico");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +24,8 @@
 	<nav class="navbar bg-dark-escom">
 		<div class="container-fluid">
 			<a class="navbar-brand text-light">Sistema de profesores</a>
-			<form action="logout" class="d-flex">
+			<form action="/asterocritico/" class="d-flex" method="post">
+				<input type="hidden" value="cerrarsesion" name="cs">
 				<button class="btn btn-success" type="submit">Cerrar sesión</button>
 			</form>
 		</div>

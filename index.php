@@ -1,7 +1,52 @@
 <?php
-// if(is_null($_SESSION["mazapanRTX"])){
-// 	redireccionar
-// }
+include 'conexion.php';
+
+session_start();
+$inicio = isset($_POST["usuario"]) && isset($_POST["contra"]);
+$se = isset($_SESSION["usu"]) && isset($_SESSION["con"]);
+$redb = false;
+if(isset($_POST["cs"])){
+	session_destroy();
+}elseif($inicio || $se){
+	if($inicio){
+		$u = $_POST["usuario"];
+		$c = $_POST["contra"];
+		$bandera=true;
+	}else{
+		$u=$_SESSION["usu"];
+		$c=$_SESSION["con"];
+		$bandera=false;
+	}
+
+	$p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
+    	$con->real_escape_string($u),
+    	$con->real_escape_string($c));
+	$r = $con->query($p);
+	
+	// echo $p;
+	if($r->num_rows > 0){
+		while($f = $r->fetch_assoc()){
+			$redb = true;
+			if($bandera){
+				$_SESSION["usu"]=$u;
+				$_SESSION["con"]=$c;
+			}
+			if($f["permiso"]==2){
+				$red = "profesores.php";
+				echo "adm";
+			}else{
+				$red = "formulario.php";
+				echo "pofe";
+			}
+		}
+	}else{
+		echo "aqui";
+	}
+}
+if($redb){
+	header("Location: /asterocritico/".$red);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +69,7 @@
 				<div class="row align-items-center h-100">
 					<div class="col p-5">
 						<h3>Sistema profesores</h3>
-						<form action="formulario.php" class="col-12" method="post">
+						<form class="col-12" method="post">
 							<div class="mb-3">
 								<label for="username_input" class="form-label">Identificador</label>
 								<input type="text" class="form-control" id="username_input" name="usuario">
@@ -35,10 +80,10 @@
 							</div>
 							<div class="mb-3">
 								<?php
-								if(isset($_COOKIE["error"])){
+								if(isset($_POST["usuario"]) || isset($_POST["contra"])){
 								?>
-									<p class="text-danger"><?php echo $_COOKIE["error"]?></p>
-								<?php	
+									<p class="text-danger">Datos incorrectos</p>
+								<?php
 								}else{
 								?>
 									<p class="text-secondary">Al entrar a este sitio acepta el uso de cookies</p>
