@@ -1,0 +1,1472 @@
+[
+    {
+     "nombre": "ADBEL ANAHI",
+     "primerApe": "MONTES",
+     "segundoApe": "MEZA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ADRIANA BERENICE",
+     "primerApe": "CELIS",
+     "segundoApe": "DOMINGUEZ",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ADRIANA DE LA PAZ",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "MORENO",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ALBERTO JESUS",
+     "primerApe": "ALCANTARA",
+     "segundoApe": "MENDEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ALEJANDRO",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "CISNEROS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ALEJANDRO",
+     "primerApe": "BOTELLO",
+     "segundoApe": "CASTILLO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ALEJANDRO",
+     "primerApe": "ZARATE",
+     "segundoApe": "CARDENAS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ALEJANDRO SIGFRIDO",
+     "primerApe": "CIFUENTES",
+     "segundoApe": "ALVAREZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ALEXIS",
+     "primerApe": "TESTA",
+     "segundoApe": "NAVA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ALFONSO",
+     "primerApe": "SÁNCHEZ",
+     "segundoApe": "AGUILAR",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ALFONSO",
+     "primerApe": "FERNANDEZ",
+     "segundoApe": "VAZQUEZ",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "ANA BELEM",
+     "primerApe": "JUAREZ",
+     "segundoApe": "MENDEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ANA MARIA",
+     "primerApe": "WINFIELD",
+     "segundoApe": "REYES",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ANDRES",
+     "primerApe": "ORTIGOZA",
+     "segundoApe": "CAMPOS",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ANGEL",
+     "primerApe": "MORALES",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ANGEL SALVADOR",
+     "primerApe": "MONTIEL",
+     "segundoApe": "SANCHEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "APOLINAR FRANCISCO",
+     "primerApe": "CRUZ",
+     "segundoApe": "LAZARO",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ARACELI",
+     "primerApe": "LOYOLA",
+     "segundoApe": "ESPINOSA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ARIEL",
+     "primerApe": "LOPEZ",
+     "segundoApe": "ROJAS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "AXEL ERNESTO",
+     "primerApe": "MORENO",
+     "segundoApe": "CERVANTES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "BENJAMIN",
+     "primerApe": "LUNA",
+     "segundoApe": "BENOSO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "BENJAMIN",
+     "primerApe": "LOPEZ",
+     "segundoApe": "CARRERA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "BENJAMIN",
+     "primerApe": "CRUZ",
+     "segundoApe": "TORRES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "BLANCA ESTHER",
+     "primerApe": "CARVAJAL",
+     "segundoApe": "GAMEZ",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "CARLOS",
+     "primerApe": "PINEDA",
+     "segundoApe": "GUERRERO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "CARLOS",
+     "primerApe": "JUAREZ",
+     "segundoApe": "LEON",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CARLOS JESUS",
+     "primerApe": "PASTRANA",
+     "segundoApe": "FERNANDEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "CECILIA",
+     "primerApe": "ALBORTANTE",
+     "segundoApe": "MORATO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "CESAR",
+     "primerApe": "MUJICA",
+     "segundoApe": "ASCENCIO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "CESAR",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "VASQUEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CESAR ROMAN",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CHRISTIAN RENE",
+     "primerApe": "LEAL",
+     "segundoApe": "PACHECO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CLAUDIA",
+     "primerApe": "GARCIA",
+     "segundoApe": "BLANQUEL",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CLAUDIA",
+     "primerApe": "GARCIA",
+     "segundoApe": "BLANQUEL",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CLAUDIA ALEJANDRA",
+     "primerApe": "LOPEZ",
+     "segundoApe": "RODRIGUEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "CLAUDIA CELIA",
+     "primerApe": "DIAZ",
+     "segundoApe": "HUERTA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CLAUDIA JISELA",
+     "primerApe": "DORANTES",
+     "segundoApe": "VILLA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CONSUELO VARINIA",
+     "primerApe": "GARCIA",
+     "segundoApe": "MENDOZA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "CRISPIN",
+     "primerApe": "HERRERA",
+     "segundoApe": "YAÑEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "CRISTAL KARINA",
+     "primerApe": "GALINDO",
+     "segundoApe": "DURÁN",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "CRISTHIAN ALEJANDRO",
+     "primerApe": "AVILA",
+     "segundoApe": "SANCHEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "DANIEL",
+     "primerApe": "CRUZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "DANIEL",
+     "primerApe": "AGUILAR",
+     "segundoApe": "VELAZQUEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "DANTE VIRGILIO",
+     "primerApe": "GOMEZ",
+     "segundoApe": "NAVARRO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "DARWIN",
+     "primerApe": "GUTIERREZ",
+     "segundoApe": "MEJIA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "DAVID",
+     "primerApe": "ARAUJO",
+     "segundoApe": "DIAZ",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "DIDIER",
+     "primerApe": "OJEDA",
+     "segundoApe": "GUILLEN",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "EDGAR ARMANDO",
+     "primerApe": "CATALAN",
+     "segundoApe": "SALGADO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "EDGARDO ADRIAN",
+     "primerApe": "FRANCO",
+     "segundoApe": "MARTINEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "EDITH CRISTINA",
+     "primerApe": "HERRERA",
+     "segundoApe": "LUNA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "EDMUNDO RENE",
+     "primerApe": "DURAN",
+     "segundoApe": "CAMARILLO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "EDUARDO",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "FLORES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "EDUARDO",
+     "primerApe": "CHAVEZ",
+     "segundoApe": "LIMA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "EDUARDO",
+     "primerApe": "GUTIERREZ",
+     "segundoApe": "ALDANA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ELBA",
+     "primerApe": "MENDOZA",
+     "segundoApe": "MACIAS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ELENA FABIOLA",
+     "primerApe": "RUIZ",
+     "segundoApe": "LEDESMA",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "ELIA TZINDEJHE",
+     "primerApe": "RAMIREZ",
+     "segundoApe": "MARTINEZ",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ELIZABETH",
+     "primerApe": "MORENO",
+     "segundoApe": "GALVAN",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ELSA LETICIA",
+     "primerApe": "ARCOS",
+     "segundoApe": "DIAZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "EMILIANO",
+     "primerApe": "MORA",
+     "segundoApe": "ORTIZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ENCARNACION",
+     "primerApe": "SALINAS",
+     "segundoApe": "HERNANDEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ENRIQUE",
+     "primerApe": "TORRES",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ERICK EUGENIO",
+     "primerApe": "LINARES",
+     "segundoApe": "VALLEJO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ERIKA",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "RUBIO",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "FABIAN",
+     "primerApe": "GASPAR",
+     "segundoApe": "MEDINA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "FABIOLA",
+     "primerApe": "OCAMPO",
+     "segundoApe": "BOTELLO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "FANNY",
+     "primerApe": "SOSA",
+     "segundoApe": "ADAN",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "FELIPE DE JESUS ",
+     "primerApe": "FIGUEROA",
+     "segundoApe": "DEL PRADO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "FERNANDO",
+     "primerApe": "AGUILAR",
+     "segundoApe": "SANCHEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "FLAVIO ARTURO",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "GARFIAS",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "FLORENCIO",
+     "primerApe": "GUZMAN",
+     "segundoApe": "AGUILAR",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "GABRIEL DE JESUS",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "JORDAN",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "GABRIELA DE JESUS",
+     "primerApe": "LOPEZ",
+     "segundoApe": "RUIZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "GELACIO",
+     "primerApe": "CASTILLO",
+     "segundoApe": "CABRERA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "GENARO",
+     "primerApe": "JUAREZ",
+     "segundoApe": "MARTINEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "GILBERTO",
+     "primerApe": "QUINTANILLA",
+     "segundoApe": "SANCHEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "GISELA",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "ALBARRAN",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "GLORIA LOURDES",
+     "primerApe": "CABRERA",
+     "segundoApe": "CHAVEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "GUILLERMO",
+     "primerApe": "MARQUEZ",
+     "segundoApe": "ARREGUIN",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "GUMERSINDO",
+     "primerApe": "VERA",
+     "segundoApe": "HERNANDEZ",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "GUSTAVO",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "HECTOR MANUEL",
+     "primerApe": "MANZANILLA",
+     "segundoApe": "GRANADOS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "IDALIA",
+     "primerApe": "MALDONADO",
+     "segundoApe": "CASTILLO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "IGNACIO",
+     "primerApe": "RIOS ",
+     "segundoApe": "DE LA TORRE",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ISMAEL",
+     "primerApe": "CERVANTES",
+     "segundoApe": "DE ANDA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ISRAEL",
+     "primerApe": "BUITRON",
+     "segundoApe": "DAMASO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ISRAEL",
+     "primerApe": "SÁNCHEZ",
+     "segundoApe": "MENDOZA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ISRAEL",
+     "primerApe": "SALAS",
+     "segundoApe": "RAMIREZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ITURIEL ENRIQUE",
+     "primerApe": "FLORES",
+     "segundoApe": "ESTRADA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "IVAN",
+     "primerApe": "DIAZ",
+     "segundoApe": "TOALA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "IVAN EDUARDO",
+     "primerApe": "BLANCO",
+     "segundoApe": "ALMAZAN",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "IVAN GIOVANNY",
+     "primerApe": "MOSSO",
+     "segundoApe": "GARCIA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JACQUELINE",
+     "primerApe": "ARZATE",
+     "segundoApe": "GORDILLO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JAIME HUGO",
+     "primerApe": "PUEBLA",
+     "segundoApe": "LOMAS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JAZMIN ADRIANA",
+     "primerApe": "JUAREZ ",
+     "segundoApe": "RAMIREZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JEAN ",
+     "primerApe": "ORTEGA",
+     "segundoApe": " GONZáLEZ",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "JESSI PAULINA",
+     "primerApe": "GUZMAN",
+     "segundoApe": "FLORES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JESUS",
+     "primerApe": "ORTUÑO",
+     "segundoApe": "ARAUJO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JESUS ALFREDO",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "NUÑO",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "JESUS ROBERTO",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "CASTILLO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JOEL",
+     "primerApe": "NAVA",
+     "segundoApe": "LARA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JOEL OMAR",
+     "primerApe": "JUAREZ",
+     "segundoApe": "GAMBINO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JORGE",
+     "primerApe": "CORTES",
+     "segundoApe": "GALICIA",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "JORGE",
+     "primerApe": "FERRER",
+     "segundoApe": "TENORIO",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "JORGE ALBERTO",
+     "primerApe": "CRUZ",
+     "segundoApe": "ROJAS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JORGE JAVIER",
+     "primerApe": "SILVA",
+     "segundoApe": "MARTINEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JORGE LUIS",
+     "primerApe": "ROSAS",
+     "segundoApe": "TRIGREROS",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "JOSE",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "JUAREZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JOSE ALFREDO",
+     "primerApe": "JIMENEZ",
+     "segundoApe": "BENITEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE ALFREDO",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "GUERRERO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JOSE ANTONIO",
+     "primerApe": "FLORES",
+     "segundoApe": "ESCOBAR",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE ANTONIO",
+     "primerApe": "ORTIZ",
+     "segundoApe": "RAMIREZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE ARMANDO",
+     "primerApe": "ESQUIVEL",
+     "segundoApe": "CENTENO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JOSE ASUNCION",
+     "primerApe": "ENRIQUEZ",
+     "segundoApe": "ZARATE",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE CARLOS",
+     "primerApe": "DAVALOS",
+     "segundoApe": "LOPEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JOSE CELESTINO ELIAS",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "SECUNDINO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE CRUZ",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "PERALES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE EMILIO",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "ARROYO",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "JOSE FELIX",
+     "primerApe": "SERRANO",
+     "segundoApe": "TALAMANTES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE GREGORIO",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "VILLAREAL",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JOSE JUAN",
+     "primerApe": "PEREZ",
+     "segundoApe": "PEREZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSE LUIS",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "AGUILAR",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JOSE MANUEL",
+     "primerApe": "LOPEZ",
+     "segundoApe": "SANCHEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JOSE MARCO ANTONIO",
+     "primerApe": "RUEDA",
+     "segundoApe": "MELENDEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JOSEFINA",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "JAIME",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSUE",
+     "primerApe": "RANGEL",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JOSUE EMANUEL",
+     "primerApe": "BARRON",
+     "segundoApe": "VERA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JUAN ANTONIO",
+     "primerApe": "CASTILLO",
+     "segundoApe": "MARRUFO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JUAN CARLOS",
+     "primerApe": "MORALES",
+     "segundoApe": "CRUZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JUAN CARLOS",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "DIAZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JUAN CARLOS",
+     "primerApe": "TELLEZ",
+     "segundoApe": "BARRERA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JUAN JESUS",
+     "primerApe": "GUTIERREZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JUAN JESUS",
+     "primerApe": "ALCARAZ",
+     "segundoApe": "TORRES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "JUAN MANUEL",
+     "primerApe": "CARBALLO",
+     "segundoApe": "JIMENEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "JUAN VICENTE",
+     "primerApe": "GARCIA",
+     "segundoApe": "SALES",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "JUDITH MARGARITA",
+     "primerApe": "TIRADO",
+     "segundoApe": "LULE",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "KARINA",
+     "primerApe": "VIVEROS",
+     "segundoApe": "VELA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "LAURA",
+     "primerApe": "MUÑOZ",
+     "segundoApe": "SALAZAR",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "LAURA",
+     "primerApe": "MENDEZ",
+     "segundoApe": "SEGUNDO",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "LAURA",
+     "primerApe": "LAZCANO",
+     "segundoApe": "XOXOTLA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "LEONOR",
+     "primerApe": "VAZQUEZ",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "LETICIA",
+     "primerApe": "CAÑEDO",
+     "segundoApe": "SUAREZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "LETICIA",
+     "primerApe": "HENESTROSA",
+     "segundoApe": "CARRASCO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "LILIAN",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "ACOSTA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "LORENA",
+     "primerApe": "CHAVARRIA",
+     "segundoApe": "BAEZ",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "LUIS ENRIQUE",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "OLVERA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "LUIS MOCTEZUMA",
+     "primerApe": "CERVANTES",
+     "segundoApe": "ESPINOSA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "LUIS OCTAVIO",
+     "primerApe": "LOPEZ",
+     "segundoApe": "LEYVA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "LUZ MARIA",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "MA DEL SOCORRO ",
+     "primerApe": "TELLEZ",
+     "segundoApe": "REYES",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "MACARIO",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "CRUZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MANUEL",
+     "primerApe": "SALAZAR",
+     "segundoApe": "RAMIREZ",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "MANUEL ALEJANDRO",
+     "primerApe": "SOTO",
+     "segundoApe": "RAMOS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARCO",
+     "primerApe": "TENORIO",
+     "segundoApe": "MARRÓN",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARCO ANTONIO",
+     "primerApe": "MORENO",
+     "segundoApe": "ARMENDARIZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARCO ANTONIO",
+     "primerApe": "DORANTES",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARIA DEL ROSARIO",
+     "primerApe": "ROCHA",
+     "segundoApe": "BERNABE",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "MARIA DEL ROSARIO",
+     "primerApe": "GALEANA",
+     "segundoApe": "CHAVEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARIA ELENA",
+     "primerApe": "CRUZ",
+     "segundoApe": "MEZA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARIA GABRIELA",
+     "primerApe": "GALIÑANES",
+     "segundoApe": "RODRIGUEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARIA SUSANA",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "PALACIOS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "MARIANA",
+     "primerApe": "GOMEZ",
+     "segundoApe": "TRESS",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "MARIBEL",
+     "primerApe": "ARAGON",
+     "segundoApe": "GARCIA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "MARISOL",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "ORDAZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARKO ALFONSO",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "RAMIREZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MARTHA PATRICIA",
+     "primerApe": "JIMENEZ",
+     "segundoApe": "VILLANUEVA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "MARTHA ROSA",
+     "primerApe": "CORDERO",
+     "segundoApe": "LOPEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MIGUEL",
+     "primerApe": "SANCHEZ",
+     "segundoApe": "BRITO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "MIGUEL ABEL",
+     "primerApe": "LEON",
+     "segundoApe": "HERNANDEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "MIGUEL ANGEL",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "CASTILLO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "MIGUEL ANGEL",
+     "primerApe": "GONZALEZ",
+     "segundoApe": "TRUJILLO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "MIGUEL ANGEL",
+     "primerApe": "MALDONADO",
+     "segundoApe": "MUÑOZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MIGUEL SANTIAGO",
+     "primerApe": "SUAREZ ",
+     "segundoApe": "CASTAÑON",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "MIJAIL",
+     "primerApe": "VAZQUEZ",
+     "segundoApe": "ORTIZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MIRIAM",
+     "primerApe": "PESCADOR",
+     "segundoApe": "ROJAS",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "MISAEL",
+     "primerApe": "SOLORZA",
+     "segundoApe": "GUZMAN",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "MONICA",
+     "primerApe": "RIVERA",
+     "segundoApe": "DE LA ROSA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "MONSERRAT GABRIELA",
+     "primerApe": "PEREZ",
+     "segundoApe": "VERA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "MYRIAM NOEMI",
+     "primerApe": "PAREDES",
+     "segundoApe": "CADENA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "NANCY",
+     "primerApe": "OCOTITLA",
+     "segundoApe": "ROJAS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "NARIA ADRIANA",
+     "primerApe": "FLORES",
+     "segundoApe": "FUENTES",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "NAYELI",
+     "primerApe": "VEGA",
+     "segundoApe": "GARCIA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "NESTOR",
+     "primerApe": "COLIN",
+     "segundoApe": "HERNANDEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "NIDIA ASUNCION",
+     "primerApe": "CORTEZ",
+     "segundoApe": "DUARTE",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "OCTAVIO",
+     "primerApe": "SANCHEZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ODETTE BERENICE",
+     "primerApe": "CANCINO",
+     "segundoApe": "MOSQUEDA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "OSCAR",
+     "primerApe": "CARRANZA",
+     "segundoApe": "CASTILLO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "PATRICIA",
+     "primerApe": "ESCAMILLA",
+     "segundoApe": "MIRANDA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "PERLA REBECA",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "VARGAS",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "RAFAEL",
+     "primerApe": "RAMIREZ",
+     "segundoApe": "TENORIO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RAFAEL",
+     "primerApe": "AGUILAR",
+     "segundoApe": "GARCIA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "RAFAEL NORMAN",
+     "primerApe": "SAUCEDO",
+     "segundoApe": "DELGADO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "RAQUEL",
+     "primerApe": "FLORES",
+     "segundoApe": "DELGADO",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "RAUL",
+     "primerApe": "SANTILLAN",
+     "segundoApe": "LUNA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "RENE BALTAZAR",
+     "primerApe": "JIMENEZ",
+     "segundoApe": "RUIZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "REYNA ELIA",
+     "primerApe": "MELARA",
+     "segundoApe": "ABARCA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RICARDO",
+     "primerApe": "MARTINEZ",
+     "segundoApe": "ROSALES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RICARDO",
+     "primerApe": "CEBALLOS",
+     "segundoApe": "SEBASTIAN",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "RICARDO",
+     "primerApe": "SÁNCHEZ",
+     "segundoApe": "VELEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "RICARDO FELIPE",
+     "primerApe": "DIAZ",
+     "segundoApe": "SANTIAGO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROBERTO",
+     "primerApe": "JURADO",
+     "segundoApe": "JIMENEZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ROBERTO",
+     "primerApe": "DE LUNA",
+     "segundoApe": "CABALLERO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROBERTO",
+     "primerApe": "VAZQUEZ",
+     "segundoApe": "ARREGUIN",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "ROBERTO",
+     "primerApe": "TECLA",
+     "segundoApe": "PARRA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROBERTO ESWART",
+     "primerApe": "ZAGAL",
+     "segundoApe": "FLORES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ROCIO",
+     "primerApe": "RESENDIZ",
+     "segundoApe": "MUÑOZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROCIO",
+     "primerApe": "ALMAZAN",
+     "segundoApe": "FARFAN",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROCIO",
+     "primerApe": "PALACIOS",
+     "segundoApe": "SOLANO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RODOLFO",
+     "primerApe": "ROMERO",
+     "segundoApe": "HERRERA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ROSA ALBA",
+     "primerApe": "HERNANDEZ",
+     "segundoApe": "GARCIA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "ROSAURA",
+     "primerApe": "PALMA",
+     "segundoApe": "OROZCO",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "RUBEN",
+     "primerApe": "PEREDO",
+     "segundoApe": "VALDERRAMA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RUBEN",
+     "primerApe": "GALICIA",
+     "segundoApe": "MEJIA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "RUBEN",
+     "primerApe": "ORTEGA",
+     "segundoApe": "GONZALEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "SANDRA",
+     "primerApe": "MORALES",
+     "segundoApe": "N",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "SANDRA",
+     "primerApe": "DIAZ",
+     "segundoApe": "SANTIAGO",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "SANDRA IVETTE",
+     "primerApe": "BAUTISTA",
+     "segundoApe": "ROSALES",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "SANDRA MERCEDES",
+     "primerApe": "PEREZ",
+     "segundoApe": "VERA",
+     "departamento": "DFII"
+    },
+    {
+     "nombre": "SAUL",
+     "primerApe": "DE LA O",
+     "segundoApe": "TORRES",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "SAUL",
+     "primerApe": "DEL ANGEL",
+     "segundoApe": "AVALOS",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "SERAFIN",
+     "primerApe": "ESTRADA",
+     "segundoApe": "ELIZALDE",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "SERGIO",
+     "primerApe": "CANCINO",
+     "segundoApe": "CALDERON",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "SERGIO",
+     "primerApe": "LEVARIO",
+     "segundoApe": "MEDINA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "SERGIO",
+     "primerApe": "SALINAS",
+     "segundoApe": "LUGO",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "SONIA",
+     "primerApe": "VILLEGAS",
+     "segundoApe": "NAVARRETE",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "TANIA",
+     "primerApe": "RODRIGUEZ",
+     "segundoApe": "SARABIA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "TANIBET",
+     "primerApe": "PEREZ DE LOS SANTOS",
+     "segundoApe": "MONDRAGON",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "TLATOANI DE JESUS",
+     "primerApe": "REYES",
+     "segundoApe": "BERMEJO",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "TONAHTIU ARTURO",
+     "primerApe": "RAMIREZ",
+     "segundoApe": "ROMERO",
+     "departamento": "DPOS"
+    },
+    {
+     "nombre": "UKRANIO",
+     "primerApe": "CORONILLA",
+     "segundoApe": "CONTRERAS",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "ULISES",
+     "primerApe": "VELEZ",
+     "segundoApe": "SALDAÑA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "URIEL",
+     "primerApe": "CORONA",
+     "segundoApe": "BERMUDEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "URSULA SAMANTHA",
+     "primerApe": "MORALES",
+     "segundoApe": "RODRIGUEZ",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "VERONICA",
+     "primerApe": "AGUSTIN",
+     "segundoApe": "DOMINGUEZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "VICTOR HUGO",
+     "primerApe": "GARCIA",
+     "segundoApe": "ORTEGA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "VÍCTOR MANUEL",
+     "primerApe": "SILVA",
+     "segundoApe": "GARCÍA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "VICTOR RAFAEL",
+     "primerApe": "MORENO",
+     "segundoApe": "PEÑA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "VIRGINIA",
+     "primerApe": "MEDINA",
+     "segundoApe": "MEJIA",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "VIRGINIA",
+     "primerApe": "SANCHEZ ",
+     "segundoApe": "CRUZ",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "YANIRA",
+     "primerApe": "PACHUCA",
+     "segundoApe": "HERRERA",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "YASMIN IVETTE",
+     "primerApe": "JIMENEZ",
+     "segundoApe": "GALAN",
+     "departamento": "DISC"
+    },
+    {
+     "nombre": "YAXKIN",
+     "primerApe": "FLORES",
+     "segundoApe": "MENDOZA",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "YESICA",
+     "primerApe": "FLORES",
+     "segundoApe": "MERAZ",
+     "departamento": "DFB"
+    },
+    {
+     "nombre": "YOSAFAT",
+     "primerApe": "MOSCOSO",
+     "segundoApe": "MALAGON",
+     "departamento": "DCIC"
+    },
+    {
+     "nombre": "ZELIN",
+     "primerApe": "MIGUEL",
+     "segundoApe": "PILAR",
+     "departamento": "DFB"
+    }
+   ]

@@ -1,0 +1,2045 @@
+[
+    {
+     "clave": "ADPA",
+     "Nombre": "A. and D. of Parallel Algorithms",
+     "Nombre Alternativo": "A. and D. of Parallel Alg",
+     "Semestre": 3,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AdmProy",
+     "Nombre": "Administración de Proyectos",
+     "Nombre Alternativo": "Admon de Proyectos",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "APTI",
+     "Nombre": "Administración de Proyectos de TI",
+     "Nombre Alternativo": "Admon. Proy. TI",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "APTILab",
+     "Nombre": "Administración de Proyectos de TILab",
+     "Nombre Alternativo": "Admon. Proy. TI (Lab)",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "AdmSR20",
+     "Nombre": "Administración de Servicios en Red",
+     "Nombre Alternativo": "Admon. Serv. Red 2020",
+     "Semestre": 7,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AdSeR",
+     "Nombre": "Administración de Servicios en Red",
+     "Nombre Alternativo": "Admon Serv en Red",
+     "Semestre": 4,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AlgLin20",
+     "Nombre": "Álgebra Lineal",
+     "Nombre Alternativo": "Álgebra Lineal 2020",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AlgLinLCD",
+     "Nombre": "Álgebra Lineal",
+     "Nombre Alternativo": "Álgebra Lineal LCD",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "AlgLinIIA",
+     "Nombre": "Álgebra Lineal",
+     "Nombre Alternativo": "Álgebra Lineal IIA",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "AlgBio",
+     "Nombre": "Algoritmos Bioinspirados",
+     "Nombre Alternativo": "Alg. Bioinsp.",
+     "Semestre": 5,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "AlgEstrDatLCD",
+     "Nombre": "Algoritmos y Estructuras de Datos",
+     "Nombre Alternativo": "Alg y Estr de Datos LCD",
+     "Semestre": 2,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "AlgEstrDatIIA",
+     "Nombre": "Algoritmos y Estructuras de Datos",
+     "Nombre Alternativo": "Alg y Estr de Datos IIA",
+     "Semestre": 2,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "AlEstrDat",
+     "Nombre": "Algoritmos y Estructuras de Datos",
+     "Nombre Alternativo": "Alg. y Estr. de Datos",
+     "Semestre": 2,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AnAlg",
+     "Nombre": "Análisis de Algoritmos",
+     "Nombre Alternativo": "Análisis de Alg.",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ASTiem",
+     "Nombre": "Análisis de Series de Tiempo",
+     "Nombre Alternativo": "A. Series de Tiempo",
+     "Semestre": 6,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "AVect20",
+     "Nombre": "Análisis Vectorial",
+     "Nombre Alternativo": "A. Vectorial 2020",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ADA",
+     "Nombre": "Análisis y Diseño de Algoritmos",
+     "Nombre Alternativo": "A. D. Algoritmos",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ADAIIA",
+     "Nombre": "Análisis y Diseño de Algoritmos",
+     "Nombre Alternativo": "A. D. Algoritmos IIA",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ADALCD",
+     "Nombre": "Análisis y Diseño de Algoritmos",
+     "Nombre Alternativo": "A. D. Algoritmos LCD",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ADSistIA",
+     "Nombre": "Análisis y Diseño de Sistemas",
+     "Nombre Alternativo": "A. D. Sist. IIA",
+     "Semestre": 4,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ADSist",
+     "Nombre": "Análisis y Diseño de Sistemas",
+     "Nombre Alternativo": "A. D. Sist.",
+     "Semestre": 5,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AAvan",
+     "Nombre": "Analítica Avanzada",
+     "Nombre Alternativo": "Analítica Avanzada",
+     "Semestre": 6,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "AnaVisDat",
+     "Nombre": "Analítica y Visualización de Datos",
+     "Nombre Alternativo": "Analítica y Vis. de Datos",
+     "Semestre": 5,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ApCR",
+     "Nombre": "Aplicaciones &nbsp;para Comunicaciones en Red",
+     "Nombre Alternativo": "Aplic para Comunic en Red",
+     "Semestre": 3,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AIASistEmb",
+     "Nombre": "Aplicaciones de Inteligencia Artificial en Sistemas Embebidos",
+     "Nombre Alternativo": "Ap. De IA en Sist. Emb",
+     "Semestre": 7,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ALNat",
+     "Nombre": "Aplicaciones de Lenguaje Natural",
+     "Nombre Alternativo": "Ap. Leng. Natural",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ApSistMult",
+     "Nombre": "Aplicaciones de Sistemas Multiagentes",
+     "Nombre Alternativo": "Ap. de Sist. Mult.",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ApCR20",
+     "Nombre": "Aplicaciones para Comunicaciones en Red",
+     "Nombre Alternativo": "Ap. Comun. Red. (2020)",
+     "Semestre": 6,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ADMD",
+     "Nombre": "App. Dev. for Mobile Devices",
+     "Nombre Alternativo": "App. Dev. for Mobile Devices",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AprenMaqLA",
+     "Nombre": "Aprendizaje de Máquina",
+     "Nombre Alternativo": "Apren. Máquina (Lab-Asist)",
+     "Semestre": 5,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "AprenMaq",
+     "Nombre": "Aprendizaje de Máquina",
+     "Nombre Alternativo": "Apren. Máquina",
+     "Semestre": 5,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ApMaqeIA",
+     "Nombre": "Aprendizaje de Máquina e Inteligencia Artificial",
+     "Nombre Alternativo": "Apren. Maq. e IA",
+     "Semestre": 5,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ArqComp20",
+     "Nombre": "Arquitectura de Computadoras",
+     "Nombre Alternativo": "Arq. de Comp. 2020",
+     "Semestre": 5,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ArqComp",
+     "Nombre": "Arquitectura de Computadoras",
+     "Nombre Alternativo": "Arq. de Comp (2009)",
+     "Semestre": 3,
+     "Academia": "Sistemas Digitales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ISAOptII",
+     "Nombre": "Arquitecturas Embebidas Automotrices (ISISA)",
+     "Nombre Alternativo": "Opt II (ISISA) &nbsp;Arquitecturas Embebidas Automotrices",
+     "Semestre": 7,
+     "Academia": "Sistemas Digitales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ISAOII",
+     "Nombre": "Arquitecturas Embebidas Automotrices (ISISA)",
+     "Nombre Alternativo": "Opt II (ISISA) &nbsp;Arquitecturas Embebidas Automotrices",
+     "Semestre": 7,
+     "Academia": "Sistemas Digitales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "AIn",
+     "Nombre": "Artificial Intelligence",
+     "Nombre Alternativo": "Artificial Intelligence",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "BD20",
+     "Nombre": "Bases de Datos",
+     "Nombre Alternativo": "BD 2020",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "BDLCD",
+     "Nombre": "Bases de Datos",
+     "Nombre Alternativo": "BD LCD",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "BDIIA",
+     "Nombre": "Bases de Datos",
+     "Nombre Alternativo": "BD IIA",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "BDAv",
+     "Nombre": "Bases de Datos Avanzadas",
+     "Nombre Alternativo": "BD Av",
+     "Semestre": 4,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "BDataCD",
+     "Nombre": "Big Data",
+     "Nombre Alternativo": "Big Data LCD",
+     "Semestre": 7,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "BDataIA",
+     "Nombre": "Big Data",
+     "Nombre Alternativo": "Big Data IIA",
+     "Semestre": 7,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "BData",
+     "Nombre": "Big Data",
+     "Nombre Alternativo": "Big Data",
+     "Semestre": 7,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Bav",
+     "Nombre": "Bioinformática Avanzada",
+     "Nombre Alternativo": "Bioinformática Avanzada",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "BBas",
+     "Nombre": "Bioinformática Básica",
+     "Nombre Alternativo": "Bionformática Básica",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "Bioinf20",
+     "Nombre": "Bioinformatics",
+     "Nombre Alternativo": "Bioinformatics 2020",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "BioInf",
+     "Nombre": "Bioinformatics",
+     "Nombre Alternativo": "Bioinformatics",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CalcIIA",
+     "Nombre": "Cálculo",
+     "Nombre Alternativo": "Cálculo IIA",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "CalcLCD",
+     "Nombre": "Cálculo",
+     "Nombre Alternativo": "Cálculo LCD",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "Calc20",
+     "Nombre": "Cálculo",
+     "Nombre Alternativo": "Cálculo 2020",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CalcApl20",
+     "Nombre": "Cálculo Aplicado",
+     "Nombre Alternativo": "Cálculo Aplicado 2020",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CalcMultivLCD",
+     "Nombre": "Cálculo Multivariable",
+     "Nombre Alternativo": "Cálculo Multivariable LCD",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "CalcMultivIIA",
+     "Nombre": "Cálculo Multivariable",
+     "Nombre Alternativo": "Cálculo Multivariable IIA",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "CAuto",
+     "Nombre": "Cellular Automata",
+     "Nombre Alternativo": "Cell. Automata",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CSeg",
+     "Nombre": "Ciberseguridad",
+     "Nombre Alternativo": "Ciberseguridad",
+     "Semestre": 6,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "CElec20",
+     "Nombre": "Circuitos Eléctricos",
+     "Nombre Alternativo": "Circ. Eléctricos 2020",
+     "Semestre": 3,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Comp",
+     "Nombre": "Compiladores",
+     "Nombre Alternativo": "Compiladores (2009)",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Comp20",
+     "Nombre": "Compiladores",
+     "Nombre Alternativo": "Compiladores 2020",
+     "Semestre": 5,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CplxSis",
+     "Nombre": "Complex Systems",
+     "Nombre Alternativo": "Complex Systems",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CGeo",
+     "Nombre": "Computational Geometry",
+     "Nombre Alternativo": "C. Geometry",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CAnim",
+     "Nombre": "Computer Animation",
+     "Nombre Alternativo": "Computer Animation",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CGraf",
+     "Nombre": "Computer Graphics",
+     "Nombre Alternativo": "Computer Graphics",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CGraf20",
+     "Nombre": "Computer Graphics",
+     "Nombre Alternativo": "Computer Graphics (2020)",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CSec",
+     "Nombre": "Computer Security",
+     "Nombre Alternativo": "Computer Security",
+     "Semestre": 6,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CSTo",
+     "Nombre": "Computing Selected Topics",
+     "Nombre Alternativo": "Computing Selected Topics",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CSTI20",
+     "Nombre": "Computing Selected Topics I",
+     "Nombre Alternativo": "Comp. Sel. Topics I (2020)",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "CAD",
+     "Nombre": "Cómputo de Alto Desempeño",
+     "Nombre Alternativo": "Comp. Alto Desemp.",
+     "Semestre": 4,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "CNub",
+     "Nombre": "Cómputo en la nube",
+     "Nombre Alternativo": "Cómputo en la nube",
+     "Semestre": 6,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "CompPal",
+     "Nombre": "Cómputo Paralelo",
+     "Nombre Alternativo": "Cómputo Paralelo",
+     "Semestre": 6,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ComST20",
+     "Nombre": "Computting Selected Topics II",
+     "Nombre Alternativo": "Comp- Selec. Top. II 2020",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Coe20",
+     "Nombre": "Comunicación Oral y Escrita",
+     "Nombre Alternativo": "Com. Oral y Esc 2020",
+     "Semestre": 1,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "COE-IIA",
+     "Nombre": "Comunicación Oral y Escrita",
+     "Nombre Alternativo": "Com. Oral y Escrita IIA",
+     "Semestre": 1,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "COE-LCD",
+     "Nombre": "Comunicación Oral y Escrita",
+     "Nombre Alternativo": "Com. Oral y Escrita LCD",
+     "Semestre": 1,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "Crypt",
+     "Nombre": "Cryptography",
+     "Nombre Alternativo": "Cryptography",
+     "Semestre": 3,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DMi",
+     "Nombre": "Data Mining",
+     "Nombre Alternativo": "Data Mining",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DMin20",
+     "Nombre": "Data Mining",
+     "Nombre Alternativo": "Data Mining 2020",
+     "Semestre": 7,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DBST",
+     "Nombre": "Database Selected Topics",
+     "Nombre Alternativo": "DB Selected Topics",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DesApMovN",
+     "Nombre": "Desarrollo de Aplicaciones Móviles Nativas",
+     "Nombre Alternativo": "Des. Ap. Móv. Nat.",
+     "Semestre": 7,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DAAD",
+     "Nombre": "Desarrollo de Aplicaciones para Análisis de Datos",
+     "Nombre Alternativo": "D. Ap. para A. Datos",
+     "Semestre": 4,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "DAW",
+     "Nombre": "Desarrollo de Aplicaciones Web",
+     "Nombre Alternativo": "Des. Ap. Web",
+     "Semestre": 4,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "DHSAD",
+     "Nombre": "Desarrollo de Habilidades Sociales para la Alta Dirección",
+     "Nombre Alternativo": "Des. H. Soc. Alta Direc.",
+     "Semestre": 8,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DHSADCD",
+     "Nombre": "Desarrollo de Habilidades Sociales para la Alta Dirección",
+     "Nombre Alternativo": "Des. H. Soc. Alta Direc LCD",
+     "Semestre": 8,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "DHSADIA",
+     "Nombre": "Desarrollo de Habilidades Sociales para la Alta Dirección",
+     "Nombre Alternativo": "Des.H. Soc. Alta Direc. IIA",
+     "Semestre": 8,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "DSDi",
+     "Nombre": "Desarrollo de Sist Dist",
+     "Nombre Alternativo": "Desarrollo de Sist Dist",
+     "Semestre": 3,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DSDist",
+     "Nombre": "Desarrollo de Sistemas Distribuidos",
+     "Nombre Alternativo": "Des. Sist Dist",
+     "Semestre": 4,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DSDig20",
+     "Nombre": "Diseño de Sistemas Digitales",
+     "Nombre Alternativo": "Dis. Sist. Digit. 2020",
+     "Semestre": 4,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "DSDigIIA",
+     "Nombre": "Diseño de Sistemas Digitales",
+     "Nombre Alternativo": "Dis. Sist. Digit. IIA",
+     "Semestre": 3,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "DDB",
+     "Nombre": "Distributed Database",
+     "Nombre Alternativo": "Distributed DB",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "EcIng",
+     "Nombre": "Economic Engineering",
+     "Nombre Alternativo": "Economic Engineering",
+     "Semestre": 3,
+     "Academia": "Ciencias Básicas",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "EIng",
+     "Nombre": "Economic Engineering",
+     "Nombre Alternativo": "Economic Engineering (2020)",
+     "Semestre": 6,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "EcDifIIA",
+     "Nombre": "Ecuaciones Diferenciales",
+     "Nombre Alternativo": "Ec. Dif. IIA",
+     "Semestre": 3,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "EcDif20",
+     "Nombre": "Ecuaciones Diferenciales",
+     "Nombre Alternativo": "Ec. Dif. 2020",
+     "Semestre": 3,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "EleAn20",
+     "Nombre": "Electrónica Analógica",
+     "Nombre Alternativo": "Elec. Analóg. 2020",
+     "Semestre": 4,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ESy",
+     "Nombre": "Embedded Systems",
+     "Nombre Alternativo": "Embedded Systems",
+     "Semestre": 3,
+     "Academia": "Sistemas Digitales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ESys",
+     "Nombre": "Embedded Systems",
+     "Nombre Alternativo": "Embedded Systems",
+     "Semestre": 6,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Estad",
+     "Nombre": "Estadística",
+     "Nombre Alternativo": "Estadística",
+     "Semestre": 4,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "EAvan",
+     "Nombre": "Estadística Avanzada",
+     "Nombre Alternativo": "Estadística Avanzada",
+     "Semestre": 6,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "EticLegLCD",
+     "Nombre": "Ética y Legalidad",
+     "Nombre Alternativo": "Ética y Legalidad LCD",
+     "Semestre": 2,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "FinEmp",
+     "Nombre": "Finanzas Empresariales",
+     "Nombre Alternativo": "Finanzas Emp.",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "FinEmpIIA",
+     "Nombre": "Finanzas Empresariales",
+     "Nombre Alternativo": "Finanzas Emp. IIA",
+     "Semestre": 2,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "FinEmpLCD",
+     "Nombre": "Finanzas Empresariales",
+     "Nombre Alternativo": "Finanzas Emp. LCD",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "FEProyInf",
+     "Nombre": "Formulación y Evaluación de Proyectos Informáticos",
+     "Nombre Alternativo": "Form. Eval. Proy. Infor.",
+     "Semestre": 5,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "FEProyInfIA",
+     "Nombre": "Formulación y Evaluación de Proyectos Informáticos",
+     "Nombre Alternativo": "Formulación y Evaluación de Proyectos Informáticos",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "FDDig20",
+     "Nombre": "Fundamentos de Diseño Digital",
+     "Nombre Alternativo": "Fund. Dis. Digit. 2020",
+     "Semestre": 3,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "FundDisDigIIA",
+     "Nombre": "Fundamentos de Diseño Digital",
+     "Nombre Alternativo": "Fund Diseño Digital &nbsp;IIA",
+     "Semestre": 2,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "FundIA",
+     "Nombre": "Fundamentos de Inteligencia Artificial",
+     "Nombre Alternativo": "Fund. de IA",
+     "Semestre": 4,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "FundProgLCD",
+     "Nombre": "Fundamentos de Programación",
+     "Nombre Alternativo": "Fund. de Prog. LCD",
+     "Semestre": 1,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "FundProgIIA",
+     "Nombre": "Fundamentos de Programación",
+     "Nombre Alternativo": "Fund. de Prog. IIA",
+     "Semestre": 1,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "FdeProg",
+     "Nombre": "Fundamentos de Programación",
+     "Nombre Alternativo": "Fund de Programación",
+     "Semestre": 1,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "FundEconLCD",
+     "Nombre": "Fundamentos Económicos",
+     "Nombre Alternativo": "Fund. Econ. LCD",
+     "Semestre": 2,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "FEcon20",
+     "Nombre": "Fundamentos Económicos",
+     "Nombre Alternativo": "Fund. Econ. 2020",
+     "Semestre": 2,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "FundEconIIA",
+     "Nombre": "Fundamentos Económicos",
+     "Nombre Alternativo": "Fund. Econ. IIA",
+     "Semestre": 1,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "GAlg20",
+     "Nombre": "Genetic Algorithms",
+     "Nombre Alternativo": "Genetic Algorithms (2020)",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "GesEmpCD",
+     "Nombre": "Gestión Empresarial",
+     "Nombre Alternativo": "Gestión Empresarial LCD",
+     "Semestre": 8,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "GesEmp20",
+     "Nombre": "Gestión Empresarial",
+     "Nombre Alternativo": "Gestión Empresarial",
+     "Semestre": 8,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "GesEmpIA",
+     "Nombre": "Gestión Empresarial",
+     "Nombre Alternativo": "Gestión Empresarial IIA",
+     "Semestre": 8,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "GEm",
+     "Nombre": "Gestión Empresarial",
+     "Nombre Alternativo": "Gestión Empresarial",
+     "Semestre": 4,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "HTEM",
+     "Nombre": "High Technology Enterprise Management",
+     "Nombre Alternativo": "HT Enterprise Management",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "HTEM20",
+     "Nombre": "High Technology Enterprise Management",
+     "Nombre Alternativo": "HT Enterprise Management 2020",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ImAna20",
+     "Nombre": "Image Analysis",
+     "Nombre Alternativo": "Image Analysis 2020",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IngSft",
+     "Nombre": "Ingeniería de Software",
+     "Nombre Alternativo": "Ing. Software (2009)",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IngSft20",
+     "Nombre": "Ingeniería de Software",
+     "Nombre Alternativo": "Ing. Software (2020)",
+     "Semestre": 6,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ISSI",
+     "Nombre": "Ingeniería de Software para Sistemas Inteligentes",
+     "Nombre Alternativo": "Ing. Sw. Sist. Int.",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "IES20",
+     "Nombre": "Ingeniería Ética y Sociedad",
+     "Nombre Alternativo": "Ing. Ética ySoc 2020",
+     "Semestre": 2,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IngEtSocIIA",
+     "Nombre": "Ingeniería Ética y Sociedad",
+     "Nombre Alternativo": "Ing, Ética y Soc. IIA",
+     "Semestre": 2,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "IETecIA",
+     "Nombre": "Innovación y Emprendimiento Tecnológico",
+     "Nombre Alternativo": "Innov. Emp. Tec. IIA",
+     "Semestre": 6,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "IETecCD",
+     "Nombre": "Innovación y Emprendimiento Tecnológico",
+     "Nombre Alternativo": "Innov. Emp. Tec. LCD",
+     "Semestre": 6,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "Instrum",
+     "Nombre": "Instrumentación",
+     "Nombre Alternativo": "Instrumentación (2009)",
+     "Semestre": 3,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "InstCtrl",
+     "Nombre": "Instrumentación y Control",
+     "Nombre Alternativo": "Instrum. y Control",
+     "Semestre": 5,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IA20",
+     "Nombre": "Inteligencia Artificial",
+     "Nombre Alternativo": "IA (2020)",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IHMaq",
+     "Nombre": "Interacción Humano Máquina",
+     "Nombre Alternativo": "Interac. Hum. Maq.",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "IoT",
+     "Nombre": "Internet of Things",
+     "Nombre Alternativo": "I of T",
+     "Semestre": 7,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "IntrCD",
+     "Nombre": "Introducción a la Ciencia de Datos",
+     "Nombre Alternativo": "Intr. a la Ciencia de Datos",
+     "Semestre": 1,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "IntMicr",
+     "Nombre": "Introducción a los Microcontroladores",
+     "Nombre Alternativo": "Int a los Microc (2009)",
+     "Semestre": 3,
+     "Academia": "Sistemas Digitales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ICryp",
+     "Nombre": "Introduction to Cryptography",
+     "Nombre Alternativo": "Int. Cryptography",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ITGo",
+     "Nombre": "IT Governance",
+     "Nombre Alternativo": "IT Governance",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ITGov",
+     "Nombre": "IT Governance",
+     "Nombre Alternativo": "IT Governance 2020",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "LidPer",
+     "Nombre": "Liderazgo Personal",
+     "Nombre Alternativo": "Liderazgo Personal",
+     "Semestre": 8,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "LidPerCD",
+     "Nombre": "Liderazgo Personal",
+     "Nombre Alternativo": "Liderazgo Pers. LCD",
+     "Semestre": 4,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "LidPerIIA",
+     "Nombre": "Liderazgo Personal",
+     "Nombre Alternativo": "Liderazgo Pers. IIA",
+     "Semestre": 3,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "LidDP",
+     "Nombre": "Liderazgo y Desarrollo Profesional",
+     "Nombre Alternativo": "Liderazgo y D. Prof",
+     "Semestre": 4,
+     "Academia": "Ciencias Sociales",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MLear",
+     "Nombre": "Machine Learning",
+     "Nombre Alternativo": "Machine Learning",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MAPCD",
+     "Nombre": "Matemáticas Avanzadas para la Ciencia de Datos",
+     "Nombre Alternativo": "Mat. Av. para CD",
+     "Semestre": 5,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "MAvIngIA",
+     "Nombre": "Matemáticas Avanzadas para la Ingeniería",
+     "Nombre Alternativo": "Mat. Av. Ing. IIA",
+     "Semestre": 4,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "MAvIng20",
+     "Nombre": "Matemáticas Avanzadas para la Ingeniería",
+     "Nombre Alternativo": "Mat. Av. Ing. 2020",
+     "Semestre": 4,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MatDiscLCD",
+     "Nombre": "Matemáticas Discretas",
+     "Nombre Alternativo": "Mat. Disc LCD",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "MatDiscIIA",
+     "Nombre": "Matemáticas Discretas",
+     "Nombre Alternativo": "Mat. Disc IIA",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "MDisc20",
+     "Nombre": "Matemáticas Discretas",
+     "Nombre Alternativo": "Mat.Disc. 2020",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MecElecMagIIA",
+     "Nombre": "Mecánica y Electromagnetismo",
+     "Nombre Alternativo": "Mecánica y Elect IIA",
+     "Semestre": 1,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "MecElec",
+     "Nombre": "Mecánica y Electromagnetismo",
+     "Nombre Alternativo": "Mecánica y Elect.",
+     "Semestre": 2,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MetInvCD",
+     "Nombre": "Metodología de la Investigación y Divulgación Científica",
+     "Nombre Alternativo": "Met. Inv. y Div. Cien. LCD",
+     "Semestre": 5,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "MetInv",
+     "Nombre": "Metodología de la Investigación y Divulgación Científica",
+     "Nombre Alternativo": "Met. Inv. y Div. Cien. IIA",
+     "Semestre": 6,
+     "Academia": "Ciencias Sociales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "MCTD",
+     "Nombre": "Métodos Cuantitativos para la Toma de &nbsp;Decisiones",
+     "Nombre Alternativo": "Met. Cuant. para la T D",
+     "Semestre": 3,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MCTD20",
+     "Nombre": "Métodos Cuantitativos para la Toma de Desiciones",
+     "Nombre Alternativo": "Mét. Cuant. TD (2020)",
+     "Semestre": 6,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "MetNum",
+     "Nombre": "Métodos Numéricos",
+     "Nombre Alternativo": "Met. Numéricos",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "MinDat",
+     "Nombre": "Minería de Datos",
+     "Nombre Alternativo": "Minería de Datos",
+     "Semestre": 5,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "MDatIA",
+     "Nombre": "Minería de Datos",
+     "Nombre Alternativo": "Minería de Datos IIA",
+     "Semestre": 6,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ModPred",
+     "Nombre": "Modelado Predictivo",
+     "Nombre Alternativo": "Modelado Predictivo",
+     "Semestre": 6,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ModEco",
+     "Nombre": "Modelos Econométricos",
+     "Nombre Alternativo": "Modelos Econométricos",
+     "Semestre": 7,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "NLP",
+     "Nombre": "Natural Language Processing",
+     "Nombre Alternativo": "NLP",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "NRDB",
+     "Nombre": "Non Relational Databases",
+     "Nombre Alternativo": "Non Relat. DB",
+     "Semestre": 6,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "OptACD",
+     "Nombre": "Optativa A",
+     "Nombre Alternativo": "Optativa A LCD",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "OptAIA",
+     "Nombre": "Optativa A",
+     "Nombre Alternativo": "Optativa A IIA",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "OptA1",
+     "Nombre": "Optativa A1",
+     "Nombre Alternativo": "Optativa A1",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "OptA2",
+     "Nombre": "Optativa A2",
+     "Nombre Alternativo": "Optativa A2",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "OptBIA",
+     "Nombre": "Optativa B",
+     "Nombre Alternativo": "Optativa B IIA",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "OptBCD",
+     "Nombre": "Optativa B",
+     "Nombre Alternativo": "Optativa B LCD",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "OptB1",
+     "Nombre": "Optativa B1",
+     "Nombre Alternativo": "Optativa B1",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "OptB2",
+     "Nombre": "Optativa B2",
+     "Nombre Alternativo": "Optativa B2",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "OptCCD",
+     "Nombre": "Optativa C",
+     "Nombre Alternativo": "Optativa C LCD",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "OptCIA",
+     "Nombre": "Optativa C",
+     "Nombre Alternativo": "Optativa C IIA",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "OptDCD",
+     "Nombre": "Optativa D",
+     "Nombre Alternativo": "Optativa D LCD",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "OptDIA",
+     "Nombre": "Optativa D",
+     "Nombre Alternativo": "Optativa D IIA",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "PProgIIA",
+     "Nombre": "Paradigmas de Programación",
+     "Nombre Alternativo": "Pdmas. Programación IIA",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "PProg",
+     "Nombre": "Paradigmas de Programación",
+     "Nombre Alternativo": "Pdmas. Programación",
+     "Semestre": 3,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Prob",
+     "Nombre": "Probabilidad",
+     "Nombre Alternativo": "Probabilidad",
+     "Semestre": 3,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "PyEIA",
+     "Nombre": "Probabilidad y Estadística",
+     "Nombre Alternativo": "Prob. y Est. IIA",
+     "Semestre": 4,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "PyE20",
+     "Nombre": "Probabilidad y Estadística",
+     "Nombre Alternativo": "Prob. y Est. 2020",
+     "Semestre": 4,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "PLengNat",
+     "Nombre": "Procesamiento de Lenguaje Natural",
+     "Nombre Alternativo": "Proc. Leng. Natural",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ProcSeñIA",
+     "Nombre": "Procesamiento de Señales",
+     "Nombre Alternativo": "Proc. de Señales IIA",
+     "Semestre": 5,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ProcDigImIA",
+     "Nombre": "Procesamiento Digital de Imágenes",
+     "Nombre Alternativo": "Proc. Dig. Im.",
+     "Semestre": 4,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ProcDigSeñ",
+     "Nombre": "Procesamiento Digital de Señales",
+     "Nombre Alternativo": "Proc. Dig. Señ.",
+     "Semestre": 5,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "ProcEstoc",
+     "Nombre": "Procesos Estocásticos",
+     "Nombre Alternativo": "Procesos Estocásticos",
+     "Semestre": 5,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "PDMov",
+     "Nombre": "Programación de Dispositivos Móviles",
+     "Nombre Alternativo": "Prog. Disp. Móviles",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "ProgCD",
+     "Nombre": "Programación para la Ciencia de Datos",
+     "Nombre Alternativo": "Prog. para CD",
+     "Semestre": 3,
+     "Academia": "Ciencia de Datos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "PropIntIA",
+     "Nombre": "Propiedad Intelectual",
+     "Nombre Alternativo": "Propiedad Intelectual IIA",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "PropInt",
+     "Nombre": "Propiedad Intelectual LCD",
+     "Nombre Alternativo": "Propiedad Intelectual LCD",
+     "Semestre": 7,
+     "Academia": "Proy Estratégicos y Toma de Decisiones",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "ProDat",
+     "Nombre": "Protección de Datos",
+     "Nombre Alternativo": "Protección de Datos",
+     "Semestre": 7,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "RecVoz",
+     "Nombre": "Reconocimiento de Voz",
+     "Nombre Alternativo": "Reconocimiento de Voz",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "RedComp",
+     "Nombre": "Redes de Computadoras",
+     "Nombre Alternativo": "Redes Comp. 2020",
+     "Semestre": 5,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "RNAP",
+     "Nombre": "Redes Neuronales y Aprendizaje Profundo",
+     "Nombre Alternativo": "Redes Neu. y Apr. Prof.",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "STCryp",
+     "Nombre": "Selected Topics in Cryptography",
+     "Nombre Alternativo": "Selec. Top. Cryp.",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "Sav",
+     "Nombre": "Simulación Avanzada",
+     "Nombre Alternativo": "Simulación Avanzada",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "SBas",
+     "Nombre": "Simulación Básica",
+     "Nombre Alternativo": "Simulación Básica",
+     "Semestre": 6,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "SIGeo",
+     "Nombre": "Sistemas de Información Geográfica",
+     "Nombre Alternativo": "Sist. Inf. Geográfica",
+     "Semestre": 6,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "SitDist20",
+     "Nombre": "Sistemas Distribuidos",
+     "Nombre Alternativo": "Sistemas Distribuidos 2020",
+     "Semestre": 7,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "SistChip",
+     "Nombre": "Sistemas en Chip",
+     "Nombre Alternativo": "Sistemas en Chip",
+     "Semestre": 6,
+     "Academia": "Sistemas Digitales",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "SMA",
+     "Nombre": "Sistemas Multiagentes",
+     "Nombre Alternativo": "Sistemas Multiagentes",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "SO20",
+     "Nombre": "Sistemas Operativos",
+     "Nombre Alternativo": "Sist. Op. 2020",
+     "Semestre": 4,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "SIMD",
+     "Nombre": "Software Engineering for Mobile Devices",
+     "Nombre Alternativo": "S. E. for Mobile Devices",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "SQADP",
+     "Nombre": "Software Quality Assurance and Desing Patterns",
+     "Nombre Alternativo": "Sw. Q. A. D. P.",
+     "Semestre": 6,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "STDA",
+     "Nombre": "Statistical Tools for Data Analytics",
+     "Nombre Alternativo": "Stat. T. D. A.",
+     "Semestre": 6,
+     "Academia": "Ciencias Básicas",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TProgRM",
+     "Nombre": "Técnicas de Programación para Robots Móviles",
+     "Nombre Alternativo": "Téc. Prog. Robots Móv",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TecLN",
+     "Nombre": "Tecnologías de Lenguaje Natural",
+     "Nombre Alternativo": "Tec. de Leng. Nat.",
+     "Semestre": 5,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TDAW",
+     "Nombre": "Tecnologías para el Desarrollo de Aplicaciones Web",
+     "Nombre Alternativo": "T. D. Ap. Web",
+     "Semestre": 4,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TDAWIA",
+     "Nombre": "Tecnologías para el Desarrollo de Aplicaciones Web",
+     "Nombre Alternativo": "T. D. Ap. Web IIA",
+     "Semestre": 4,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TSAP",
+     "Nombre": "Temas Selectos de Aprendizaje Profundo",
+     "Nombre Alternativo": "Temas Selec. AP",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "TSIA",
+     "Nombre": "Temas Selectos de Inteligencia Artificial",
+     "Nombre Alternativo": "Temas Selec. de IA",
+     "Semestre": 6,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "TSelcIA",
+     "Nombre": "Temas Selectos de Inteligencia Artificial",
+     "Nombre Alternativo": "Temas Selec. de IA",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TSPLN",
+     "Nombre": "Temas Selectos de Procesamiento de Lenguaje Natural",
+     "Nombre Alternativo": "Temas Selec. PLN",
+     "Semestre": 7,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "TeCoSe",
+     "Nombre": "Teoría de Comunicaciones y Señales",
+     "Nombre Alternativo": "T. de Comunic y Señales",
+     "Semestre": 3,
+     "Academia": "Sistemas Distribuidos",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TCompIA",
+     "Nombre": "Teoría de la Computación",
+     "Nombre Alternativo": "T. de la Comp. IIA",
+     "Semestre": 5,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TComp20",
+     "Nombre": "Teoría de la Computación",
+     "Nombre Alternativo": "T. de la Comp. 2020",
+     "Semestre": 4,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TSAB",
+     "Nombre": "Tópicos Selectos de Algoritmos Bioinspirados",
+     "Nombre Alternativo": "T. Selec. de Alg. Bio.",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TTICD",
+     "Nombre": "Trabajo Terminal I",
+     "Nombre Alternativo": "TT I &nbsp;LCD",
+     "Semestre": 7,
+     "Academia": "Trabajo Terminal",
+     "plan": 2020,
+     "programa": "Licenciatura en Ciencia de Datos"
+    },
+    {
+     "clave": "TTI20",
+     "Nombre": "Trabajo Terminal I",
+     "Nombre Alternativo": "TT I 2020",
+     "Semestre": 7,
+     "Academia": "Trabajo Terminal",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TTIIA",
+     "Nombre": "Trabajo Terminal I",
+     "Nombre Alternativo": "TT I &nbsp;IIA",
+     "Semestre": 7,
+     "Academia": "Trabajo Terminal",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "TTI2009",
+     "Nombre": "Trabajo Terminal I",
+     "Nombre Alternativo": "TT I (Plan 2009)",
+     "Semestre": 4,
+     "Academia": "Trabajo Terminal",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "TTII2009",
+     "Nombre": "Trabajo Terminal II",
+     "Nombre Alternativo": "TT II (Plan 2009)",
+     "Semestre": 5,
+     "Academia": "Trabajo Terminal",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "VAReal",
+     "Nombre": "Virtual and Augmented Reality",
+     "Nombre Alternativo": "Virt. Aug. Realit.",
+     "Semestre": 7,
+     "Academia": "Ciencias de la Computación",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "VInst",
+     "Nombre": "Virtual Instrumentation",
+     "Nombre Alternativo": "Virtual Inst.",
+     "Semestre": 6,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "VIAp",
+     "Nombre": "Virtual Instrumentiation Applications",
+     "Nombre Alternativo": "Virt. Inst. App.",
+     "Semestre": 7,
+     "Academia": "Fundamentos de Sistemas Electrónicos",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "VisionA",
+     "Nombre": "Visión Artificial",
+     "Nombre Alternativo": "Visión Artificial",
+     "Semestre": 5,
+     "Academia": "Inteligencia Artificial",
+     "plan": 2020,
+     "programa": "Ingeniería en Inteligencia Artificial"
+    },
+    {
+     "clave": "WAD",
+     "Nombre": "Web Application Development",
+     "Nombre Alternativo": "Web App Dev",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "WCBDF",
+     "Nombre": "Web Client and Backend Developmen Frameworks",
+     "Nombre Alternativo": "Web CB Dev. Fram.",
+     "Semestre": 7,
+     "Academia": "Ingeniería de Software",
+     "plan": 2020,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    },
+    {
+     "clave": "WSec",
+     "Nombre": "Web Security",
+     "Nombre Alternativo": "Web Security",
+     "Semestre": 3,
+     "Academia": "Ingeniería de Software",
+     "plan": 2009,
+     "programa": "Ingeniería en Sistemas Computacionales"
+    }
+   ]

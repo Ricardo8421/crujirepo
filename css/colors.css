@@ -1,0 +1,21 @@
+.bg-dark-escom{
+	background-color: #004f7f;
+}
+
+.bg-escom{
+	background-color: #0047B6;
+}
+
+.bg-light-escom{
+	background-color: #80cfff;
+}
+
+.bg-lighter-escom{
+	background-color: #bfe7ff;
+}
+
+.bg-gradient-escom{
+	background-image: url("../img/blue_gradient_1.png");
+	background-position: center;
+	background-size: cover;
+}
