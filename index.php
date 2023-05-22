@@ -19,9 +19,9 @@ if(isset($_POST["cs"])){
 	}
 
 	$p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
-    	$con->real_escape_string($u),
-    	$con->real_escape_string($c));
-	$r = $con->query($p);
+    	$xd->real_escape_string($u),
+    	$xd->real_escape_string($c));
+	$r = $xd->query($p);
 	
 	// echo $p;
 	if($r->num_rows > 0){

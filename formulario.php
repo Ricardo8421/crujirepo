@@ -8,9 +8,9 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
   session_destroy();
 }else{
   $p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
-    	$con->real_escape_string($_SESSION["usu"]),
-    	$con->real_escape_string($_SESSION["con"]));
-	$r = $con->query($p);
+    	$xd->real_escape_string($_SESSION["usu"]),
+    	$xd->real_escape_string($_SESSION["con"]));
+	$r = $xd->query($p);
   if($r->num_rows > 0){
 		while($f = $r->fetch_assoc()){
       if($f["permiso"]==2){
@@ -65,7 +65,7 @@ if($redb){
 
   <div class="container-scroll">
     <div class="container ">
-      <form method="post" action="./registro_concluido.html" class="formulario flex flex--column" autocomplete="off" id="form">
+      <form method="post" action="./registro_concluido.php" class="formulario flex flex--column" autocomplete="off" id="form">
         <section class="bg-lighter-escom py-5 carta d-flex ">
           <we>
             <h4 class="my-4">Selección de academia(backend)</h4>

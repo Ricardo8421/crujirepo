@@ -1,6 +1,6 @@
 let form = document.getElementById('form');
 var completado=0;
-var hipervinculo = 'registro_concluido.html';
+var hipervinculo = 'registro_concluido.php';
 form.addEventListener('submit', function(event) {
   event.preventDefault(); // Evita el envío del formulario por defecto
 

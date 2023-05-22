@@ -13,9 +13,9 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
   	session_destroy();
 }else{
   	$p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
-    	$con->real_escape_string($_SESSION["usu"]),
-    	$con->real_escape_string($_SESSION["con"]));
-	$r = $con->query($p);
+    	$xd->real_escape_string($_SESSION["usu"]),
+    	$xd->real_escape_string($_SESSION["con"]));
+	$r = $xd->query($p);
 	if($r->num_rows > 0){
 		while($f = $r->fetch_assoc()){
       		if($f["permiso"]==1){
