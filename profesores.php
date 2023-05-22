@@ -1,9 +1,4 @@
 <?php
-// session_Start();
-// if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
-// 	header("Location: /asterocritico");
-// }
-
 include "conexion.php";
 session_Start();
 $redb = false;
@@ -20,7 +15,7 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
 		while($f = $r->fetch_assoc()){
       		if($f["permiso"]==1){
         		$redb = true;
-				$red = "/formulario.php";
+				$red = "formulario.php";
 			}
 		}
 	}else{
@@ -30,7 +25,7 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
 }
 
 if($redb){
-  	header("Location: /asterocritico".$red);
+  	header("Location: ./".$red);
 }
 ?>
 
@@ -53,7 +48,7 @@ if($redb){
 	<nav class="navbar bg-dark-escom">
 		<div class="container-fluid">
 			<a class="navbar-brand text-light">Sistema de profesores</a>
-			<form action="/asterocritico/" class="d-flex" method="post">
+			<form action="./" class="d-flex" method="post">
 				<input type="hidden" value="cerrarsesion" name="cs">
 				<button class="btn btn-success" type="submit">Cerrar sesión</button>
 			</form>

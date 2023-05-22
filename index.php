@@ -42,7 +42,7 @@ if(isset($_POST["cs"])){
 	}
 }
 if($redb){
-	header("Location: /asterocritico/".$red);
+	header("Location: ./".$red);
 }
 
 ?>
