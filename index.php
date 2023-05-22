@@ -33,14 +33,12 @@ if(isset($_POST["cs"])){
 			}
 			if($f["permiso"]==2){
 				$red = "profesores.php";
-				echo "adm";
+				// echo "adm";
 			}else{
 				$red = "formulario.php";
-				echo "pofe";
+				// echo "pofe";
 			}
 		}
-	}else{
-		echo "aqui";
 	}
 }
 if($redb){

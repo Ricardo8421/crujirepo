@@ -1,11 +1,33 @@
 <?php
 include "conexion.php";
 session_Start();
+$redb = false;
+$red = "";
 if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
-	header("Location: /asterocritico");
+	$redb = true;
+  session_destroy();
 }else{
-  //consultar si la sesion corresponde al tipo de usuario
+  $p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
+    	$con->real_escape_string($_SESSION["usu"]),
+    	$con->real_escape_string($_SESSION["con"]));
+	$r = $con->query($p);
+  if($r->num_rows > 0){
+		while($f = $r->fetch_assoc()){
+      if($f["permiso"]==2){
+        $redb = true;
+				$red = "/profesores.php";
+			}
+		}
+	}else{
+    session_destroy();
+    $redb = true;
+	}
 }
+
+if($redb){
+  header("Location: /asterocritico".$red);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
