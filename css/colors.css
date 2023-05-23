@@ -1,17 +1,17 @@
 .bg-dark-escom{
-	background-color: #004f7f;
+	background-color: #004f7f !important;
 }
 
 .bg-escom{
-	background-color: #0047B6;
+	background-color: #0047B6 !important;
 }
 
 .bg-light-escom{
-	background-color: #80cfff;
+	background-color: #80cfff !important;
 }
 
 .bg-lighter-escom{
-	background-color: #bfe7ff;
+	background-color: #bfe7ff !important;
 }
 
 .bg-gradient-escom{
