@@ -23,7 +23,7 @@
 			</form>
 		</div>
 	</nav>
-	
+
 	<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel"
 		aria-hidden="true">
 		<div class="modal-dialog">
@@ -35,7 +35,7 @@
 				<form>
 					<div class="modal-body">
 						<input type="hidden" id="deleteConfirmationInput">
-						<p>¿Seguro que quieres elminiar esta materia del sistema?</p>
+						<p>¿Seguro que quieres elminiar este profesor del sistema?</p>
 						<small class="text-danger">Esta acción no se puede deshacer</small>
 					</div>
 					<div class="modal-footer">
@@ -51,59 +51,36 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="editDataLabel">Editando los datos de la materia</h5>
+					<h5 class="modal-title" id="editDataLabel">Editando los datos del profesor</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<form>
 					<div class="modal-body">
 						<fieldset>
+							<input type="hidden" name="id_usuario" id="inputIdUsuarioProfesor">
 							<div class="mb-3">
-								<label for="inputClaveMateria" class="form-label">Clave</label>
-								<input disabled type="text" id="inputClaveMateria" class="form-control"
-									placeholder="Clave de la materia" name="clave">
+								<label for="inputMatriculaProfesor" class="form-label">Matricula</label>
+								<input type="text" id="inputMatriculaProfesor" class="form-control"
+									placeholder="Matricula de la Profesor" name="matricula">
 							</div>
 							<div class="mb-3">
 								<div class="form-group">
-									<label for="inputAcademiaMateria" class="form-label">Academia</label>
-									<div id="dropdownAcademiaMateria" class="input-group">
-										<select id="inputAcademiaMateria" class="form-control chosen-select"
+									<label for="inputDepartametoProfesor" class="form-label">Departamento</label>
+									<div id="dropdownDepartamentoProfesor" class="input-group">
+										<select id="inputDepartamentoProfesor" class="form-control chosen-select"
 											style="width:350px;" name="academia">
-											<option value="" selected disabled> Seleccione la academia </option>
-											<option value="1">Academia bla</option>
-											<option value="2">Academia ble</option>
-											<option value="3">Academia bli</option>
+											<option value="" selected disabled> Seleccione el departamento </option>
+											<option value="1">Departamento bla</option>
+											<option value="2">Departamento ble</option>
+											<option value="3">Departamento bli</option>
 										</select>
 									</div>
 								</div>
 							</div>
 							<div class="mb-3">
-								<label for="inputNombreMateria" class="form-label">Nombre</label>
-								<input type="text" id="inputNombreMateria" class="form-control"
-									placeholder="Nombre de la materia" name="nombre">
-							</div>
-							<div class="mb-3">
-								<label for="inputSemestreMateria" class="form-label">Semestre</label>
-								<input type="number" min="1" max=8" id="inputSemestreMateria" class="form-control"
-									placeholder="Semestre de la materia" name="semestre">
-							</div>
-							<div class="mb-3">
-								<label for="inputPlanMateria" class="form-label">Plan</label>
-								<input type="number" min="2009" max="2040" id="inputPlanMateria" class="form-control"
-									placeholder="Año de plan academico" name="plan">
-							</div>
-							<div class="mb-3">
-								<div class="form-group">
-									<label for="inputCarreraMateria" class="form-label">Carrera</label>
-									<div id="dropdownCarreraMateria" class="input-group">
-										<select id="inputCarreraMateria" name="carrera"
-											class="form-control chosen-select" style="width:350px;">
-											<option value="" selected disabled> Seleccione la Carrera </option>
-											<option value="C">Academia bla</option>
-											<option value="B">Ing. Inteligencia Artificial</option>
-											<option value="A">Lic. Ciencia de Datos</option>
-										</select>
-									</div>
-								</div>
+								<label for="inputNombreProfesor" class="form-label">Nombre</label>
+								<input type="text" id="inputNombreProfesor" class="form-control"
+									placeholder="Nombre del profesor" name="nombre">
 							</div>
 						</fieldset>
 					</div>
@@ -135,27 +112,73 @@
 						<table class="table table-borderless mb-0">
 							<thead class="bg-dark-escom text-light">
 								<tr>
-									<th class="text-center align-middle">MATERIA</th>
-									<th class="text-center align-middle">ACADEMIA</th>
-									<th class="text-center align-middle">SEMESTRE</th>
-									<th class="text-center align-middle">PLAN</th>
-									<th class="text-center align-middle">CARRERA</th>
+									<th class="text-center align-middle">MATRICULA</th>
+									<th class="text-center align-middle">NOMBRE COMPLETO</th>
+									<th class="text-center align-middle">DEPARTAMENTO</th>
+									<th class="text-center align-middle">ACCESO</th>
+									<th class="text-center align-middle">PDF</th>
+									<th class="text-center align-middle">RESTABLECER<br>CUESTIONARIO</th>
 									<th class="text-center align-middle">EDITAR</th>
 									<th class="text-center align-middle">BORRAR</th>
 								</tr>
 							</thead>
 							<tbody id="generatedContainer">
 								<!-- Se genera desde aquí -->
-								<tr>
-									<td class="d-none" modal-form-target="inputClaveMateria">Mates</td>
-									<td class="text-center align-middle" modal-form-target="inputNombreMateria">
-										Matemáticas</td>
-									<td class="text-center align-middle" modal-form-target="inputAcademiaMateria">
-										Academia bla</td>
-									<td class="text-center align-middle" modal-form-target="inputSemestreMateria">3</td>
-									<td class="text-center align-middle" modal-form-target="inputPlanMateria">2020</td>
-									<td class="text-center align-middle" modal-form-target="inputCarreraMateria">Lic.
-										Ciencia de Datos</td>
+								<tr class="info-container">
+									<td class="d-none" modal-form-target="inputIdUsuarioProfesor">1</td>
+									<td class="text-center align-middle" modal-form-target="inputMatriculaProfesor">
+										d975ca8bb6</td>
+									<td class="text-center align-middle" modal-form-target="inputNombreProfesor">Juanito
+										Perez</td>
+									<td class="text-center align-middle" modal-form-target="inputDepartamentoProfesor">
+										Departamento bla</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-success disabled btn-sm px-3 btn-access">
+											<i class="fas fa-check"></i>
+										</button>
+									</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-warning btn-sm px-3 btn-pdf">
+											<i class="fa-regular fa-file-pdf"></i>
+										</button>
+									</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-danger btn-sm px-3 btn-reset-form">
+											<i class="fa-solid fa-arrow-rotate-left"></i>
+										</button>
+									</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-primary btn-sm px-3 btn-edit"
+											data-bs-toggle="modal" data-bs-target="#editDataModal">
+											<i class="fas fa-pencil"></i>
+										</button>
+									</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-danger btn-sm px-3 btn-delete"
+											data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<!-- Hasta aquí -->
+
+								<!-- Se genera desde aquí -->
+								<tr class="info-container">
+									<td class="d-none" modal-form-target="inputIdUsuarioProfesor">1</td>
+									<td class="text-center align-middle" modal-form-target="inputMatriculaProfesor">
+										d975ca8aa9</td>
+									<td class="text-center align-middle" modal-form-target="inputNombreProfesor">Juanito
+										Mango</td>
+									<td class="text-center align-middle" modal-form-target="inputDepartamentoProfesor">
+										Departamento bli</td>
+									<td class="text-center align-middle">
+										<button type="button" class="btn btn-success disabled btn-sm px-3 btn-access">
+											<i class="fas fa-check"></i>
+										</button>
+									</td>
+									<td class="text-center align-middle" colspan="2">
+										Este usuario no ha respondido el cuestionario
+									</td>
 									<td class="text-center align-middle">
 										<button type="button" class="btn btn-primary btn-sm px-3 btn-edit"
 											data-bs-toggle="modal" data-bs-target="#editDataModal">
