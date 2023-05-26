@@ -1,11 +1,33 @@
 <?php
 include "conexion.php";
 session_Start();
+$redb = false;
+$red = "";
 if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
-	header("Location: /asterocritico");
+	$redb = true;
+  session_destroy();
 }else{
-  //consultar si la sesion corresponde al tipo de usuario
+  $p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
+    	$xd->real_escape_string($_SESSION["usu"]),
+    	$xd->real_escape_string($_SESSION["con"]));
+	$r = $xd->query($p);
+  if($r->num_rows > 0){
+		while($f = $r->fetch_assoc()){
+      if($f["permiso"]==2){
+        $redb = true;
+				$red = "profesores.php";
+			}
+		}
+	}else{
+    session_destroy();
+    $redb = true;
+	}
 }
+
+if($redb){
+  header("Location: ./".$red);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +50,7 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
   <nav class="navbar bg-dark-escom">
     <div class="container-fluid">
       <a class="navbar-brand text-light">Sistema de profesores</a>
-      <form action="/asterocritico/" class="d-flex" method="post">
+      <form action="./" class="d-flex" method="post">
         <input type="hidden" value="cerrarsesion" name="cs">
         <button class="btn btn-success" type="submit">Cerrar sesión</button>
       </form>
@@ -43,17 +65,26 @@ if(!isset($_SESSION["usu"]) || !isset($_SESSION["con"])){
 
   <div class="container-scroll">
     <div class="container ">
-      <form method="post" action="./registro_concluido.html" class="formulario flex flex--column" autocomplete="off" id="form">
+      <form method="post" action="./registro_concluido.php" class="formulario flex flex--column" autocomplete="off" id="form">
         <section class="bg-lighter-escom py-5 carta d-flex ">
           <we>
-            <h4 class="my-4">Selección de academia(backend)</h4>
+            <h4 class="my-4">Selección de academia</h4>
             <div class=" container container-formulario">
               <label for="academia">Acdemia:</label>
               <select
                 class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px "
                 aria-label="Default select example"
                 style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="academia">
-
+                  <?php
+                  $r = $xd->query("SELECT nombre FROM academia");
+                  if($r->num_rows > 0){
+                    while($f = $r->fetch_assoc()){
+                        ?>
+                        <option><?php echo $f["nombre"] ?></option>
+                        <?php
+                    }
+                  }
+                  ?>
               </select>
             </div>
 
