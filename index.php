@@ -2,50 +2,55 @@
 include 'conexion.php';
 
 session_start();
-$inicio = isset($_POST["usuario"]) && isset($_POST["contra"]);
-$se = isset($_SESSION["usu"]) && isset($_SESSION["con"]);
-$redb = false;
-if(isset($_POST["cs"])){
+$isLoggingIn = isset($_POST["usuario"]) && isset($_POST["contra"]);
+$alreadyLoggedIn = isset($_SESSION["usuario"]) && isset($_SESSION["contra"]);
+$shouldRedirect = false;
+
+if (isset($_POST["cerrarSesion"])) {
 	session_destroy();
-}elseif($inicio || $se){
-	if($inicio){
-		$u = $_POST["usuario"];
-		$c = $_POST["contra"];
-		$bandera=true;
-	}else{
-		$u=$_SESSION["usu"];
-		$c=$_SESSION["con"];
-		$bandera=false;
+} elseif ($isLoggingIn || $alreadyLoggedIn) {
+
+	if ($isLoggingIn) {
+		$username = $_POST["usuario"];
+		$password = $_POST["contra"];
+	} else {
+		$username = $_SESSION["usuario"];
+		$password = $_SESSION["contra"];
 	}
 
-	$p = sprintf("SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
-    	$xd->real_escape_string($u),
-    	$xd->real_escape_string($c));
-	$r = $xd->query($p);
-	
+	$query = sprintf(
+		"SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
+		$mysql->real_escape_string($username),
+		$mysql->real_escape_string($password)
+	);
+	$result = $mysql->query($query);
+
 	// echo $p;
-	if($r->num_rows > 0){
-		while($f = $r->fetch_assoc()){
-			$redb = true;
-			if($bandera){
-				$_SESSION["usu"]=$u;
-				$_SESSION["con"]=$c;
+	if ($result -> num_rows > 0) {
+		while ($row = $result -> fetch_assoc()) {
+			$shouldRedirect = true;
+			if ($isLoggingIn) {
+				$_SESSION["usuario"] = $username;
+				$_SESSION["contra"] = $password;
 			}
-			if($f["permiso"]==2){
+			if ($row["permiso"] == 2) {
 				$red = "profesores.php";
 				// echo "adm";
-			}else{
+			} else {
 				$red = "formulario.php";
 				// echo "pofe";
 			}
 		}
 	}
 }
-if($redb){
-	header("Location: ./".$red);
+
+if ($shouldRedirect) {
+	header("Location: ./" . $red);
 }
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,14 +83,14 @@ if($redb){
 							</div>
 							<div class="mb-3">
 								<?php
-								if(isset($_POST["usuario"]) || isset($_POST["contra"])){
-								?>
+								if (isset($_POST["usuario"]) || isset($_POST["contra"])) {
+									?>
 									<p class="text-danger">Datos incorrectos</p>
-								<?php
-								}else{
-								?>
+									<?php
+								} else {
+									?>
 									<p class="text-secondary">Al entrar a este sitio acepta el uso de cookies</p>
-								<?php	
+								<?php
 								}
 								?>
 							</div>
