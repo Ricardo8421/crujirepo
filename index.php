@@ -32,10 +32,10 @@ if(isset($_POST["cs"])){
 				$_SESSION["con"]=$c;
 			}
 			if($f["permiso"]==2){
-				$red = "profesores.php";
+				$red = "profesores";
 				// echo "adm";
 			}else{
-				$red = "formulario.php";
+				$red = "formulario";
 				// echo "pofe";
 			}
 		}
