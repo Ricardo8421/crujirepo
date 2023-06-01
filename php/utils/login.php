@@ -34,15 +34,15 @@ function checkCredentials(String $username, String $password) : int {
 }
 
 /*
- * Checa las credenciales y regresa a dónde debería regresar
+ * Checa las credenciales y regresa el permiso que tiene
  * 
  * @param String $username El nombre de usuario
  * 
  * @param String password La contraseña
  * 
- * @returns String La ruta del php al que se debería regresar
+ * @returns int El permiso que tiene el usuario. 0 Si no existe
 */
-function login(String $username, String $password) : String {
+function login(String $username, String $password) : int {
     $permiso = checkCredentials($username, $password);
 
     if ($permiso != 0) {
@@ -50,7 +50,23 @@ function login(String $username, String $password) : String {
         $_SESSION["contra"] = $password;
     }
 
-    return getRedirect($permiso);
+    return $permiso;
+}
+
+/*
+ * Checa las credenciales guardadas en la sesion
+ * 
+ * 
+ * @returns int Nivel de permiso que tiene si ha iniciado sesión. 0 si no ha iniciado
+ * 
+*/
+function checkLoggedIn() : int {
+    if (!isset($_SESSION["usuario"]) || !isset($_SESSION["contra"])) {
+  	    session_destroy();
+        return 0;
+    }
+
+    return checkCredentials($_SESSION['usuario'], $_SESSION['contra']);
 }
 
 /*
@@ -63,6 +79,11 @@ function login(String $username, String $password) : String {
  * 
 */
 function checkSession(int $nivel) : String {
+    if (!isset($_SESSION["usuario"]) || !isset($_SESSION["contra"])) {
+  	    session_destroy();
+        return "";
+    }
+
     $permiso = checkCredentials($_SESSION['usuario'], $_SESSION['contra']);
 
     if ($permiso != $nivel) {
@@ -72,6 +93,14 @@ function checkSession(int $nivel) : String {
     return null;
 }
 
+/*
+ * Regresa la página por default para redireccionar
+ * 
+ * @param int $permiso El permiso que tiene el usuario
+ * 
+ * @returns String La dirección a la que le corresponde al permiso.
+ * 
+*/
 function getRedirect(int $permiso) : String {
     switch ($permiso) {
         case 1: return "formulario.php";

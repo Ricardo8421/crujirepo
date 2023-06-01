@@ -1,35 +1,11 @@
 <?php
-include "conexion.php";
-session_Start();
+include "utils/login.php";
+session_start();
 
-$shouldRedirect = false;
-$redirectTo = "";
+$redirect = checkSession(1);
 
-if (!isset($_SESSION["usu"]) || !isset($_SESSION["con"])) {
-	$shouldRedirect = true;
-	session_destroy();
-} else {
-	$p = sprintf(
-		"SELECT permiso, accesoCongelado FROM usuario LEFT OUTER JOIN profesor ON usuario.id=profesor.idUsuario WHERE login='%s' AND pass='%s'",
-		$mysql->real_escape_string($_SESSION["usu"]),
-		$mysql->real_escape_string($_SESSION["con"])
-	);
-	$result = $mysql->query($p);
-	if ($result->num_rows > 0) {
-		while ($row = $result->fetch_assoc()) {
-			if ($row["permiso"] == 2) {
-				$shouldRedirect = true;
-				$redirectTo = "profesores.php";
-			}
-		}
-	} else {
-		session_destroy();
-		$shouldRedirect = true;
-	}
-}
-
-if ($shouldRedirect) {
-	header("Location: ./" . $redirectTo);
+if (!is_null($redirect)) {
+	header("Location: ./" . $redirect);
 }
 
 ?>
