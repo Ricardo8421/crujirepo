@@ -1,17 +1,10 @@
-<?php
-/*
-    require "utils/login.php";
+<?php 
 
-    session_start();
+session_start();
 
-    $test = login("87b85cd69b", "f");
+echo $_SESSION["usuario"];
 
-    echo $test . "<br>";
-
-    echo $_SESSION["usuario"] . "<br>" . $_SESSION["contra"];
-*/
-?>  
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +16,6 @@
 </head>
 <body>
     
-    <script src="js/login.js"></script>
+    <script src="js/pruebaAjax.js"></script>
 </body>
 </html>
