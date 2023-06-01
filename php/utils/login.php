@@ -78,7 +78,7 @@ function checkLoggedIn() : int {
  *          Regresa null si no necesita redireccionar
  * 
 */
-function checkSession(int $nivel) : String {
+function checkSession(int $nivel) {
     if (!isset($_SESSION["usuario"]) || !isset($_SESSION["contra"])) {
   	    session_destroy();
         return "";
