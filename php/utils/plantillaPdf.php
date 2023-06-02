@@ -3,9 +3,9 @@ $nombreCompleto = "Juan Perez";
 $numeroEmpleado = "123456";
 $departamento = "Sistemas y Computación";
 
-$nombreImagen = "img/Ipn.png";
+$nombreImagen = "../../assets/ipn.png";
 $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-$nombreImagen = "img/Escom.png";
+$nombreImagen = "../../assets/Escom.png";
 $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
 ?>
 
