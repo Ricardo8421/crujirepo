@@ -35,7 +35,7 @@ if ($accessLevel != 0) {
 				<div class="row align-items-center h-100">
 					<div class="col p-5">
 						<h3>Sistema profesores</h3>
-						<form class="col-12" method="post" id="login_form">
+						<form class="col-12" id="login_form">
 							<div class="mb-3">
 								<label for="username_input" class="form-label">Identificador</label>
 								<input type="text" class="form-control" id="username_input" name="usuario">
@@ -47,7 +47,7 @@ if ($accessLevel != 0) {
 							<div class="mb-3" id="login_message">
 								<p class="text-secondary">Al entrar a este sitio acepta el uso de cookies</p>
 							</div>
-							<button type="submit" class="btn btn-primary" id="form_button">Ingresar</button>
+							<button type="button" class="btn btn-primary" id="form_button">Ingresar</button>
 						</form>
 					</div>
 				</div>

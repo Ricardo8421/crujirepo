@@ -10,7 +10,11 @@ include "conexion.php";
  * 
  * @returns int El nivel del permiso que tiene. 0 si no está registrado.
 */
-function checkCredentials(String $username, String $password) : int {
+function checkCredentials(String $username = null, String $password = null) : int {
+	if (is_null($username) || is_null($password)) {
+		return 0;
+	}
+	
     $mysql = $GLOBALS['mysql'];
 
     $query = sprintf(
@@ -25,7 +29,6 @@ function checkCredentials(String $username, String $password) : int {
 
     if ($result -> num_rows > 0) {
 		while ($row = $result -> fetch_assoc()) {
-			$shouldRedirect = true;
             return $row['permiso'];
 		}
 	}
@@ -42,7 +45,7 @@ function checkCredentials(String $username, String $password) : int {
  * 
  * @returns int El permiso que tiene el usuario. 0 Si no existe
 */
-function login(String $username, String $password) : int {
+function login(String $username = null, String $password = null) : int {
     $permiso = checkCredentials($username, $password);
 
     if ($permiso != 0) {

@@ -4,18 +4,20 @@
 
     session_start();
 
-    $permiso = login($_POST["usuario"], $_POST["contrasena"]);
+    $permiso = (isset($_POST["usuario"]) && isset($_POST["contrasena"])) ?
+		 login($_POST["usuario"], $_POST["contrasena"]) : 0;
 
-    $co = [];
-    $co["permiso"] = $permiso;
+    $json = [];
+    $json["permiso"] = $permiso;
+
     if ($permiso == 0) {
-        $co["error"] = $_POST["contrasena"];
-        $co["redirectTo"] = $_POST["usuario"];
-        echo json_encode($co);
+        $json["error"] = $_POST["usuario"];
+        $json["redirectTo"] = $_POST["contrasena"];
+        echo json_encode($json);
     } else {
         $redirect = getRedirect($permiso);
-        $co["error"] = null;
-        $co["redirectTo"] = $redirect;
-        echo json_encode($co);
+        $json["error"] = null;
+        $json["redirectTo"] = $redirect;
+        echo json_encode($json);
     }
 ?>  

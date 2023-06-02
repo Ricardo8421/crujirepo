@@ -1,4 +1,4 @@
-fetch('le_json.json')
+fetch('../php/ajax/datosMaterias')
 	.then(response => response.json())
 	.then(data => {
 		var datos = data;
