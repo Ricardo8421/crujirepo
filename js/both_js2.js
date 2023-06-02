@@ -1,4 +1,4 @@
-fetch('../php/ajax/datosMaterias')
+fetch('php/ajax/datosMaterias')
 	.then(response => response.json())
 	.then(data => {
 		var datos = data;
@@ -65,11 +65,11 @@ fetch('../php/ajax/datosMaterias')
 				// Recorrer los objetos filtrados y agregar opciones al nuevo select
 				objetosFiltrados.forEach(function (objeto) {
 					// Verificar si la materia del objeto no está en el select de materias
-					if (!selectMaterias.querySelector('option[value="' + objeto.Nombre + '"]')) {
+					if (!selectMaterias.querySelector('option[value="' + objeto.Materia + '"]')) {
 						// Crear la opción para la materia del objeto
 						var opcion = document.createElement("option");
-						opcion.text = objeto.Nombre;
-						opcion.value = objeto.Nombre;
+						opcion.text = objeto.Materia;
+						opcion.value = objeto.Materia;
 
 						// Agregar la opción al nuevo select
 						selectMaterias.add(opcion);
