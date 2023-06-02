@@ -1,3 +1,15 @@
+<?php
+require "php/utils/login.php";
+session_start();
+
+$redirect = checkSession(2);
+
+if (!is_null($redirect)) {
+	header("Location: ./" . $redirect);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +19,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Administración de profesores</title>
 	<link rel="stylesheet" href="css/colors.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/a0a5eb5331.js" crossorigin="anonymous"></script>
 </head>
@@ -24,8 +35,7 @@
 		</div>
 	</nav>
 
-	<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel"
-		aria-hidden="true">
+	<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -59,44 +69,43 @@
 						<fieldset>
 							<div class="mb-3">
 								<label for="inputClaveMateria" class="form-label">Clave</label>
-								<input disabled type="text" id="inputClaveMateria" class="form-control"
-									placeholder="Clave de la materia" name="clave">
+								<input disabled type="text" id="inputClaveMateria" class="form-control" placeholder="Clave de la materia" name="clave">
 							</div>
 							<div class="mb-3">
 								<div class="form-group">
 									<label for="inputAcademiaMateria" class="form-label">Academia</label>
 									<div id="dropdownAcademiaMateria" class="input-group">
-										<select id="inputAcademiaMateria" class="form-control chosen-select"
-											style="width:350px;" name="academia">
+										<select id="inputAcademiaMateria" class="form-control chosen-select" style="width:350px;" name="academia">
 											<option value="" selected disabled> Seleccione la academia </option>
-											<option value="1">Academia bla</option>
-											<option value="2">Academia ble</option>
-											<option value="3">Academia bli</option>
+											<?php
+											$result = $mysql->query("SELECT id, nombre FROM academia");
+											if ($result->num_rows > 0) {
+												while ($row = $result->fetch_assoc()) {
+													echo "<option value=\"" . $row["id"] . "\">" .  $row["nombre"] . "</option>";
+												}
+											}
+											?>
 										</select>
 									</div>
 								</div>
 							</div>
 							<div class="mb-3">
 								<label for="inputNombreMateria" class="form-label">Nombre</label>
-								<input type="text" id="inputNombreMateria" class="form-control"
-									placeholder="Nombre de la materia" name="nombre">
+								<input type="text" id="inputNombreMateria" class="form-control" placeholder="Nombre de la materia" name="nombre">
 							</div>
 							<div class="mb-3">
 								<label for="inputSemestreMateria" class="form-label">Semestre</label>
-								<input type="number" min="1" max=8" id="inputSemestreMateria" class="form-control"
-									placeholder="Semestre de la materia" name="semestre">
+								<input type="number" min="1" max=8" id="inputSemestreMateria" class="form-control" placeholder="Semestre de la materia" name="semestre">
 							</div>
 							<div class="mb-3">
 								<label for="inputPlanMateria" class="form-label">Plan</label>
-								<input type="number" min="2009" max="2040" id="inputPlanMateria" class="form-control"
-									placeholder="Año de plan academico" name="plan">
+								<input type="number" min="2009" max="2040" id="inputPlanMateria" class="form-control" placeholder="Año de plan academico" name="plan">
 							</div>
 							<div class="mb-3">
 								<div class="form-group">
 									<label for="inputCarreraMateria" class="form-label">Carrera</label>
 									<div id="dropdownCarreraMateria" class="input-group">
-										<select id="inputCarreraMateria" name="carrera"
-											class="form-control chosen-select" style="width:350px;">
+										<select id="inputCarreraMateria" name="carrera" class="form-control chosen-select" style="width:350px;">
 											<option value="" selected disabled> Seleccione la Carrera </option>
 											<option value="C">Academia bla</option>
 											<option value="B">Ing. Inteligencia Artificial</option>
@@ -120,10 +129,8 @@
 		<div class="row">
 			<div class="col-7"></div>
 			<div class="col justify-content-end d-flex">
-				<button class="btn btn-success" type="button" id="addTeacher" data-bs-toggle="modal"
-					data-bs-target="#checkDataModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
-				<button class="btn btn-primary" type="button" id="filter" data-bs-toggle="modal"
-					data-bs-target="#filterPopup"><i class="fa-solid fa-sliders"></i> Filtrar</button>
+				<button class="btn btn-success" type="button" id="addTeacher" data-bs-toggle="modal" data-bs-target="#checkDataModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
+				<button class="btn btn-primary" type="button" id="filter" data-bs-toggle="modal" data-bs-target="#filterPopup"><i class="fa-solid fa-sliders"></i> Filtrar</button>
 			</div>
 		</div>
 		<div class="row mt-3"></div>
@@ -145,28 +152,6 @@
 								</tr>
 							</thead>
 							<tbody id="generatedContainer">
-								<!-- Se genera desde aquí -->
-								<tr>
-									<td class="d-none" modal-form-target="inputClaveMateria">Mates</td>
-									<td class="text-center align-middle" modal-form-target="inputNombreMateria">Matemáticas</td>
-									<td class="text-center align-middle" modal-form-target="inputAcademiaMateria">Academia bla</td>
-									<td class="text-center align-middle" modal-form-target="inputSemestreMateria">3</td>
-									<td class="text-center align-middle" modal-form-target="inputPlanMateria">2020</td>
-									<td class="text-center align-middle" modal-form-target="inputCarreraMateria">Lic. Ciencia de Datos</td>
-									<td class="text-center align-middle">
-										<button type="button" class="btn btn-primary btn-sm px-3 btn-edit"
-											data-bs-toggle="modal" data-bs-target="#editDataModal">
-											<i class="fas fa-pencil"></i>
-										</button>
-									</td>
-									<td class="text-center align-middle">
-										<button type="button" class="btn btn-danger btn-sm px-3 btn-delete"
-											data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
-											<i class="fas fa-trash"></i>
-										</button>
-									</td>
-								</tr>
-								<!-- Hasta aquí -->
 							</tbody>
 						</table>
 					</div>
@@ -176,16 +161,13 @@
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-		integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-		integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
 	<script src="js/modalForm.js"></script>
+	<script src="js/materiasAjax.js"></script>
 </body>
 
 </html>

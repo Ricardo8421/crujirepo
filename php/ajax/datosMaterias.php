@@ -16,6 +16,7 @@ if($result->num_rows > 0){
     while ($row = $result->fetch_assoc()) {
         $currentSubject = [];
 
+		$currentSubject["Clave"] = $row["clave"];
         $currentSubject["Materia"] = $row["materia"];
         $currentSubject["Academia"] = $row["academia"];
         $currentSubject["Semestre"] = $row["semestre"];

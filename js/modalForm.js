@@ -1,11 +1,11 @@
-$(document).ready(()=>{
-    $('.btn-edit').on('click', function(){
+addClickListeners = () => {
+	$('.btn-edit').on('click', function(){
         editData($(this).parent().parent());
     });
     $('.btn-delete').on('click', function(){
         deleteData($(this).parent().parent());
     });
-})
+}
 
 editData = (row) => {
     values = $(row).children("[modal-form-target]");
