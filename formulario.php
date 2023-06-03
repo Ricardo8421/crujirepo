@@ -34,7 +34,7 @@ if (!is_null($redirect)) {
     <nav class="navbar bg-dark-escom">
         <div class="container-fluid">
             <a class="navbar-brand text-light">Sistema de profesores</a>
-            <form action="./" class="d-flex" method="post">
+            <form action="logout.php" class="d-flex" method="post">
                 <input type="hidden" value="cerrarsesion" name="cs">
                 <button class="btn btn-success" type="submit">Cerrar sesión</button>
             </form>
@@ -47,7 +47,7 @@ if (!is_null($redirect)) {
 
     <div class="container-scroll">
         <div class="container ">
-            <form method="post" action="/registro_concluido.php" class="formulario flex flex--column"
+            <form method="post" action="/registroConcluido.php" class="formulario flex flex--column"
                 autocomplete="off" id="form">
                 <section class="bg-lighter-escom py-5 carta d-flex  style="background-color:#fff;">
                     <h4 class="my-4">Selección de academia</h4>
