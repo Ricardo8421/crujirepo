@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Informacion Ingresada</title>
 </head>
 <body>
     <style>
@@ -31,10 +31,6 @@
         table{
             padding: 1rem;
             letter-spacing: normal;
-        }
-
-        hr{
-            border: 2px solid rgb(27,99,149);
         }
 
         footer{
@@ -83,9 +79,6 @@
         .actividades tr:first-child td {
             border-bottom: 2px solid rgb(27,99,149);
         }
-        .actividades td {
-            border-bottom: 1px solid rgb(27,99,149);
-        }
 
         .actividades td:not(:last-child) {
             border-right: 1px solid rgb(27,99,149);
@@ -96,15 +89,15 @@
     </style>
 
     <header> 
-        <img src="http://localhost/crujirepo/assets/Escom.png" alt="logo" class="ipn">
+        <img src="http://localhost/test/assets/Escom.png" alt="logo" class="ipn">
         Datos personales
-        <img src="http://localhost/crujirepo/assets/Ipn.png" alt="logo" class="escom">
+        <img src="http://localhost/test/assets/Ipn.png" alt="logo" class="escom">
     </header>
     <table>
         <tr>
             <td>Nombre Completo:</td>
             <td>{{ $nombreCompleto }}</td>
-        </tr>
+        </tr> 
         <tr>
             <td>Numero de empleado:</td>
             <td>{{ $numeroEmpleado }}</td>
@@ -116,26 +109,67 @@
     </table>
     <hr/>
 
-    <div class="conteiner">
+        <h2>Materias seleccionadas</h2>
+        <table class="actividades">
+            <tr>
+                <td>No.</td> 
+                <td>Materia</td>
+                <td>Academia</td>
+            </tr>
+            <tr>
+                <td>{{ $materia1 }}</td> 
+                <td>{{ $nombreM1 }}</td>
+                <td>{{ $academiaM1 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia2 }}</td> 
+                <td>{{ $nombreM2 }}</td>
+                <td>{{ $academiaM2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia3 }}</td> 
+                <td>{{ $nombreM3 }}</td>
+                <td>{{ $academiaM3 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia4 }}</td> 
+                <td>{{ $nombreM4 }}</td>
+                <td>{{ $academiaM4 }}</td>
+            </tr>
+        </table>
         <h2>Actividades seleccionadas</h2>
         <table class="actividades">
             <tr>
                 <td>No.</td> 
                 <td>Actividad</td>
-                <td>Horas destinadas</td>
+                <td>Horas</td>
             </tr>
             <tr>
-                <td>1</td> 
-                <td>Contar chistes</td>
-                <td>10</td>
+                <td>{{ $actividad1 }}</td> 
+                <td>{{ $nombreA1 }}</td>
+                <td>{{ $horasA1 }}</td>
             </tr>
             <tr>
-                <td>2</td> 
-                <td>ArremangalaArrepungalaArremagala</td>
-                <td>10</td>
+                <td>{{ $actividad2 }}</td> 
+                <td>{{ $nombreA2 }}</td>
+                <td>{{ $horasA2 }}</td>
+            </tr>            
+            <tr>
+                <td>{{ $actividad3 }}</td> 
+                <td>{{ $nombreA3 }}</td>
+                <td>{{ $horasA3 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $actividad4 }}</td> 
+                <td>{{ $nombreA4 }}</td>
+                <td>{{ $horasA4 }}</td>
+            </tr>
+            </tr>
+                <td>{{ $actividad5 }}</td>
+                <td>{{ $nombreA5 }}</td>
+                <td>{{ $horasA5 }}</td>
             </tr>
         </table>
-    </div>
     <footer>
         <p>
             "La tecnica al servicio de la patria"

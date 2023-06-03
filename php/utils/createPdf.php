@@ -32,6 +32,47 @@ function createPdf($json){
     $html = str_replace("{{ \$numeroEmpleado }}", $numeroEmpleado, $html);
     $html = str_replace("{{ \$departamento }}", $departamento, $html);
 
+    $materias = $data['materias'];
+
+    $cantidadMaterias = count($materias);
+
+    for ($i = 0 ; $i < $cantidadMaterias ; $i++){
+        $materia = $materias['materia'.($i+1)];
+        $nimbre = $materia['nombre'];
+        $academia = $materia['academia'];
+        $html = str_replace("{{ \$materia".($i+1)." }}", ($i+1), $html);
+        $html = str_replace("{{ \$nombreM".($i+1)." }}", $nimbre, $html);
+        $html = str_replace("{{ \$academiaM".($i+1)." }}", $academia, $html);
+    }
+    if ($cantidadMaterias < 4){
+        for ($i = $cantidadMaterias ; $i < 4 ; $i++){
+            $html = str_replace("{{ \$materia".($i+1)." }}", "", $html);
+            $html = str_replace("{{ \$nombreM".($i+1)." }}", "", $html);
+            $html = str_replace("{{ \$academiaM".($i+1)." }}", "", $html);
+        }
+    }
+
+    $actividades = $data['actividades'];
+
+    $cantidadActividades = count($actividades);
+
+    for ($i = 0 ; $i < $cantidadActividades ; $i++){
+        $actividad = $actividades['actividad'.($i+1)];
+        $nombre = $actividad['nombre'];
+        $horas = $actividad['horas'];
+        $html = str_replace("{{ \$actividad".($i+1)." }}", ($i+1), $html);
+        $html = str_replace("{{ \$nombreA".($i+1)." }}", $nombre, $html);
+        $html = str_replace("{{ \$horasA".($i+1)." }}", $horas, $html);
+    }
+    if ($cantidadActividades < 5){
+        for ($i = $cantidadActividades ; $i < 5 ; $i++){
+            $html = str_replace("{{ \$actividad".($i+1)." }}", "", $html);
+            $html = str_replace("{{ \$nombreA".($i+1)." }}", "", $html);
+            $html = str_replace("{{ \$horasA".($i+1)." }}", "", $html);
+        }
+    }
+
+
     //Carga el contenido de la variable html al objeto dompdf
     $dompdf->loadHtml($html);
     //Renderiza el pdf
@@ -39,7 +80,6 @@ function createPdf($json){
 
     $nombreArchivo = 'datosIngresados.pdf';
     $dompdf->stream($nombreArchivo, ['Attachment' => true]);
-    //Manda llamar a la funcion downloadPdf
     
 }
 ?>
