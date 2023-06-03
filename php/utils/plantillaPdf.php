@@ -1,3 +1,10 @@
+<?php
+$nombreImagen = "./assets/ipn.png";
+$imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+
+$nombreImagen = "./assets/Escom.png";
+$imagenBase64_2 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +76,7 @@
 
         .actividades {
             border-collapse: collapse;
-            width: 40%;
+            width: auto;
         }
 
         .actividades td, .actividades th {
@@ -108,7 +115,6 @@
         </tr>
     </table>
     <hr/>
-
         <h2>Materias seleccionadas</h2>
         <table class="actividades">
             <tr>
