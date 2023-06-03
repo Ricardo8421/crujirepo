@@ -1,5 +1,5 @@
 <?php
-require_once 'libraries/dompdf/autoload.inc.php';
+require_once '../../libraries/dompdf/autoload.inc.php';
 echo "Ya jala";
 
 use Dompdf\Dompdf;
@@ -18,7 +18,7 @@ $dompdf = new Dompdf();
 $dompdf->loadHtml($html);
 $dompdf->render();
 
-$nombreArchivo = 'mi_archivo.pdf';
+$nombreArchivo = 'datosIngresados.pdf';
 $dompdf->stream($nombreArchivo, ['Attachment' => true]);
 
 function obtenerJson()
