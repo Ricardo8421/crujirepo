@@ -1,14 +1,3 @@
-<?php
-$nombreCompleto = "Juan Perez";
-$numeroEmpleado = "123456";
-$departamento = "Sistemas y Computación";
-
-$nombreImagen = "../../assets/ipn.png";
-$imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-$nombreImagen = "../../assets/Escom.png";
-$imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,22 +96,22 @@ $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nom
     </style>
 
     <header> 
-        <img src="<?php echo $imagenBase64 ?>" alt="logo" class="ipn">
+        <img src="http://localhost/crujirepo/assets/Escom.png" alt="logo" class="ipn">
         Datos personales
-        <img src="<?php echo $imagenBase264 ?>" alt="logo" class="escom">
+        <img src="http://localhost/crujirepo/assets/Ipn.png" alt="logo" class="escom">
     </header>
     <table>
         <tr>
             <td>Nombre Completo:</td>
-            <td> <?php echo $nombreCompleto; ?></td>
+            <td>{{ $nombreCompleto }}</td>
         </tr>
         <tr>
             <td>Numero de empleado:</td>
-            <td> <?php echo $numeroEmpleado; ?></td>
+            <td>{{ $numeroEmpleado }}</td>
         </tr>
         <tr>
             <td>Departamento:</td>
-            <td> <?php echo $departamento; ?></td>
+            <td>{{ $departamento }}</td>
         </tr>
     </table>
     <hr/>

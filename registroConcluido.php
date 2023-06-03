@@ -30,9 +30,14 @@
 	<section class="registry-card carta">
 		<span class="registry-card__icon-complete"></span>
 		<h1 class="registry-card__title card__title">¡Registro completado!</h1>
-		<a href="#" class="button btn btn-warning">Descargar PDF</a>
+		<a href="#" class="button btn btn-warning" onclick="redirectToPDF()">Descargar PDF</a>
 	</section>
 	</main>
 </body>
 
+<script>
+    function redirectToPDF() {
+        window.location.href = 'php/utils/createPdf.php';
+    }
+</script>
 </html>
