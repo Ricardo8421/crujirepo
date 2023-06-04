@@ -1,4 +1,4 @@
-fetch('php/ajax/datosMaterias')
+fetch("php/ajax/datosMaterias")
 	.then(response => response.json())
 	.then(data => {
 		var datos = data;
@@ -7,8 +7,8 @@ fetch('php/ajax/datosMaterias')
 		var academias = [];
 		// Recorrer los objetos JSON
 		for (var i = 0; i < datos.length; i++) {
-			// Verificar si la edad del objeto es mayor a 28
-			// Crear la opción para el país del objeto
+			
+			
 			var opcion = document.createElement("option");
 			if (!academias.includes(datos[i].Academia)) {
 				academias.push(datos[i].Academia);
@@ -39,7 +39,7 @@ fetch('php/ajax/datosMaterias')
 				previous_divs[0].parentNode.removeChild(previous_divs[0]);
 			}
 
-			for (i = 1; i < 5; i++) {
+			for (let i = 1; i < 5; i++) {
 				selectsMaterias_q = document.querySelectorAll("#materia");
 
 				var materia_div = document.createElement("div");
@@ -53,6 +53,7 @@ fetch('php/ajax/datosMaterias')
         <label for="materia" id="materia_label">Materia ${i}</label>
         <br id="break">
                 `;
+				let nombre="materia" + i;
 				// Crear la nueva etiqueta select
 				var selectMaterias = document.createElement("select");
 
@@ -60,16 +61,16 @@ fetch('php/ajax/datosMaterias')
 				selectMaterias.ariaLabel = "Default select example";
 				selectMaterias.style = "background-color: var(--background-color); color: var( --contrast-dark-color);";
 				selectMaterias.id = "materia";
-				selectMaterias.name = "materia";
+				selectMaterias.name =(nombre);
 
 				// Recorrer los objetos filtrados y agregar opciones al nuevo select
 				objetosFiltrados.forEach(function (objeto) {
 					// Verificar si la materia del objeto no está en el select de materias
-					if (!selectMaterias.querySelector('option[value="' + objeto.Materia + '"]')) {
+					if (!selectMaterias.querySelector('option[value="' + objeto.Clave + '"]')) {
 						// Crear la opción para la materia del objeto
 						var opcion = document.createElement("option");
 						opcion.text = objeto.Materia;
-						opcion.value = objeto.Materia;
+						opcion.value = objeto.Clave;
 
 						// Agregar la opción al nuevo select
 						selectMaterias.add(opcion);
@@ -102,33 +103,33 @@ fetch('php/ajax/datosMaterias')
 
 				if (document.querySelectorAll("#materias_pp").length != 0) {
 
-					materias_pp.addEventListener('change', function () {
+					materias_pp.addEventListener('click', function () {
 						console.log(selectnumber);
 						// Variable para llevar la cuenta de la cantidad
 						let previous_divs = document.getElementById("materias_div" + selectnumber)
-						if (this.checked) {
+						
 							previous_divs.style.display = "block";
 							if (selectnumber < 4) { selectnumber = selectnumber + 1; }
 							else { selectnumber = 2; restanumber = 4; }
-							this.checked = false;
-						}
+							
+						
 					});
-					materias_ll.addEventListener('change', function () {
+					materias_ll.addEventListener('click', function () {
 						if (restanumber == 4) { selectnumber = 4; restanumber = 0; }
 						console.log(selectnumber);
 						// Variable para llevar la cuenta de la cantidad
 						let previous_divs = document.getElementById("materias_div" + selectnumber)
 						if (previous_divs.style.display == "none" && selectnumber > 2) selectnumber = selectnumber - 1;
 						previous_divs = document.getElementById("materias_div" + selectnumber)
-						if (this.checked) {
+						
 
 							previous_divs.style.display = "none";
 							if (selectnumber > 2) {
 								selectnumber = selectnumber - 1;
 							}
 							else selectnumber = 2;
-							this.checked = false;
-						}
+							
+						
 						console.log(selectnumber);
 					});
 				}

@@ -174,7 +174,7 @@
     
       margin-bottom: 1rem;
     
-      background-image: url(../imgcopy/checkmark.svg);
+      background-image: url(./assets/checkmark);
       background-size: cover;
       background-repeat: no-repeat;
     }

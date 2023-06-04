@@ -1,9 +1,11 @@
 let form = document.getElementById('form');
 var completado = 0;
-var hipervinculo = 'registro_concluido.php';
+var hipervinculo = 'FormularioDatosEnvio.php';
 form.addEventListener('submit', function (event) {
-	event.preventDefault(); // Evita el envío del formulario por defecto
-
+event.preventDefault(); // Evita el envío del formulario por defecto
+ // Llamar a la función para hacer la consulta
+console.log("enyrasa");
+ 
 	let horas_actividad1 = parseInt(document.getElementById('horas_actividad1').value);
 	let horas_actividad2 = parseInt(document.getElementById('horas_actividad2').value);
 	let horas_actividad3 = parseInt(document.getElementById('horas_actividad3').value);
@@ -13,7 +15,7 @@ form.addEventListener('submit', function (event) {
 	if (isNaN(horas_actividad4)) { horas_actividad4 = 0; }
 	if (isNaN(horas_actividad5)) {
 		horas_actividad5 = 0;
-		console.log(horas_actividad5);
+		
 	}
 
 	var suma = horas_actividad1 + horas_actividad2 + horas_actividad3 + horas_actividad4 + horas_actividad5;
@@ -66,7 +68,7 @@ inputs.forEach((input) => {
 
 
 // Obtener todas las etiquetas select y los campos de entrada
-let selects = document.getElementsByName("actividad");
+var selects = document.querySelectorAll("#actividad")
 let inputs_numbers = document.querySelectorAll('input[type="number"]');
 
 // Recorrer cada etiqueta select
