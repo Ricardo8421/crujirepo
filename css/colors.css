@@ -1,20 +1,27 @@
-.bg-dark-escom{
-	background-color: #004f7f !important;
+:root {
+	--bg-dark-escom: #004f7f;
+	--bg-escom: #0047B6;
+	--bg-light-escom: #80cfff;
+	--bg-lighter-escom: #bfe7ff;
 }
 
-.bg-escom{
-	background-color: #0047B6 !important;
+.bg-dark-escom {
+	background-color: var(--bg-dark-escom) !important;
 }
 
-.bg-light-escom{
-	background-color: #80cfff !important;
+.bg-escom {
+	background-color: var(--bg-escom) !important;
 }
 
-.bg-lighter-escom{
-	background-color: #bfe7ff !important;
+.bg-light-escom {
+	background-color: var(--bg-light-escom) !important;
 }
 
-.bg-gradient-escom{
+.bg-lighter-escom {
+	background-color: var(--bg-lighter-escom) !important;
+}
+
+.bg-gradient-escom {
 	background-image: url("../assets/blue_gradient_1.png");
 	background-position: center;
 	background-size: cover;
