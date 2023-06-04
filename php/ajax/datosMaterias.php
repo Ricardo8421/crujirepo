@@ -6,7 +6,8 @@ header('Content-type: application/json; charset=UTF-8');
 $query =
     "SELECT m.clave, m.nombre AS materia, a.nombre AS academia, m.semestre, m.plan, m.carrera 
     FROM materia m, academia a 
-    WHERE a.id = m.academia";
+    WHERE a.id = m.academia
+	ORDER BY m.carrera, m.plan, m.semestre, materia";
 
 $result = $mysql->query($query);
 

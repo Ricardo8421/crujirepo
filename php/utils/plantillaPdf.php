@@ -1,21 +1,17 @@
 <?php
-$nombreCompleto = "Juan Perez";
-$numeroEmpleado = "123456";
-$departamento = "Sistemas y Computación";
-
-$nombreImagen = "../../assets/ipn.png";
+$nombreImagen = "./assets/ipn.png";
 $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-$nombreImagen = "../../assets/Escom.png";
-$imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-?>
 
+$nombreImagen = "./assets/Escom.png";
+$imagenBase64_2 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Informacion Ingresada</title>
 </head>
 <body>
     <style>
@@ -42,10 +38,6 @@ $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nom
         table{
             padding: 1rem;
             letter-spacing: normal;
-        }
-
-        hr{
-            border: 2px solid rgb(27,99,149);
         }
 
         footer{
@@ -84,7 +76,7 @@ $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 
         .actividades {
             border-collapse: collapse;
-            width: 40%;
+            width: auto;
         }
 
         .actividades td, .actividades th {
@@ -93,9 +85,6 @@ $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 
         .actividades tr:first-child td {
             border-bottom: 2px solid rgb(27,99,149);
-        }
-        .actividades td {
-            border-bottom: 1px solid rgb(27,99,149);
         }
 
         .actividades td:not(:last-child) {
@@ -107,46 +96,86 @@ $imagenBase264 = "data:image/png;base64," . base64_encode(file_get_contents($nom
     </style>
 
     <header> 
-        <img src="<?php echo $imagenBase64 ?>" alt="logo" class="ipn">
+        <img src="http://localhost/test/assets/Escom.png" alt="logo" class="ipn">
         Datos personales
-        <img src="<?php echo $imagenBase264 ?>" alt="logo" class="escom">
+        <img src="http://localhost/test/assets/Ipn.png" alt="logo" class="escom">
     </header>
     <table>
         <tr>
             <td>Nombre Completo:</td>
-            <td> <?php echo $nombreCompleto; ?></td>
-        </tr>
+            <td>{{ $nombreCompleto }}</td>
+        </tr> 
         <tr>
             <td>Numero de empleado:</td>
-            <td> <?php echo $numeroEmpleado; ?></td>
+            <td>{{ $numeroEmpleado }}</td>
         </tr>
         <tr>
             <td>Departamento:</td>
-            <td> <?php echo $departamento; ?></td>
+            <td>{{ $departamento }}</td>
         </tr>
     </table>
     <hr/>
-
-    <div class="conteiner">
+        <h2>Materias seleccionadas</h2>
+        <table class="actividades">
+            <tr>
+                <td>No.</td> 
+                <td>Materia</td>
+                <td>Academia</td>
+            </tr>
+            <tr>
+                <td>{{ $materia1 }}</td> 
+                <td>{{ $nombreM1 }}</td>
+                <td>{{ $academiaM1 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia2 }}</td> 
+                <td>{{ $nombreM2 }}</td>
+                <td>{{ $academiaM2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia3 }}</td> 
+                <td>{{ $nombreM3 }}</td>
+                <td>{{ $academiaM3 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $materia4 }}</td> 
+                <td>{{ $nombreM4 }}</td>
+                <td>{{ $academiaM4 }}</td>
+            </tr>
+        </table>
         <h2>Actividades seleccionadas</h2>
         <table class="actividades">
             <tr>
                 <td>No.</td> 
                 <td>Actividad</td>
-                <td>Horas destinadas</td>
+                <td>Horas</td>
             </tr>
             <tr>
-                <td>1</td> 
-                <td>Contar chistes</td>
-                <td>10</td>
+                <td>{{ $actividad1 }}</td> 
+                <td>{{ $nombreA1 }}</td>
+                <td>{{ $horasA1 }}</td>
             </tr>
             <tr>
-                <td>2</td> 
-                <td>ArremangalaArrepungalaArremagala</td>
-                <td>10</td>
+                <td>{{ $actividad2 }}</td> 
+                <td>{{ $nombreA2 }}</td>
+                <td>{{ $horasA2 }}</td>
+            </tr>            
+            <tr>
+                <td>{{ $actividad3 }}</td> 
+                <td>{{ $nombreA3 }}</td>
+                <td>{{ $horasA3 }}</td>
+            </tr>
+            <tr>
+                <td>{{ $actividad4 }}</td> 
+                <td>{{ $nombreA4 }}</td>
+                <td>{{ $horasA4 }}</td>
+            </tr>
+            </tr>
+                <td>{{ $actividad5 }}</td>
+                <td>{{ $nombreA5 }}</td>
+                <td>{{ $horasA5 }}</td>
             </tr>
         </table>
-    </div>
     <footer>
         <p>
             "La tecnica al servicio de la patria"
