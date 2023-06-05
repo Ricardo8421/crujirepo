@@ -1,10 +1,3 @@
-<?php
-$nombreImagen = "./assets/ipn.png";
-$imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-
-$nombreImagen = "./assets/Escom.png";
-$imagenBase64_2 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,9 +89,9 @@ $imagenBase64_2 = "data:image/png;base64," . base64_encode(file_get_contents($no
     </style>
 
     <header> 
-        <img src="http://localhost/test/assets/Escom.png" alt="logo" class="ipn">
+        <img src="../../assets/Escom.png" alt="logo" class="ipn">
         Datos personales
-        <img src="http://localhost/test/assets/Ipn.png" alt="logo" class="escom">
+        <img src="../../assets/Ipn.png" alt="logo" class="escom">
     </header>
     <table>
         <tr>
