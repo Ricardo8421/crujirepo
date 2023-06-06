@@ -40,6 +40,6 @@ $jsonData = array(
 $json = json_encode($jsonData);
 
 //manda llamar a la funcion createPdf qye se encuentra en createPdf.php y le pasa el json
-createPdf($json);
+createPdfProfesor($json);
 
 ?>
