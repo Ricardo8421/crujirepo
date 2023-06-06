@@ -3,7 +3,9 @@ include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
 
-$matricula = $_POST["matricula"];
+session_start();    
+
+$usuario = $_SESSION["usuario"];
 
 $query = sprintf(
     "SELECT 
@@ -15,9 +17,9 @@ $query = sprintf(
 		p.accesoCongelado AS AccesoCongelado
     FROM profesor p, usuario u, departamento d
     WHERE p.idUsuario = u.id AND p.departamento = d.clave AND
-        p.idUsuario = %s
+        u.login = '%s'
     ORDER BY NombreCompleto",
-    $mysql->real_escape_string($matricula)
+    $mysql->real_escape_string($usuario)
 );
 
 $result = $mysql->query($query);
