@@ -8,25 +8,20 @@ if(isset($_POST["nombre"]) && isset($_POST["departamento"]) && isset($_POST["con
     $nombre = $_POST["nombre"];
     $departamento = $_POST["departamento"];
     $contra = $_POST["contrasena"];
-    $query = "SELECT clave FROM departamento";
+    $query = sprintf("SELECT clave FROM departamento WHERE clave='%s'",
+        $mysql->real_escape_string($departamento));
     $d = $mysql->query($query);    
     if($d->num_rows>0 && !empty($nombre) && !empty($contra)){
-        while($f = $d->fetch_assoc()){
-            if($f["clave"]==$departamento){
-                $query = sprintf("CALL createProfesor('%s', '%s', '%s')",
-                    $mysql->real_escape_string($nombre),
-                    $mysql->real_escape_string($departamento),
-                    $mysql->real_escape_string($contra)
-                );
-                if($mysql->query($query)){
-                    $r["resultado"] = "Registro correcto";
-                    $b = true;
-                }
-                break;
-            }
+        $query = sprintf("CALL createProfesor('%s', '%s', '%s')",
+            $mysql->real_escape_string($nombre),
+            $mysql->real_escape_string($departamento),
+            $mysql->real_escape_string($contra)
+        );
+        if($mysql->query($query)){
+            $r["resultado"] = "Registro correcto";
+            $b = true;
         }
     }
-    
 }
     
 if(!$b){
