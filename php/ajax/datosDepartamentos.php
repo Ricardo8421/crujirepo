@@ -3,7 +3,10 @@ include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
 
-$query = "SELECT id AS Id, nombre AS Actividad, horasMinimas AS HorasMinimas FROM actividad";
+$query =
+	"SELECT clave AS Clave, nombre AS Departamento
+	FROM departamento
+	ORDER BY Departamento";
 
 $result = $mysql->query($query);
 
