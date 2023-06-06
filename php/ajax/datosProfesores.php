@@ -6,8 +6,9 @@ header('Content-type: application/json; charset=UTF-8');
 $query =
     "SELECT 
 		u.id AS IdUsuario, 
-		u.login AS Matricula, 
+		p.id AS Matricula, 
 		p.nombreCompleto AS NombreCompleto,
+		d.clave AS ClaveDepartamento,
 		d.nombre AS Departamento,
 		p.accesoCongelado AS AccesoCongelado
     FROM profesor p, usuario u, departamento d

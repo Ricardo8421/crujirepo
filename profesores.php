@@ -36,6 +36,27 @@ if (!is_null($redirect)) {
 		</div>
 	</nav>
 
+	<div class="modal fade" id="crudModal" tabindex="-1" aria-labelledby="crudModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="crudModalLabel"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<form id="crudForm">
+					<div class="modal-body">
+						<fieldset id="generatedForm">
+						</fieldset>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+						<button type="submit" class="btn btn-success" id="crudSubmitButton">Guardar Cambios</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -58,64 +79,12 @@ if (!is_null($redirect)) {
 		</div>
 	</div>
 
-	<div class="modal fade" id="editDataModal" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="editDataLabel">Editando los datos</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<fieldset>
-							<input type="hidden" name="id_usuario" id="inputIdUsuarioProfesor">
-							<div class="mb-3">
-								<label for="inputMatriculaProfesor" class="form-label">Matricula</label>
-								<input type="text" id="inputMatriculaProfesor" class="form-control" placeholder="Matricula de la Profesor" name="matricula">
-							</div>
-							<div class="mb-3">
-								<div class="form-group">
-									<label for="inputDepartametoProfesor" class="form-label">Departamento</label>
-									<div id="dropdownDepartamentoProfesor" class="input-group">
-										<select id="inputDepartamentoProfesor" class="form-control chosen-select" style="width:350px;" name="departamento">
-											<option value="" selected disabled> Seleccione el Departamento </option>
-											<?php
-											$result = $mysql->query("SELECT clave, nombre FROM departamento");
-											if ($result->num_rows > 0) {
-												while ($row = $result->fetch_assoc()) {
-													echo "<option value=\"" . $row["clave"] . "\">" .  $row["nombre"] . "</option>";
-												}
-											}
-											?>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="mb-3">
-								<label for="inputNombreProfesor" class="form-label">Nombre</label>
-								<input type="text" id="inputNombreProfesor" class="form-control" placeholder="Nombre del profesor" name="nombre">
-							</div>
-							<div class="mb-3 form-check">
-								<label for="inputAccesoProfesor" class="form-check-label" >Acceso</label>
-								<input type="checkbox" id="inputAccesoProfesor" class="form-check-input" name="acceso">
-							</div>
-						</fieldset>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-						<button type="submit" class="btn btn-success" id="sumbitCrud">Guardar Cambios</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
 	<div class="container-fluid pt-3">
 		<div class="row">
 			<div class="col-7"></div>
 			<div class="col justify-content-end d-flex">
-				<button class="btn btn-success btn-create" type="button" id="addTeacher" data-bs-toggle="modal" data-bs-target="#editDataModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
-				<button class="btn btn-primary btn-read" type="button" id="filter" data-bs-toggle="modal" data-bs-target="#editDataModal"><i class="fa-solid fa-sliders"></i> Filtrar</button>
+				<button class="btn btn-success btn-create" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
+				<button class="btn btn-primary btn-read" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-sliders"></i> Filtrar</button>
 			</div>
 		</div>
 		<div class="row mt-3"></div>
