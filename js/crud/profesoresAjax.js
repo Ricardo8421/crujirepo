@@ -3,8 +3,10 @@
  */
 
 const url = "php/ajax/datosProfesores.php";
-const topic = "profesor";
-const columns = 8;
+const loadingRing = `
+	<tr><th colspan="8" class="text-center align-middle">
+		<div class="lds-dual-ring"></div>
+	</th></tr>`;
 
 const generateRowHTML = (profe) =>
 	`
@@ -140,7 +142,7 @@ const deleteConfig = {
 	label: "¿Está seguro de querer borrar este registro?",
 	buttonText: "Borrar",
 	fields: [
-		{ type: "hidden", name: "clave" },
+		{ type: "hidden", name: "matricula" },
 		{
 			type: "disabled",
 			label: "Profesor a borrar",

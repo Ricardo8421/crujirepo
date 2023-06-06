@@ -8,8 +8,8 @@
  *
  * url : string
  * 		Url de donde se va a conseguir el json con los datos
- * columns : int
- * 		Cantidad de columnas que tiene la tabla
+ * loadingRing : string
+ * 		Html que inserta el símbolo de cargando mientras recibe los datos
  * generateRowHTML (objeto) : string
  * 		Funcion que regresa el html de cada fila de la tabla.
  * 		El objeto es un elemento que se va a obtener del json
@@ -22,10 +22,6 @@
  * que son objetos que marcan la configuración de los campos del 
  *
  */
-
-const loadingRing = `<tr><th colspan="${columns}" class="text-center align-middle">
-		<div class="lds-dual-ring"></div>
-	</th></tr>`;
 
 const retrieveData = async () => {
 	return await $.ajax({ url: url });

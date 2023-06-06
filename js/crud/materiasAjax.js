@@ -3,7 +3,10 @@
  */
 
 const url = "php/ajax/datosMaterias.php";
-const columns = 7;
+const loadingRing = `
+	<tr><th colspan="8" class="text-center align-middle">
+		<div class="lds-dual-ring"></div>
+	</th></tr>`;
 
 const generateRowHTML = (materia) =>
 	`<tr>
