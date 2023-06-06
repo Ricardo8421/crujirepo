@@ -19,7 +19,7 @@ const generateRowHTML = (profe) =>
 				<i class="fas fa-${profe.AccesoCongelado == 1 ? 'x' : 'check'}"></i>
 			</button>
 		</td>
-		${generatePDFButtons(profe.HaContestado)}
+		${generatePDFButtons(profe.HaContestado==1)}
 		<td class="text-center align-middle">
 			<button type="button" class="btn btn-primary btn-sm px-3 btn-update"
 				data-bs-toggle="modal" data-bs-target="#crudModal">
