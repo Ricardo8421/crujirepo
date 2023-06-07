@@ -121,6 +121,7 @@ const readFields = () => {
 	for (let i = 0; i < fields.length; i++) {
 		const field = fields[i];
 		field.label = "Buscar por " + field.label.toLowerCase();
+		field.required = false;
 	}
 	return fields;
 }

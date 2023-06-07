@@ -114,6 +114,7 @@ renderTextField = async (config) => {
 	let div = "";
 	let disabled = "";
 	let type = "text";
+	let required = config.required === false? '' : 'required';
 
 	switch (config.type) {
 		case "hidden":
@@ -128,21 +129,23 @@ renderTextField = async (config) => {
 
 	return `
 		${div}
-			<input required type="${type}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}" ${disabled}>
+			<input ${required} type="${type}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}" ${disabled}>
 		</div>`;
 };
 
 renderNumberField = async (config) => {
+	let required = config.required === false? '' : 'required';
 	return `
 		<div class="mb-3">
 			<label for="${config.id}" class="form-label">${config.label}</label>
-			<input required type="number" min="${config.min}" max="${config.max}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}">
+			<input ${required} type="number" min="${config.min}" max="${config.max}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}">
 		</div>`;
 };
 
 renderSelectField = async (config) => {
 	let options = await config.getOptions();
 	let optionsHtml = "";
+	let required = config.required === false? '' : 'required';
 
 	for (let i = 0; i < options.length; i++) {
 		const option = options[i];
@@ -155,7 +158,7 @@ renderSelectField = async (config) => {
 		<div class="form-group">
 			<label for="${config.id}" class="form-label">${config.label}</label>
 			<div id="dropdown${config.id}" class="input-group">
-				<select required id="${config.id}" class="form-control chosen-select" style="width:350px;" name="${config.name}">
+				<select ${required} id="${config.id}" class="form-control chosen-select" style="width:350px;" name="${config.name}">
 					<option value="" selected disabled>${config.placeholder}</option>
 					${optionsHtml}
 				</select>
@@ -165,10 +168,12 @@ renderSelectField = async (config) => {
 };
 
 renderCheckboxField = async (config) => {
+	console.log(config);
+	let required = config.required === false? '' : 'required';
 	return `
 	<div class="mb-3 form-check">
 		<label for="${config.id}" class="form-check-label" >${config.label}</label>
-		<input required type="checkbox" id="${config.id}" class="form-check-input" name="${config.name}">
+		<input ${required} type="checkbox" id="${config.id}" class="form-check-input" name="${config.name}">
 	</div>`;
 };
 

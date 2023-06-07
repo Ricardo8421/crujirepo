@@ -2,7 +2,10 @@
  * Constantes para usar en profesores.php con modalForm.js
  */
 
-const url = "php/ajax/datosProfesores.php";
+const createUrl = "php/ajax/insertarProfesor.php";
+const readUrl = "php/ajax/datosProfesores.php";
+const updateUrl = "php/ajax/modificarProfesor_admin.php";
+const deleteUrl = "php/ajax/eliminarProfesor.php";
 const loadingRing = `
 	<tr><th colspan="8" class="text-center align-middle">
 		<div class="lds-dual-ring"></div>
@@ -112,13 +115,23 @@ createFields = () => {
 	return fields;
 };
 
+readFields = () => {
+	let fields = createFields();
+	for (let i = 0; i < fields.length; i++) {
+		const field = fields[i];
+		field.required = false;
+	}
+	return fields;
+}
+
 updateFields = () => {
 	let fields = crudFields();
 	fields[fields.length] = {
 		type: "checkbox",
 		label: "Congelar el acceso",
 		id: "inputAccesoCongelado",
-		name: "accesoCongelado"
+		name: "accesoCongelado",
+		required: false
 	}
 	return fields;
 }
@@ -131,7 +144,7 @@ const createConfig = {
 const readConfig = {
 	label: "Filtrando",
 	buttonText: "Filtrar",
-	fields: createFields()
+	fields: readFields()
 };
 const updateConfig = {
 	label: "Actualizando los datos",
