@@ -46,11 +46,11 @@ function createPdfProfesor($jsonData){
     }
 
     $jsonData = json_decode($jsonData);
-    $nombreCompleto = $jsonData->nombreCompleto;
-    $numeroEmpleado = $jsonData->numeroEmpleado;
-    $departamento = $jsonData->departamento;
-    $materias = $jsonData->materias;
-    $actividades = $jsonData->actividades;
+    $nombreCompleto = $jsonData->NombreCompleto;
+    $numeroEmpleado = $jsonData->Matricula;
+    $departamento = $jsonData->Departamento;
+    $materias = $jsonData->Materias;
+    $actividades = $jsonData->Actividades;
 
     $pdf = new PDF('P', 'mm', 'Letter');
     $pdf->AliasNbPages();
@@ -93,9 +93,8 @@ function createPdfProfesor($jsonData){
 
     // Iterar sobre las materias y encontrar la longitud máxima para el nombre y la academia
     foreach ($materias as $materia) {
-        $nombre = $materia->nombre;
-        $longitudNombre = strlen($nombre);
-        $longitudAcademia = strlen($materia->academia);
+        $longitudNombre = strlen($materia->Materia);
+        $longitudAcademia = strlen($materia->Academia);
 
         if ($longitudNombre > $maxLongitudNombre) {
             $maxLongitudNombre = $longitudNombre;
@@ -140,10 +139,10 @@ function createPdfProfesor($jsonData){
         $pdf->Cell($cellWidth[0], 10, $numeroMateria, 1, 0, 'C', true);
 
         // Mostrar el nombre de la materia en varias líneas
-        $pdf->Cell($cellWidth[1], 10, $materia->nombre, 1, 0, 'C', true);
+        $pdf->Cell($cellWidth[1], 10, $materia->Materia, 1, 0, 'C', true);
 
         // Mostrar el nombre de la academia
-        $pdf->Cell($cellWidth[2], 10, $materia->academia, 1, 1, 'C', true);
+        $pdf->Cell($cellWidth[2], 10, $materia->Academia, 1, 1, 'C', true);
 
         $numeroMateria++; // Incrementar el número de materia en cada iteración
     }
@@ -162,7 +161,7 @@ function createPdfProfesor($jsonData){
     $maxLongitudNombre = 0;
 
     foreach ($actividades as $actividad) {
-        $nombre = $actividad->nombre;
+        $nombre = $actividad->Actividad;
         $longitudNombre = strlen($nombre);
         if ($longitudNombre > $maxLongitudNombre) {
             $maxLongitudNombre = $longitudNombre;
@@ -199,10 +198,10 @@ function createPdfProfesor($jsonData){
         $pdf->Cell($cellWidth[0], 10, $numeroActividad, 1, 0, 'C', true);
 
         // Mostrar el nombre de la materia en varias líneas
-        $pdf->Cell($cellWidth[1], 10, $actividad->nombre, 1, 0, 'C', true);
+        $pdf->Cell($cellWidth[1], 10, $actividad->Actividad, 1, 0, 'C', true);
 
         // Mostrar el nombre de la academia
-        $pdf->Cell($cellWidth[2], 10, $actividad->horas, 1, 1, 'C', true);
+        $pdf->Cell($cellWidth[2], 10, $actividad->Horas, 1, 1, 'C', true);
 
         $numeroActividad++; // Incrementar el número de materia en cada iteración
     }

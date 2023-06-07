@@ -2,36 +2,36 @@
 require 'createPdf.php';
 
 $jsonData = array(
-    'nombreCompleto' => 'Jose Monroy',
-    'numeroEmpleado' => '123456',
-    'departamento' => 'Inteligencia Artificial',
-    'materias' => array(
+    'NombreCompleto' => 'Jose Monroy',
+    'Matricula' => '123456',
+    'Departamento' => 'Inteligencia Artificial',
+    'Materias' => array(
         'materia1' => array(
-            'nombre' => 'Materia 1',
-            'academia' => 'Academia 1',
+            'Materia' => 'Materia 1',
+            'Academia' => 'Academia 1',
         ),
         'materia2' => array(
-            'nombre' => 'Materia 2',
-            'academia' => 'Academia 2',
+            'Materia' => 'Materia 2',
+            'Academia' => 'Academia 2',
         ),
         'materia3' => array(
-            'nombre' => 'Materia 3',
-            'academia' => 'Academia 3',
+            'Materia' => 'Materia 3',
+            'Academia' => 'Academia 3',
         )
     ),
 
-    'actividades' => array(
+    'Actividades' => array(
         'actividad1' => array(
-            'nombre' => 'Actividad 1',
-            'horas' => '10',
+            'Actividad' => 'Actividad 1',
+            'Horas' => '10',
         ),
         'actividad2' => array(
-            'nombre' => 'Actividad 2',
-            'horas' => '20',
+            'Actividad' => 'Si la vaca vive entonces no esta muerta',
+            'Horas' => '20',
         ),
         'actividad3' => array(
-            'nombre' => 'Actividad 3',
-            'horas' => '30',
+            'Actividad' => 'Actividad 3',
+            'Horas' => '30',
         )
         )
 );
