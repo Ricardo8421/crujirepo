@@ -3,26 +3,45 @@ fetch("php/ajax/datosMaterias")
 	.then(data => {
 		var datos = data;
 		// Obtener la etiqueta select
-		var select = document.getElementById("academia");
-		var academias = [];
-		// Recorrer los objetos JSON
-		for (var i = 0; i < datos.length; i++) {
-			
-			
-			var opcion = document.createElement("option");
-			if (!academias.includes(datos[i].Academia)) {
-				academias.push(datos[i].Academia);
-				opcion.text = datos[i].Academia;
-				opcion.value = datos[i].Academia;
-				// Agregar la opción a la etiqueta select
-				select.add(opcion);
-			}
-		}
-		// Agregar el evento change a la etiqueta select
-		select.addEventListener("change", function () {
-			// Obtener la academia seleccionada
-			var academiaSeleccionada = this.value;
 
+		$(document).ready(function() {
+			// Manejar el cambio en el select
+				// Hacer una solicitud AJAX a tu script PHP
+				async function peticion(seleccionado) {
+					let response= await $.ajax({
+					url: "php/utils/academia_usuario.php",
+					method: "POST",
+					data: {},
+					success: function(resultado) {
+						//let rsp=JSON.parse(resultado);
+
+						
+function dividirString(inputString) {
+	// Ignorar los primeros 4 caracteres
+	inputString = inputString.slice(4);
+	
+	// Dividir el string en partes usando el delimitador "
+	var partes = inputString.split('"');
+	
+	// Filtrar las partes vacías
+	partes = partes.filter(function(parte) {
+	  return parte !== "";
+	});
+	
+	// Retornar el resultado como un array de strings
+	return partes;
+  }
+  
+						  
+						  // Ejemplo de uso:
+						  const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
+						  const resultArray = dividirString(inputString);
+						  console.log(resultArray[1]);
+								// Agregar el evento change a la etiqueta select
+		
+			// Obtener la academia seleccionada
+			var academiaSeleccionada = String(resultArray[1]);
+			//console.log(rsp);
 			// Filtrar los objetos del JSON por la academia seleccionada
 			var objetosFiltrados = datos.filter(function (objeto) {
 				return objeto.Academia == academiaSeleccionada;
@@ -85,6 +104,15 @@ fetch("php/ajax/datosMaterias")
 				//carta.appendChild(littlescript);
 			}
 
+		
+					}
+				});
+				if (response.error) {
+					$("#login_message").html(`<p class="text-danger">${response.error}</p>`);
+				} else {
+				}
+			}
+			peticion();
 		});
 		// Agregar un evento change a la casilla de verificación
 		materias_extra.addEventListener('change', function () {
