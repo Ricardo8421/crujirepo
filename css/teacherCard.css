@@ -5,6 +5,9 @@
     overflow:hidden;
     border-radius:8px;
     cursor:pointer;
+
+	border-radius: 2rem !important;
+	box-shadow: var(--shadow);
 }
 
 .card:before{

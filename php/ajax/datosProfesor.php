@@ -9,7 +9,8 @@ $usuario = $_SESSION["usuario"];
 
 $query = sprintf(
     "SELECT 
-		u.id AS IdUsuario, 
+		u.id AS IdUsuario,
+		u.login AS Usuario,
 		p.id AS Matricula, 
 		p.nombreCompleto AS NombreCompleto,
 		d.clave AS ClaveDepartamento,

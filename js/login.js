@@ -1,5 +1,8 @@
 $(document).ready(()=>{
-    $("#form_button").on('click', login);
+    $("#login_form").on('submit', (e)=>{
+		e.preventDefault();
+		login();
+	});
 })
 
 async function login() {
@@ -12,7 +15,6 @@ async function login() {
     if (response.error) {
         $("#login_message").html(`<p class="text-danger">${response.error}</p>`);
     } else {
-		console.log("redirecting to " + response.redirectTo);
         $(location).attr('href', response.redirectTo);
     }
 }
