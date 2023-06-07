@@ -68,6 +68,7 @@ addClickListeners = () => {
 	$(".btn-read").on("click", async function () {
 		renderForm(readConfig);
 		submitForm(readUrl);
+		read(retrieveData);
 	});
 	$(".btn-update").on("click", async function () {
 		await renderForm(updateConfig);
