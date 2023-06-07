@@ -75,10 +75,13 @@ function createPdfProfesor($jsonData){
     $pdf->Cell(0, 10, $departamento, 0, 1, 'L');
 
     // Línea horizontal
+    $pdf->SetDrawColor(27, 99, 149); // Establecer color de línea en azul
+    $pdf->SetLineWidth(1); // Establecer grosor de línea en 1.5
     $pdf->Cell(0, 0, '', 'T');
 
     // Encabezado de Materias seleccionadas
     $pdf->Ln(10);
+    $pdf->SetLineWidth(0);
     $pdf->SetFont('Arial', 'B', 14);
     $pdf->Cell(0, 10, 'Materias seleccionadas', 0, 1, 'C');
     
@@ -106,9 +109,6 @@ function createPdfProfesor($jsonData){
     }
 
     $numeroMateria = 1; // Variable para almacenar el número de materia
-
-    // Variables para definir la posición y el tamaño de las celdas
-    // Iterar sobre las materias y mostrar los datos actualizados en la tabla
     
     $celdaMaterias = $maxLongitudNombre * 2.5;
     $celdaAcademia = $maxLongitudAcademia * 2.5;
@@ -207,7 +207,8 @@ function createPdfProfesor($jsonData){
     }
 
     // Salida del PDF
-    $pdf->Output('datosIngresados.pdf', 'D'); // Descargar el PDF con el nombre "archivo.pdf"
+    //$pdf->Output('datosIngresados.pdf', 'D'); // Descargar el PDF con el nombre "archivo.pdf"
+    $pdf->Output('datosIngresados.pdf', 'I'); // Mostrar el PDF en el navegador
 }
 
 ?>
