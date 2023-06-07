@@ -1,5 +1,6 @@
 <?php
-require 'createPdfProfesor.php';
+//require 'createPdfProfesor.php';
+require 'createPdfAcademia.php';
 
 $jsonData = array(
     'NombreCompleto' => 'Jose Monroy',
@@ -36,10 +37,174 @@ $jsonData = array(
         )
 );
 
+$jsonData2 = array(
+    'Academia' => 'Ciencias Computacionales',
+    'Materias' => array(
+        'materia1' => array(
+            'Materia' => 'Programacion Basica',
+            'Profesores' => array(
+                'profesor1' => array(
+                    'NombreCompleto' => 'Jose Luis Monroy',
+                    'Matricula' => '123456',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor2' => array(
+                    'NombreCompleto' => 'Maria Perez',
+                    'Matricula' => '654321',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor3' => array(
+                    'NombreCompleto' => 'Juan Lopez',
+                    'Matricula' => '456789',
+                    'Departamento' => 'Computacion Grafica',
+                )
+            )
+        ),
+        'materia2' => array(
+            'Materia' => 'Programacion Orientada a Objetos y Patrones de Diseno',
+            'Profesores' => array(
+                'profesor1' => array(
+                    'NombreCompleto' => 'Jose Monroy',
+                    'Matricula' => '123456',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor3' => array(
+                    'NombreCompleto' => 'Juan Lopez',
+                    'Matricula' => '456789',
+                    'Departamento' => 'Computacion Grafica',
+                )
+            )
+        ),
+        'materia3' => array(
+            'Materia' => 'Estructura de Datos',
+            'Profesores' => array(
+                'profesor1' => array(
+                    'NombreCompleto' => 'Jose Monroy',
+                    'Matricula' => '123456',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor2' => array(
+                    'NombreCompleto' => 'Maria Perez',
+                    'Matricula' => '654321',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor3' => array(
+                    'NombreCompleto' => 'Juan Lopez',
+                    'Matricula' => '456789',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor4' => array(
+                    'NombreCompleto' => 'Pedro Sanchez',
+                    'Matricula' => '987654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor5' => array(
+                    'NombreCompleto' => 'Maria Lopez',
+                    'Matricula' => '456123',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor6' => array(
+                    'NombreCompleto' => 'Juan Perez',
+                    'Matricula' => '789456',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor7' => array(
+                    'NombreCompleto' => 'Pedro Lopez',
+                    'Matricula' => '321654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+            )
+            ),
+        'materia4' => array(
+            'Materia' => 'Inteligencia Artificial',
+            'Profesores' => array (
+                'profesor1' => array(
+                    'NombreCompleto' => 'Jose Monroy',
+                    'Matricula' => '123456',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor2' => array(
+                    'NombreCompleto' => 'Maria Perez',
+                    'Matricula' => '654321',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor3' => array(
+                    'NombreCompleto' => 'Juan Lopez',
+                    'Matricula' => '456789',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor4' => array(
+                    'NombreCompleto' => 'Pedro Sanchez',
+                    'Matricula' => '987654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor5' => array(
+                    'NombreCompleto' => 'Maria Lopez',
+                    'Matricula' => '456123',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor6' => array(
+                    'NombreCompleto' => 'Juan Perez',
+                    'Matricula' => '789456',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor7' => array(
+                    'NombreCompleto' => 'Pedro Lopez',
+                    'Matricula' => '321654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+            )
+            ),
+        'materia5' => array(
+            'Materia' => 'Computacion Grafica',
+            'Profesores' => array(
+                'profesor1' => array(
+                    'NombreCompleto' => 'Jose Monroy',
+                    'Matricula' => '123456',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor2' => array(
+                    'NombreCompleto' => 'Maria Perez',
+                    'Matricula' => '654321',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor3' => array(
+                    'NombreCompleto' => 'Juan Lopez',
+                    'Matricula' => '456789',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor4' => array(
+                    'NombreCompleto' => 'Pedro Sanchez',
+                    'Matricula' => '987654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+                'profesor5' => array(
+                    'NombreCompleto' => 'Maria Lopez',
+                    'Matricula' => '456123',
+                    'Departamento' => 'Inteligencia Artificial',
+                ),
+                'profesor6' => array(
+                    'NombreCompleto' => 'Juan Perez',
+                    'Matricula' => '789456',
+                    'Departamento' => 'Computacion Grafica',
+                ),
+                'profesor7' => array(
+                    'NombreCompleto' => 'Pedro Lopez',
+                    'Matricula' => '321654',
+                    'Departamento' => 'Sistemas Distribuidos',
+                ),
+            )
+            ),
+
+    )
+);
+
 //manda llamar a la funcion json_encode para convertir el array en un json
-$json = json_encode($jsonData);
+//$json = json_encode($jsonData);
+$json = json_encode($jsonData2);
 
 //manda llamar a la funcion createPdf qye se encuentra en createPdf.php y le pasa el json
-createPdfProfesor($json);
+//reatePdfProfesor($json);
+createPdfAcademia($json);
 
 ?>
