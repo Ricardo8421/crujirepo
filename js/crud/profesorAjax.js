@@ -2,7 +2,10 @@
  * Constantes para usar en profesores.php con modalForm.js
  */
 
-const url = "php/ajax/datosProfesor.php";
+const createUrl = "php/ajax/insertarProfesor.php";
+const readUrl = "php/ajax/datosProfesores.php";
+const updateUrl = "php/ajax/modificarProfesor_admin.php";
+const deleteUrl = "php/ajax/eliminarProfesor.php";
 const loadingRing = `<div class="text-center align-middle"><div class="lds-dual-ring"></div></div>`;
 
 const generateRowHTML = (profe) => `

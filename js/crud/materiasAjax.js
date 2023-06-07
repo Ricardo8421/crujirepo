@@ -2,7 +2,11 @@
  * Constantes para usar en materias.php con modalForm.js
  */
 
-const url = "php/ajax/datosMaterias.php";
+const createUrl = "php/ajax/insertarMateria.php";
+const readUrl = "php/ajax/datosMaterias.php";
+const updateUrl = "php/ajax/modificarMateria.php";
+const deleteUrl = "php/ajax/eliminarMateria.php";
+
 const loadingRing = `
 	<tr><th colspan="8" class="text-center align-middle">
 		<div class="lds-dual-ring"></div>

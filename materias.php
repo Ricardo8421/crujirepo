@@ -47,6 +47,7 @@ if (!is_null($redirect)) {
 					<div class="modal-body">
 						<fieldset id="generatedForm">
 						</fieldset>
+						<small class="text-danger" id="crudMsg"></small>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
