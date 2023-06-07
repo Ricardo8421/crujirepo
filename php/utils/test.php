@@ -1,5 +1,5 @@
 <?php
-require 'createPdf.php';
+require 'createPdfProfesor.php';
 
 $jsonData = array(
     'NombreCompleto' => 'Jose Monroy',
