@@ -25,6 +25,7 @@ if (!is_null($redirect)) {
     <link rel="stylesheet" href="css/formulario_styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/a0a5eb5331.js" crossorigin="anonymous"></script>
 
 </head>
@@ -51,26 +52,9 @@ if (!is_null($redirect)) {
             <form method="post" action="FormularioDatosEnvio.php" class="formulario flex flex--column" autocomplete="off" id="form">
                 <section class="bg-lighter-escom py-5 carta d-flex" style="background-color:#fff" ;>
 
-                    <h4 class="my-4">Selección de academia</h4>
+                   
                     <div class=" container container-formulario">
-                        <label for="academia">Acdemia:</label>
-                        <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="academia">
-                            <?php
-                            $result = $mysql->query("SELECT nombre FROM academia");
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    $nombre = $row["nombre"];
-                            ?>
-                                    <option value="<?php echo $nombre; ?>">
-                                        <?php echo $nombre; ?>
-                                    </option>
-                            <?php
-                                }
-                            }
-                            ?>
-                        </select>
-                    </div>
-                </section>
+                        
                 <section class="bg-lighter-escom py-5 carta">
                     <div class="container" id="carta">
                         <h2>Materias</h2>
@@ -83,7 +67,6 @@ if (!is_null($redirect)) {
                     </div>
                     <label for="materias_extra">¿Desea registra mas materias?</label>
                     <input type="checkbox" id="materias_extra" name="materias_extra">
-
 
                     <label for="materias_pp" id="materias_pp_label" style="display: none;"> </label>
 
@@ -106,10 +89,24 @@ if (!is_null($redirect)) {
                 <div class="form-group">
                     <label for="actividad1">Actividad 1</label><br>
                     <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="actividad" name="actividad1" required>
-                        <option value="1">Prepearacion de clases</option>
+                    <option value=""> Seleccionar actividad</option>
+                        <?php
+                        $result = $mysql->query("SELECT nombre,id  FROM actividad where horasMinimas>0");
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                $nombre = $row["nombre"];
+                                $id = $row["id"];
+                        ?>
+                                <option value="<?php echo $id; ?>">
+                                    <?php echo $nombre; ?>
+                                </option>
+                        <?php
+                            }
+                        }
+                        ?>
                     </select>
                     <label for="horas_actividad1">Horas dedicadas a la actividad 1</label>
-                    <input type="number" class="form-control border-primary" id="horas_actividad1" name="horas_actividad1" min="0" max="22" required>
+                    <input type="number" class="form-control border-primary" id="horas_actividad1" name="horas_actividad1" min="1" max="22" required>
                     <div id="horas_actividad1-error" class="error-message" style="color:red"></div>
                     <small class="form-text text-muted">Ingrese el número de horas que dedicará a la actividad
                         seleccionada.
@@ -120,10 +117,24 @@ if (!is_null($redirect)) {
                     <label for="actividad2">Actividad 2</label><br>
 
                     <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="actividad" name="actividad2" required>
-                        <option value="2">Atención a alumnos</option>
+                    <option value=""> Seleccionar actividad</option>
+                        <?php
+                        $result = $mysql->query("SELECT nombre,id  FROM actividad where horasMinimas>0");
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                $nombre = $row["nombre"];
+                                $id = $row["id"];
+                        ?>
+                                <option value="<?php echo $id; ?>">
+                                    <?php echo $nombre; ?>
+                                </option>
+                        <?php
+                            }
+                        }
+                        ?>
                     </select>
                     <label for="horas_actividad2">Horas dedicadas a la actividad 2</label>
-                    <input type="number" class="form-control border-primary" id="horas_actividad2" name="horas_actividad2" min="0" max="22" required>
+                    <input type="number" class="form-control border-primary" id="horas_actividad2" name="horas_actividad2" min="1" max="22" required>
                     <div id="horas_actividad2-error" class="error-message" style="color:red"></div>
 
                 </div>
@@ -132,7 +143,7 @@ if (!is_null($redirect)) {
                     <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="actividad" name="actividad3">
                         <option value=""> Seleccionar actividad</option>
                         <?php
-                        $result = $mysql->query("SELECT nombre,id  FROM actividad");
+                        $result = $mysql->query("SELECT nombre,id  FROM actividad where horasMinimas=0");
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 $nombre = $row["nombre"];
@@ -163,7 +174,7 @@ if (!is_null($redirect)) {
                     <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="actividad" name="actividad4">
                         <option value=""> Seleccionar actividad</option>
                         <?php
-                        $result = $mysql->query("SELECT nombre,id  FROM actividad");
+                        $result = $mysql->query("SELECT nombre,id  FROM actividad where horasMinimas=0");
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 $nombre = $row["nombre"];
@@ -194,7 +205,7 @@ if (!is_null($redirect)) {
                     <select class="form-control-dark dropdown-menu dropdown-menu-dark d-block position-static mx-0 border-0 shadow w-220px " aria-label="Default select example" style="background-color: var(--background-color); color: var( --contrast-dark-color);" id="actividad" name="actividad5">
                         <option value="">Seleccionar actividad</option>
                         <?php
-                        $result = $mysql->query("SELECT nombre,id  FROM actividad");
+                        $result = $mysql->query("SELECT nombre,id  FROM actividad where horasMinimas=0");
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 $nombre = $row["nombre"];
