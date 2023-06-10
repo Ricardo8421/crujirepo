@@ -36,7 +36,7 @@ function dividirString(inputString) {
 						  // Ejemplo de uso:
 						  const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
 						  const resultArray = dividirString(inputString);
-						  console.log(resultArray[1]);
+						  //console.log(resultArray[1]);
 								// Agregar el evento change a la etiqueta select
 		
 			// Obtener la academia seleccionada
@@ -81,7 +81,11 @@ function dividirString(inputString) {
 				selectMaterias.style = "background-color: var(--background-color); color: var( --contrast-dark-color);";
 				selectMaterias.id = "materia";
 				selectMaterias.name =(nombre);
-
+				if (i == 1) {selectMaterias.required = true;}
+				var def=document.createElement("option");
+				def.value="";
+				def.text="Seleccionar materia";
+				selectMaterias.add(def);
 				// Recorrer los objetos filtrados y agregar opciones al nuevo select
 				objetosFiltrados.forEach(function (objeto) {
 					// Verificar si la materia del objeto no está en el select de materias
