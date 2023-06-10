@@ -4,8 +4,15 @@ include "../utils/conexion.php";
 header('Content-type: application/json; charset=UTF-8');
 
 $query =
-    "SELECT m.clave, m.nombre AS materia, a.nombre AS academia, m.semestre, m.plan, m.carrera 
-    FROM materia m, academia a 
+    "SELECT
+		m.clave,
+		m.nombre AS materia,
+		a.id AS IdAcademia,
+		a.nombre AS academia,
+		m.semestre,
+		m.plan,
+		m.carrera
+    FROM materia m, academia a
     WHERE a.id = m.academia
 	ORDER BY m.carrera, m.plan, m.semestre, materia";
 

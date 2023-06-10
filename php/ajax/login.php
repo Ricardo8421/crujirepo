@@ -11,8 +11,8 @@
     $json["permiso"] = $permiso;
 
     if ($permiso == 0) {
-        $json["error"] = $_POST["usuario"];
-        $json["redirectTo"] = $_POST["contrasena"];
+        $json["error"] = "Usuario o contraseña incorrectos";
+        $json["redirectTo"] = "";
         echo json_encode($json);
     } else {
         $redirect = getRedirect($permiso);
