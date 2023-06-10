@@ -8,10 +8,8 @@
  *
  * url : string
  * 		Url de donde se va a conseguir el json con los datos
- * topic : string
- * 		Cadena que representa la clase de objeto con la que se trata
- * columns : int
- * 		Cantidad de columnas que tiene la tabla
+ * loadingRing : string
+ * 		Html que inserta el símbolo de cargando mientras recibe los datos
  * generateRowHTML (objeto) : string
  * 		Funcion que regresa el html de cada fila de la tabla.
  * 		El objeto es un elemento que se va a obtener del json
@@ -20,33 +18,67 @@
  * el atributo modal-form-target que contiene la id del input para que este script pueda
  * remplazar los datos en el formulario
  *
+ * Y se necesitan los objetos createConfig, readConfig, updateConfig, y deleteConfig
+ * que son objetos que marcan la configuración de los campos del
+ *
  */
 
-const loadingRing = 
-	`<tr><th colspan="${columns}" class="text-center align-middle">
-		<div class="lds-dual-ring"></div>
-	</th></tr>`
+// Funcionalidad general
 
 const retrieveData = async () => {
-	return await $.ajax({ url: url });
-}
+	return await $.ajax({ url: readUrl });
+};
 
 $(document).ready(() => {
-	render(retrieveData);
+	read(retrieveData);
 });
 
+submitForm = (url) => {
+	let form = $("#crudForm");
+
+	console.log(form);
+
+	form.off();
+	
+	form.on('submit', async (event) => {
+		event.preventDefault();
+
+		let response = await $.ajax({
+			url: url,
+			type: "POST",
+			data: form.serialize()
+		});
+
+		console.log(response);
+
+		if (response.success) {
+			$('#crudModal').modal('hide')
+			read(retrieveData);
+		} else {
+			renderMsg(response.msg);
+		}
+	});
+}
+
 addClickListeners = () => {
-	$(".btn-create").on("click", function () {
-		createButton($(".btn-update").first().parent().parent());
+	$(".btn-create").on("click", async function () {
+		renderForm(createConfig);
+		submitForm(createUrl);
 	});
-	$(".btn-read").on("click", function () {
-		readButton($(".btn-update").first().parent().parent());
+	$(".btn-read").on("click", async function () {
+		renderForm(readConfig);
+		submitForm(readUrl);
+		read(retrieveData);
 	});
-	$(".btn-update").on("click", function () {
-		updateButton($(this).parent().parent());
+	$(".btn-update").on("click", async function () {
+		await renderForm(updateConfig);
+		renderFormData($(this).parent().parent());
+		submitForm(updateUrl);
 	});
-	$(".btn-delete").on("click", function () {
-		deleteButton($(this).parent().parent());
+	$(".btn-delete").on("click", async function () {
+		await renderForm(deleteConfig);
+		renderFormData($(this).parent().parent());
+		submitForm(deleteUrl);
 	});
 };
 
@@ -57,7 +89,7 @@ addClickListeners = () => {
  * @param getData Promesa que regresará la lista de datos
  *
  */
-render = async (getData) => {
+read = async (getData) => {
 	// Colocar el símbolo de cargando
 	$("#generatedContainer").html(loadingRing);
 
@@ -74,132 +106,130 @@ render = async (getData) => {
 
 	// Agregar listeners a los botones de edicion
 	addClickListeners();
+};
+
+// Renderers
+
+renderTextField = async (config) => {
+	let div = "";
+	let disabled = "";
+	let type = "text";
+	let required = config.required === false? '' : 'required';
+
+	switch (config.type) {
+		case "hidden":
+			type = "hidden";
+			break;
+		case "disabled":
+			disabled = "readonly";
+		default:
+			div = `<div class="mb-3">
+						<label for="${config.id}" class="form-label">${config.label}</label>`;
+	}
+
+	return `
+		${div}
+			<input ${required} type="${type}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}" ${disabled}>
+		</div>`;
+};
+
+renderNumberField = async (config) => {
+	let required = config.required === false? '' : 'required';
+	return `
+		<div class="mb-3">
+			<label for="${config.id}" class="form-label">${config.label}</label>
+			<input ${required} type="number" min="${config.min}" max="${config.max}" id="${config.id}" class="form-control" placeholder="${config.placeholder}" name="${config.name}">
+		</div>`;
+};
+
+renderSelectField = async (config) => {
+	let options = await config.getOptions();
+	let optionsHtml = "";
+	let required = config.required === false? '' : 'required';
+
+	for (let i = 0; i < options.length; i++) {
+		const option = options[i];
+		optionsHtml += `
+		<option value="${option.value}">${option.text}</option>`;
+	}
+
+	return `
+	<div class="mb-3">
+		<div class="form-group">
+			<label for="${config.id}" class="form-label">${config.label}</label>
+			<div id="dropdown${config.id}" class="input-group">
+				<select ${required} id="${config.id}" class="form-control chosen-select" style="width:350px;" name="${config.name}">
+					<option value="" selected disabled>${config.placeholder}</option>
+					${optionsHtml}
+				</select>
+			</div>
+		</div>
+	</div>`;
+};
+
+renderCheckboxField = async (config) => {
+	console.log(config);
+	let required = config.required === false? '' : 'required';
+	return `
+	<div class="mb-3 form-check">
+		<label for="${config.id}" class="form-check-label" >${config.label}</label>
+		<input ${required} type="checkbox" id="${config.id}" class="form-check-input" name="${config.name}">
+	</div>`;
+};
+
+renderMsg = async (msg) => {
+	$('#crudMsg').text(msg);
 }
 
-/**
- *
- * Limpia los datos del formulario
- *
- * @param example Es una fila que sirve de ejemplo para obtener los nombres y las inputs.
- * 		Se recomienda usar la primera fila
- *
- */
-createButton = (example) => {
-	values = $(example).children("[modal-form-target]");
+renderForm = async (config) => {
+	$("#crudModalLabel").text(config.label);
+	$("#crudSubmitButton").text(config.buttonText);
 
-	$("#editDataLabel").text(`Agregando nuevo ${topic}`);
-	$("#sumbitCrud").text(`Registrar ${topic}`);
+	$("#generatedForm").html(loadingRing);
 
-	for (let i = 0; i < values.length; i++) {
-		const val = $(values[i]);
+	let html = "";
 
-		let target = val.attr("modal-form-target");
-		let name = $(`#${target}`).attr("name");
+	renders = {
+		text: renderTextField,
+		hidden: renderTextField,
+		disabled: renderTextField,
+		select: renderSelectField,
+		number: renderNumberField,
+		checkbox: renderCheckboxField,
+	};
 
-		let label = $(`label[for=${target}]`);
-		if (label.length > 0)
-			label.text(name.charAt(0).toUpperCase() + name.slice(1));
-
-		let text = $(`input#${target}[type=text]`);
-		if (text.length > 0) text.val("");
-
-		let select = $(`select#${target}`);
-		if (select.length > 0) select.children().first().prop("selected", true);
-
-		let checkbox = $(`input#${target}[type=checkbox]`);
-		if (checkbox.length > 0) checkbox.show().prop("checked", true);
+	for (let i = 0; i < config.fields.length; i++) {
+		const field = config.fields[i];
+		render = renders[field.type];
+		html += await render(field);
 	}
+
+	$("#generatedForm").html(html);
 };
 
-/**
- *
- * Reformatea el formulario para parecer que filtra.
- * NO FUNCIONA CON CHECKBOXES
- *
- * @param example Es una fila que sirve de ejemplo para obtener los nombres y las inputs.
- * 		Se recomienda usar la primera fila
- *
- */
-readButton = (example) => {
-	values = $(example).children("[modal-form-target]");
-
-	$("#editDataLabel").text("Filtrando por");
-	$("#sumbitCrud").text("Filtrar");
-
-	for (let i = 0; i < values.length; i++) {
-		const val = $(values[i]);
-
-		let target = val.attr("modal-form-target");
-		let name = $(`#${target}`).attr("name");
-
-		let label = $(`label[for=${target}]`);
-
-		let text = $(`input#${target}[type=text]`);
-		if (text.length > 0) {
-			if (label.length > 0) label.text("Buscar por " + name);
-			text.val("");
-		}
-
-		let select = $(`select#${target}`);
-		if (select.length > 0) {
-			if (label.length > 0) label.text("Filtrar por " + name);
-			select.children().first().prop("selected", true);
-		}
-
-		let checkbox = $(`input#${target}[type=checkbox]`);
-		if (checkbox.length > 0) {
-			if (label.length > 0) label.text("");
-			checkbox.hide();
-		}
-	}
-};
-
-/**
- *
- * Ingresa los datos de la fila en el formulario
- *
- * @param row La fila de donde obtiene los datos
- *
- */
-updateButton = (row) => {
+renderFormData = async (row) => {
 	values = $(row).children("[modal-form-target]");
 
-	$("#editDataLabel").text(`Editando ${topic}`);
-	$("#sumbitCrud").text("Guardar cambios");
-
 	for (let i = 0; i < values.length; i++) {
 		const val = $(values[i]);
 
-		let target = val.attr("modal-form-target");
-		let name = $(`#${target}`).attr("name");
+		let name = val.attr("modal-form-target");
 
-		let label = $(`label[for=${target}]`);
-		if (label.length > 0)
-			label.text(name.charAt(0).toUpperCase() + name.slice(1));
-
-		let text = $(`input#${target}[type=text]`);
+		let text = $(`
+			input[name=${name}][type=text],
+			input[name=${name}][type=hidden],
+			input[name=${name}][type=number]
+		`);
 		if (text.length > 0) text.val(val.text());
 
-		let select = $(`select#${target}`);
+		let select = $(`select[name=${name}]`);
 		if (select.length > 0)
 			select
 				.children(`option:contains("${val.text()}")`)
 				.prop("selected", true);
 
-		let checkbox = $(`input#${target}[type=checkbox]`);
+		let checkbox = $(`input[name=${name}][type=checkbox]`);
 		if (checkbox.length > 0)
 			checkbox.show().prop("checked", val.text() == "true");
 	}
-};
-
-/**
- *
- * Ingresa la id de la fila en el formulario
- *
- * @param row La fila de donde obtiene la id. Debe estar en el primer hijo
- *
- */
-deleteButton = (row) => {
-	id = $(row).children().first().text();
-	$("#deleteConfirmationInput").val(id);
 };

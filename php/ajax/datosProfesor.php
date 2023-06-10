@@ -3,19 +3,25 @@ include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
 
-$query =
+session_start();    
+
+$usuario = $_SESSION["usuario"];
+
+$query = sprintf(
     "SELECT 
-		u.id AS IdUsuario, 
+		u.id AS IdUsuario,
+		u.login AS Usuario,
 		p.id AS Matricula, 
 		p.nombreCompleto AS NombreCompleto,
 		d.clave AS ClaveDepartamento,
 		d.nombre AS Departamento,
-		p.accesoCongelado AS AccesoCongelado,
-        COUNT(arg.idActividad) > 1 AS HaContestado
-    FROM (profesor p LEFT OUTER JOIN actividadregistrada arg ON p.id=arg.idProfesor), usuario u, departamento d
-    WHERE p.idUsuario = u.id AND p.departamento = d.clave
-    GROUP BY Matricula
-    ORDER BY NombreCompleto";
+		p.accesoCongelado AS AccesoCongelado
+    FROM profesor p, usuario u, departamento d
+    WHERE p.idUsuario = u.id AND p.departamento = d.clave AND
+        u.login = '%s'
+    ORDER BY NombreCompleto",
+    $mysql->real_escape_string($usuario)
+);
 
 $result = $mysql->query($query);
 

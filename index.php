@@ -47,7 +47,7 @@ if ($accessLevel != 0) {
 							<div class="mb-3" id="login_message">
 								<p class="text-secondary">Al entrar a este sitio acepta el uso de cookies</p>
 							</div>
-							<button type="button" class="btn btn-primary" id="form_button">Ingresar</button>
+							<button type="sumbit" class="btn btn-primary" id="form_button">Ingresar</button>
 						</form>
 					</div>
 				</div>

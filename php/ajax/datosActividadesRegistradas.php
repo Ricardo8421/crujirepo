@@ -5,12 +5,29 @@ header('Content-type: application/json; charset=UTF-8');
 
 if(isset($_POST['usuario'])){
     $usuario = $_POST['usuario'];
-    $query = sprintf("SELECT m.nombre AS Materia, a.nombre AS Academia FROM materia m, academia a, materiaregistradas mr, profesor p WHERE p.id='%s' AND p.id=mr.idProfesor AND mr.idMateria=m.clave AND m.academia=a.id;",
+    $query = sprintf(
+		"SELECT 
+			m.nombre AS Materia,
+			a.nombre AS Academia
+		FROM materia m, academia a, materiaregistrada mr, profesor p
+		WHERE
+			p.id = mr.idProfesor AND
+			mr.idMateria = m.clave AND
+			m.academia = a.id AND
+			p.id = '%s'",
         $mysql->real_escape_string($usuario)
     );
     
     $result = $mysql->query($query);
-    $query = sprintf("SELECT a.nombre AS Actividad, arg.cantidadHoras AS Horas FROM profesor p, actividadregistrada arg, actividad a WHERE p.id=arg.idProfesor AND arg.idActividad=a.id AND p.id='%s';",
+    $query = sprintf(
+		"SELECT
+			a.nombre AS Actividad,
+			arg.cantidadHoras AS Horas
+		FROM profesor p, actividadregistrada arg, actividad a
+		WHERE
+			p.id = arg.idProfesor AND
+			arg.idActividad = a.id AND
+			p.id = '%s'",
         $mysql->real_escape_string($usuario)
     );
     $resulta2 = $mysql->query($query);

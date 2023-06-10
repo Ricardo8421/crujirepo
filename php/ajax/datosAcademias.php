@@ -3,13 +3,15 @@ include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
 
-$query =
+$query = 
 	"SELECT
-		id AS Id,
-		nombre AS Actividad,
-		horasMinimas AS HorasMinimas
-	FROM actividad
-	ORDER BY Actividad";
+		a.id AS Id,
+		d.clave AS ClaveDepartamento,
+		d.nombre AS Departamento,
+		a.nombre AS Academia
+	FROM academia a, departamento d
+	WHERE a.departamento = d.clave
+	ORDER BY Academia";
 
 $result = $mysql->query($query);
 

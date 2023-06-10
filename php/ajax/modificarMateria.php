@@ -12,7 +12,7 @@ if(isset($_POST["clave"]) && isset($_POST["nombre"]) && isset($_POST["semestre"]
     $semestre = $_POST["semestre"];
     $idAcademia = $_POST["academia"];
     $plan = $_POST["plan"];
-    $carrera = $_POST["carrera"];   
+    $carrera = $_POST["carrera"];
 }else{
     $b=false;
 }
@@ -43,16 +43,17 @@ if($carrera != "A" && $carrera != "B" && $carrera != "C"){
 }
 
 if($b){
-    $query = sprintf("INSERT INTO Materia (clave, nombre, semestre, academia, plan, carrera) VALUES ('%s', '%s', %d, %d, %d, '%s')",
-        $mysql->real_escape_string($clave),
+    $query = sprintf("UPDATE materia SET nombre='%s', semestre=%d, academia=%d, plan=%d, carrera='%s' WHERE clave='%s'",
         $mysql->real_escape_string($nombre),
         $mysql->real_escape_string($semestre),
         $mysql->real_escape_string($idAcademia),
         $mysql->real_escape_string($plan),
-        $mysql->real_escape_string($carrera)
+        $mysql->real_escape_string($carrera),
+        $mysql->real_escape_string($clave)
     );
-    if($mysql->query($query)){
-        $r["resultado"] = "Registro correcto";
+    $mysql->query($query);
+    if($mysql->affected_rows > 0){
+        $r["resultado"] = "Modificación exitosa";
     }else{
         $b = false;
     }
