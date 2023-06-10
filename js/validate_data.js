@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var seleccionado = $(this).val();
 		let resultado=peticion(seleccionado);
 		
-		console.log((resultado.catch()));
+		
 		// Hacer una solicitud AJAX a tu script PHP
 		async function peticion(seleccionado) {
 			let response= await $.ajax({
@@ -35,7 +35,6 @@ var hipervinculo = 'FormularioDatosEnvio.php';
 form.addEventListener('submit', function (event) {
 event.preventDefault(); // Evita el envío del formulario por defecto
  // Llamar a la función para hacer la consulta
-console.log("enyrasa");
  
 	let horas_actividad1 = parseInt(document.getElementById('horas_actividad1').value);
 	let horas_actividad2 = parseInt(document.getElementById('horas_actividad2').value);
@@ -71,11 +70,34 @@ console.log("enyrasa");
 		if (completado == 0) {
 			completado = completado + 1;
 			// Por ejemplo, puedes mostrar un mensaje de éxito
+			$(document).ready(function() {
+				// Manejar el cambio en el select
+				
+				
+					
+					// Hacer una solicitud AJAX a tu script PHP
+					async function registro(seleccionado) {
+						let response= await $.ajax({
+						url: "FormularioDatosEnvio.php",
+						method: "POST",
+						data: { valor: $("#form").serialize() 
+					},
+						success: function(resultado) {					
+							window.location.href = hipervinculo;
+						}
+					});
+					if (response.error) {
+						$("#login_message").html(`<p class="text-danger">${response.error}</p>`);
+					} else {
+					}
+				}
+				registro();
+			});
 			const successMessage = document.createElement('div');
 			successMessage.classList.add('alert', 'alert-success');
 			successMessage.textContent = 'Datos enviados exitosamente';
-			form.appendChild(successMessage);
-			window.location.href = hipervinculo;
+			form.appendChild(successMessage);	
+			
 		}
 	}
 });
