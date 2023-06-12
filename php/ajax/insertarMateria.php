@@ -28,10 +28,8 @@ if($semestre<1 || $semestre>8){
 $query = sprintf("SELECT id FROM academia WHERE id=%d",
     $mysql->real_escape_string($idAcademia));
 $a = $mysql->query($query);
-if($a->num_rows>0){
-    $b = true;
-}else{
-    $b=false;
+if($a->num_rows==0){
+    $b = false;
 }
 
 if($plan<1999 || $plan>2099){
