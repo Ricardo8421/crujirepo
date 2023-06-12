@@ -1,16 +1,14 @@
 function obtenerDatos() {
-    console.log("Obteniendo datos...");
     // Realizar una petición AJAX al archivo.php para obtener el JSON
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
-        var json = this.responseText;
-  
+        var json = this.responseText;   
         // Redireccionar a createPdf.php con el JSON como parámetro
         window.location = '/crujirepo/php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
       }
     };
-    xhttp.open("GET", "test.php", true);
+    xhttp.open("GET", "php/ajax/datosProfesor.php", true);
     xhttp.send();
   }
   

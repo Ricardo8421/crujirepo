@@ -51,15 +51,17 @@ $data = json_decode($json, true);
     $jsonData = json_decode($json,true);
     $jsonData = $jsonData[0];
     $nombreCompleto = $jsonData['NombreCompleto'];
+    $nombreCompleto = utf8_decode($nombreCompleto);
     $numeroEmpleado = $jsonData['Matricula'];
     $departamento = $jsonData['Departamento'];
+    $departamento = utf8_decode($departamento);
 
     $pdf = new PDF('P', 'mm', 'Letter');
     $pdf->AliasNbPages();
     $pdf->AddPage();
 
     // Definir fuentes
-    $pdf->SetFont('Arial', '', 12);
+    $pdf->SetFont('Arial', '', 12, 'UTF-8');
 
     // Tabla de información personal
     $paddingTop = 20; // Espacio superior deseado
