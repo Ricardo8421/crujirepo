@@ -49,7 +49,6 @@ $data = json_decode($json, true);
     }
 
     $jsonData = json_decode($json,true);
-    $jsonData = $jsonData[0];
     $nombreCompleto = $jsonData['NombreCompleto'];
     $nombreCompleto = utf8_decode($nombreCompleto);
     $numeroEmpleado = $jsonData['Matricula'];
