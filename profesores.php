@@ -95,16 +95,16 @@ if (!is_null($redirect)) {
 				<div class="card shadow-2-strong ">
 					<div class="table-responsive">
 						<table class="table table-borderless mb-0">
-							<thead class="bg-dark-escom text-light">
+							<thead>
 								<tr>
-									<th class="text-center align-middle">MATRICULA</th>
-									<th class="text-center align-middle">NOMBRE COMPLETO</th>
-									<th class="text-center align-middle">DEPARTAMENTO</th>
-									<th class="text-center align-middle">ACCESO</th>
-									<th class="text-center align-middle">PDF</th>
-									<th class="text-center align-middle">RESTABLECER<br>CUESTIONARIO</th>
-									<th class="text-center align-middle">EDITAR</th>
-									<th class="text-center align-middle">BORRAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">MATRICULA</th>
+									<th class="text-center align-middle bg-dark-escom text-light">NOMBRE COMPLETO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">DEPARTAMENTO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">ACCESO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">PDF</th>
+									<th class="text-center align-middle bg-dark-escom text-light">RESTABLECER<br>CUESTIONARIO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">EDITAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">BORRAR</th>
 								</tr>
 							</thead>
 							<tbody id="generatedContainer">

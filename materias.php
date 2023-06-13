@@ -74,15 +74,15 @@ if (!is_null($redirect)) {
 				<div class="card shadow-2-strong ">
 					<div class="table-responsive">
 						<table class="table table-borderless mb-0">
-							<thead class="bg-dark-escom text-light">
+							<thead>
 								<tr>
-									<th class="text-center align-middle">MATERIA</th>
-									<th class="text-center align-middle">ACADEMIA</th>
-									<th class="text-center align-middle">SEMESTRE</th>
-									<th class="text-center align-middle">PLAN</th>
-									<th class="text-center align-middle">CARRERA</th>
-									<th class="text-center align-middle">EDITAR</th>
-									<th class="text-center align-middle">BORRAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">MATERIA</th>
+									<th class="text-center align-middle bg-dark-escom text-light">ACADEMIA</th>
+									<th class="text-center align-middle bg-dark-escom text-light">SEMESTRE</th>
+									<th class="text-center align-middle bg-dark-escom text-light">PLAN</th>
+									<th class="text-center align-middle bg-dark-escom text-light">CARRERA</th>
+									<th class="text-center align-middle bg-dark-escom text-light">EDITAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">BORRAR</th>
 								</tr>
 							</thead>
 							<tbody id="generatedContainer">
