@@ -1,33 +1,34 @@
-
-$(document).ready(function () {
-	// Manejar el cambio en el select
-
-	$("select[name='actividad1']").change(function () {
-		// Obtener el valor seleccionado
-		var seleccionado = $(this).val();
-		let resultado = peticion(seleccionado);
-
-
-		// Hacer una solicitud AJAX a tu script PHP
-		async function peticion(seleccionado) {
-			let response = await $.ajax({
-				url: "php/utils/c.php",
-				method: "POST",
-				data: { valor: seleccionado },
-				success: function (resultado) {
-					let rsp = JSON.parse(resultado);
-					// Actualizar el valor del input con el resultado de la consulta
-					$("input[name='horas_actividad1']").attr("min", rsp);
+$(document).ready(function() {
+    // Manejar el cambio en el select
+    for(let i=1;i<=5;i++){
+    $("select[name='actividad"+i+"']").change(function() {
+        // Obtener el valor seleccionado
+        var seleccionado = $(this).val();
+        let resultado=peticion(seleccionado);
 
 
-				}
-			});
-			if (response.error) {
-				$("#login_message").html(`<p class="text-danger">${response.error}</p>`);
-			} else {
-			}
-		}
-	});
+        // Hacer una solicitud AJAX a tu script PHP
+        async function peticion(seleccionado) {
+            let response= await $.ajax({
+            url: "php/utils/c.php",
+            method: "POST",
+            data: { valor: seleccionado },
+            success: function(resultado) {
+                let rsp=JSON.parse(resultado);
+                if(rsp<=0){rsp=1;}
+                // Actualizar el valor del input con el resultado de la consulta
+                $("input[name='horas_actividad"+i+"']").attr("min", rsp);
+
+
+            }
+        });
+        if (response.error) {
+            $("#login_message").html('<p class="text-danger">${response.error}</p>');
+        } else {
+        }
+    }
+    });
+}
 });
 let form = document.getElementById('form');
 var completado = 0;
