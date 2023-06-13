@@ -81,7 +81,7 @@ if (!is_null($redirect)) {
 
 	<div class="container-fluid pt-3">
 		<div class="row">
-			<div class="col-7"></div>
+			<div class="col-7" id="errorsongos"></div>
 			<div class="col justify-content-end d-flex">
 				<button class="btn btn-success btn-create" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
 				<button class="btn btn-primary btn-read" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-sliders"></i> Filtrar</button>

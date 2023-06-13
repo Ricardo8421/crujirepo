@@ -101,7 +101,7 @@ const crudFields = () => [
 			let res = [];
 			for (let i = 0; i < departamentos.length; i++) {
 				const departamento = departamentos[i];
-				res[i] = { value: departamento.Id, text: departamento.Departamento };
+				res[i] = { value: departamento.Clave, text: departamento.Departamento };
 			}
 
 			return res;
