@@ -11,6 +11,34 @@ const loadingRing = `
 		<div class="lds-dual-ring"></div>
 	</th></tr>`;
 
+$(document).ready(() => {
+	temp=addClickListeners;
+	addClickListeners=()=>{
+		temp();
+		$(".btn-reset-form").on("click", async function () {
+			values = $(this).parent().parent().children('[modal-form-target="matricula"]');
+			matricula = values.text(); // esto es la matricula 
+			let response = await $.ajax({
+				url: "php/ajax/reiniciarCuestionario.php",
+				type: "POST",
+				data: {matricula},
+				success: function (resultado) {
+					try{
+						if(resultado.success){
+							location.reload();
+						}else{
+							$('#crudMsg').text(msg);
+						}
+					}catch(e){
+						$('#crudMsg').text(msg);
+					}
+				}
+			});
+		});
+	}
+});
+	
+
 const generateRowHTML = (profe) =>
 	`
 	<tr class="info-container">
