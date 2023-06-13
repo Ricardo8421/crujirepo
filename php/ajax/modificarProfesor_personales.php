@@ -2,9 +2,9 @@
 include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
+session_start();
 
 $b=false;
-
 if(isset($_POST["nombre"]) && isset($_POST["departamento"]) && isset($_SESSION["usuario"])){
     $nombre = $_POST["nombre"];
     $departamento = $_POST["departamento"];

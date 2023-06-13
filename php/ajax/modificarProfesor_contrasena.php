@@ -2,12 +2,13 @@
 include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
+session_start();
 
 $b=false;
 
-if(isset($_SESSION["usuario"]) && isset($_POST["contrasenaVieja"]) && isset($_POST["contrasenaNueva"])){
-    $usuario = $_SESSION["nombre"];
-    $contraVieja = $_POST["contrasenaVieja"];
+if(isset($_SESSION["usuario"]) && isset($_POST["contrasenaAntigua"]) && isset($_POST["contrasenaNueva"])){
+    $usuario = $_SESSION["usuario"];
+    $contraVieja = $_POST["contrasenaAntigua"];
     $contraAntigua = $_POST["contrasenaNueva"];
     $query = sprintf("SELECT id FROM usuario WHERE `login`='%s' AND pass='%s'",
         $mysql->real_escape_string($usuario),
@@ -27,7 +28,7 @@ if(isset($_SESSION["usuario"]) && isset($_POST["contrasenaVieja"]) && isset($_PO
 }
     
 if(!$b){
-    $r["msg"] = "Algo salió mal";
+    $r["msg"] = "Algo salió relativamente mal";
 }
 
 $r["success"]=$b;

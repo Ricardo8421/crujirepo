@@ -92,7 +92,7 @@ function dividirString(inputString) {
 					if (!selectMaterias.querySelector('option[value="' + objeto.Clave + '"]')) {
 						// Crear la opción para la materia del objeto
 						var opcion = document.createElement("option");
-						opcion.text = objeto.Materia;
+						opcion.text = objeto.Materia+" - "+(objeto.Carrera=="Lic. Ciencia de Datos" ? "LCD" : (objeto.Carrera=="Ing. Inteligencia Artificial" ? "IIA" : "ISC"));
 						opcion.value = objeto.Clave;
 
 						// Agregar la opción al nuevo select

@@ -168,3 +168,53 @@ const generateCardHTML = (profe) => `
 			<button class="btn btn-warning px-4">Contestar Cuestionario</button>
 		</div>
 	</div>`;
+
+let form = document.getElementById('teacherForm');
+form.addEventListener('submit', async function(event){
+	event.preventDefault();
+	let response = await $.ajax({
+		url: "php/ajax/modificarProfesor_personales.php",
+		type: "POST",
+		data: $("#teacherForm").serialize(),
+		success: function (resultado) {
+			const successMessage = document.createElement('div');
+			try{
+				if(resultado.success){
+					location.reload();
+				}else{
+					successMessage.classList.add('alert', 'alert-danger');
+				}
+				successMessage.textContent = resultado.msg;
+			}catch(e){
+				successMessage.classList.add('alert', 'alert-danger');
+				successMessage.textContent = "Algo salió mal";
+			}
+			document.getElementById("generatedContainer").appendChild(successMessage);
+		}
+	});
+});
+
+let formU = document.getElementById('userForm');
+formU.addEventListener('submit', async function(event){
+	event.preventDefault();
+	let response = await $.ajax({
+		url: "php/ajax/modificarProfesor_contrasena.php",
+		type: "POST",
+		data: $("#userForm").serialize(),
+		success: function (resultado) {
+			const successMessage = document.createElement('div');
+			try{
+				if(resultado.success){
+					location.reload();
+				}else{
+					successMessage.classList.add('alert', 'alert-danger');
+				}
+				successMessage.textContent = resultado.msg;
+			}catch(e){
+				successMessage.classList.add('alert', 'alert-danger');
+				successMessage.textContent = "Algo salió mal";
+			}
+			document.getElementById("generatedContainer").appendChild(successMessage);
+		}
+	});
+});
