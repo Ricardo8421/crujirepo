@@ -9,14 +9,14 @@ $usuario = $_SESSION["usuario"];
 
 $query = sprintf(
     "SELECT 
-		u.id AS IdUsuario,
-		u.login AS Usuario,
+		u.id AS IdUsuario, 
 		p.id AS Matricula, 
 		p.nombreCompleto AS NombreCompleto,
 		d.clave AS ClaveDepartamento,
 		d.nombre AS Departamento,
-		p.accesoCongelado AS AccesoCongelado
-    FROM profesor p, usuario u, departamento d
+		p.accesoCongelado AS AccesoCongelado,
+        COUNT(arg.idActividad) > 1 AS HaContestado
+    FROM (profesor p LEFT OUTER JOIN actividadregistrada arg ON p.id=arg.idProfesor), usuario u, departamento d
     WHERE p.idUsuario = u.id AND p.departamento = d.clave AND
         u.login = '%s'
     ORDER BY NombreCompleto",

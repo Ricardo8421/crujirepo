@@ -28,6 +28,8 @@ $(document).ready(async () => {
 	$('#inputDepartamento').html(optionsDepartamento);
 	$(`option[value=${profe.ClaveDepartamento}]`).prop('selected', true);
 
+	insertButton();
+
 	let teacherForm = $('#teacherForm');
 	
 	teacherForm.on('submit', async (e)=>{
@@ -87,6 +89,54 @@ const displayData = (profe) => {
 		
 		$(`[display=${key}]`).text(profe[key]);
 	}
+}
+
+const insertButton = () => {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState === 4 && this.status === 200) {
+			var objeto = JSON.parse(this.responseText)[0];
+			usuario = objeto['Matricula'];
+			if (objeto['HaContestado'] == '1'){
+				var button = '<button class="btn btn-warning px-4" id = "generar-pdf">Generar PDF</button>';
+				$('#PdfOption').append(button);
+				document.getElementById("generar-pdf").addEventListener("click", function(){
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState === 4 && this.status === 200) {
+						var objeto = JSON.parse(this.responseText)[0];
+						var usuario = objeto['Matricula'];
+
+						var xhttp2 = new XMLHttpRequest();
+						xhttp2.onreadystatechange = function() {
+							if (this.readyState === 4 && this.status === 200) {
+							var json = this.responseText;
+							var url = '/crujirepo/php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
+							window.location.href = url;
+							}
+						};
+
+						xhttp2.open("POST", "php/ajax/datosActividadesRegistradas.php", true);
+						xhttp2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+						xhttp2.send("usuario=" + encodeURIComponent(usuario));
+						}
+					};
+
+					xhttp.open("GET", "php/ajax/datosProfesor.php", true);
+					xhttp.send();
+				});
+			}
+			else{
+				var button = '<button class="btn btn-warning px-4" id = "Contestar-Encuesta">Contestar Encuesta</button>';
+				$('#PdfOption').append(button);
+				document.getElementById("Contestar-Encuesta").addEventListener("click", function(){
+					window.location.href = '/crujirepo/formulario';
+				});
+			}
+		}
+	};
+	xhttp.open("GET", "php/ajax/datosProfesor.php", true);
+	xhttp.send();
 }
 
 const generateCardHTML = (profe) => `
@@ -164,8 +214,7 @@ const generateCardHTML = (profe) => `
 			<button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#editUserModal">Editar datos de cuenta</button>
 		</div>
 
-		<div class="buttons mt-4">
-			<button class="btn btn-warning px-4">Contestar Cuestionario</button>
+		<div class="buttons mt-4" id="PdfOption">
 		</div>
 	</div>`;
 
