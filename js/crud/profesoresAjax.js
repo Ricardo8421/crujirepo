@@ -35,6 +35,23 @@ $(document).ready(() => {
 				}
 			});
 		});
+		$('.table').on('click', '.btn-pdf', function() {
+			// Encuentra el elemento padre de tipo fila (tr)
+			var fila = $(this).closest('tr');
+			var usuario = fila.find('td:nth-child(3)').text();
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState === 4 && this.status === 200) {
+				var json = this.responseText;
+				var url = '/crujirepo/php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
+				window.location.href = url;
+				}
+			};
+			xhttp.open("POST", "php/ajax/datosActividadesRegistradas.php", true);
+			xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhttp.send("usuario=" + encodeURIComponent(usuario));
+		});
 	}
 });
 	
