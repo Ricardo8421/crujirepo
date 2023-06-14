@@ -5,6 +5,7 @@
     <title>La pagina no existe :(</title>
     <link type="text/css" rel="stylesheet" href="./css/404t.css" />
     <link rel="icon" href="./assets/Escom.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/Escom.png" type="image/x-icon" />
 </head>
 
 <body class="permission_denied">
