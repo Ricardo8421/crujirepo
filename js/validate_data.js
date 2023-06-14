@@ -15,12 +15,28 @@ $(document).ready(function() {
             data: { valor: seleccionado },
             success: function(resultado) {
                 let rsp=JSON.parse(resultado);
+				console.log(rsp);
+				if(parseInt(rsp)>=0&&parseInt(rsp)<22&&!isNaN(rsp))
+				{
+
+				
                 if(rsp<=0){rsp=1;}
                 // Actualizar el valor del input con el resultado de la consulta
                 $("input[name='horas_actividad"+i+"']").attr("min", rsp);
 
 
             }
+			else
+			{
+				if (resultado) {
+					$("#login_message").html('<p class="text-danger">${response.error}</p>');}
+					setTimeout(function() {
+						console.log("Después de esperar");
+					  }, 20000);
+					  window.location.href = "formulario.php";
+
+			}
+		}
         });
         if (response.error) {
             $("#login_message").html('<p class="text-danger">${response.error}</p>');

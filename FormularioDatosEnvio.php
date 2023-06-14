@@ -3,6 +3,7 @@ include "php/utils/login.php";
 session_start();
 $redirect = checkSession(1);
 $b=false;
+$redireccionar=false;
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
   $profesor = "";
   $usuario = $_SESSION["usuario"];
@@ -17,28 +18,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
 
   $queryA = "INSERT INTO actividadRegistrada (idProfesor, idActividad, cantidadHoras) VALUES ";
   $queryM = "INSERT INTO materiaregistradas (idProfesor, idMateria) VALUES ";
+  
   for ($i = 1; $i <= 5; $i++) {
+    $flag=1;
+
     if (isset($_POST["actividad" . $i]) && isset($_POST["horas_actividad" . $i])) {
       $actividad = $_POST["actividad" . $i];
       $horas = $_POST["horas_actividad" . $i];
 
       if ($actividad !== null && $actividad !== "" && $actividad !== "default" && $horas !== null && $horas !== "" && $horas !== "0") {
+         if (is_numeric($actividad)&& (int)$actividad == $actividad && is_numeric($horas) && (int)$horas == $horas){
         $queryA = $queryA.sprintf("('%s', %d, %d),",
           $mysql->real_escape_string($profesor),
           $mysql->real_escape_string($actividad),
           $mysql->real_escape_string($horas)
         );
+      }else {
+        $redireccionar=true;
       }
     }
-    if(isset($_POST["materia" . $i])){
+    }
+    if(isset($_POST["materia" . $i]) && $flag==1){   
+    $materiaV=$_POST["materia" . $i];
+    $queryMV = sprintf("SELECT clave FROM materia WHERE clave=%s",
+    $mysql->real_escape_string($materiaV)
+        );
+    $queryMV=substr($queryMV,0,-1);
+    #$res = $mysql->query($queryMV);
+    
+    #if ($res->num_rows<=0){$flag=0;
+     # $redireccionar=true;}
+    
+
       $materia=$_POST["materia" . $i];
-      if ($materia !== null && $materia !== "" && $materia !== "default"&&$i<5) {
+      if ($materia !== null && $materia !== "" && $materia !== "default"&&$i<5&&$flag==!0&& is_numeric($materia)==false && (int)$materia !==$materia&& (float)$materia !== $materia && is_string($materia)) {
         $queryM = $queryM.sprintf("('%s', '%s'),",
           $mysql->real_escape_string($profesor),
           $mysql->real_escape_string($materia),
         );
       }
     } 
+  }
+  if($redireccionar){
+    header:("location:formulario.php");
   }
   $queryA=substr($queryA,0,-1);
   if ($mysql->query($queryA)) {
