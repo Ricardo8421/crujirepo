@@ -170,6 +170,7 @@ $(document).ready(function() {
   selects.forEach((select, index) => {
 	// Agregar un evento change a cada etiqueta select
 	select.addEventListener('change', () => {
+		if(this.value<=0||isNaN(parseInt(this.value))){this.value="";}
 	  // Restablecer el valor seleccionado anteriormente
 	  if (selectedValues[index]) {
 		const prevOption = select.querySelector(`option[value="${selectedValues[index]}"]`);
