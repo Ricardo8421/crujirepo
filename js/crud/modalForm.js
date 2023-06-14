@@ -46,7 +46,22 @@ submitForm = (url) => {
 		let response = await $.ajax({
 			url: url,
 			type: "POST",
-			data: form.serialize()
+			data: form.serialize(),
+			success: function (resultado) {
+				const successMessage = document.createElement('div');
+				try{
+					if(resultado.success){
+						location.reload();
+					}else{
+						successMessage.classList.add('alert', 'alert-danger');
+					}
+					successMessage.textContent = resultado.resultado;
+				}catch(e){
+					successMessage.classList.add('alert', 'alert-danger');
+					successMessage.textContent = "Algo salió mal";
+				}
+				document.getElementById("errorsongos").appendChild(successMessage);
+			}
 		});
 
 		console.log(response);

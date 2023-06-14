@@ -26,6 +26,7 @@ if(isset($_POST["matricula"])){
 if(!$b){
     $r["resultado"] = "Algo salió mal";
 }
+$r["success"] = $b;
 
 $json = json_encode($r, JSON_UNESCAPED_UNICODE);
 

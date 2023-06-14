@@ -20,7 +20,8 @@ if (!is_null($redirect)) {
 	<title>Administración de profesores</title>
 	<link rel="stylesheet" href="css/colors.css">
 	<link rel="stylesheet" href="css/loadingRing.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/a0a5eb5331.js" crossorigin="anonymous"></script>
 </head>
@@ -81,7 +82,7 @@ if (!is_null($redirect)) {
 
 	<div class="container-fluid pt-3">
 		<div class="row">
-			<div class="col-7"></div>
+			<div class="col-7" id="errorsongos"></div>
 			<div class="col justify-content-end d-flex">
 				<button class="btn btn-success btn-create" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
 				<button class="btn btn-primary btn-read" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-sliders"></i> Filtrar</button>
@@ -94,16 +95,16 @@ if (!is_null($redirect)) {
 				<div class="card shadow-2-strong ">
 					<div class="table-responsive">
 						<table class="table table-borderless mb-0">
-							<thead class="bg-dark-escom text-light">
+							<thead>
 								<tr>
-									<th class="text-center align-middle">MATRICULA</th>
-									<th class="text-center align-middle">NOMBRE COMPLETO</th>
-									<th class="text-center align-middle">DEPARTAMENTO</th>
-									<th class="text-center align-middle">ACCESO</th>
-									<th class="text-center align-middle">PDF</th>
-									<th class="text-center align-middle">RESTABLECER<br>CUESTIONARIO</th>
-									<th class="text-center align-middle">EDITAR</th>
-									<th class="text-center align-middle">BORRAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">MATRICULA</th>
+									<th class="text-center align-middle bg-dark-escom text-light">NOMBRE COMPLETO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">DEPARTAMENTO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">ACCESO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">PDF</th>
+									<th class="text-center align-middle bg-dark-escom text-light">RESTABLECER<br>CUESTIONARIO</th>
+									<th class="text-center align-middle bg-dark-escom text-light">EDITAR</th>
+									<th class="text-center align-middle bg-dark-escom text-light">BORRAR</th>
 								</tr>
 							</thead>
 							<tbody id="generatedContainer">
@@ -116,9 +117,9 @@ if (!is_null($redirect)) {
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
 	<script src="js/crud/profesoresAjax.js"></script>
 	<script src="js/crud/modalForm.js"></script>
 </body>
