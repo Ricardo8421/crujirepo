@@ -75,13 +75,19 @@ $(document).ready(function() {
 	let horas_actividad3 = parseInt(document.getElementById('horas_actividad3').value);
 	let horas_actividad4 = parseInt(document.getElementById('horas_actividad4').value);
 	let horas_actividad5 = parseInt(document.getElementById('horas_actividad5').value);
-	if (isNaN(horas_actividad3)) {
+	if (isNaN(horas_actividad1)||horas_actividad1<0) {
+		horas_actividad1 = 0;
+	  }
+	  if (isNaN(horas_actividad2)||horas_actividad2<0) {
+		horas_actividad2 = 0;
+	  }
+	if (isNaN(horas_actividad3)||horas_actividad3<0) {
 	  horas_actividad3 = 0;
 	}
-	if (isNaN(horas_actividad4)) {
+	if (isNaN(horas_actividad4)||horas_actividad4<0) {
 	  horas_actividad4 = 0;
 	}
-	if (isNaN(horas_actividad5)) {
+	if (isNaN(horas_actividad5)||horas_actividad5<0) {
 	  horas_actividad5 = 0;
 	}
   
