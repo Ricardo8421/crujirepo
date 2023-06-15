@@ -9,7 +9,7 @@
 </head>
 
 <body class="permission_denied">
-    <img src="./assets/escudoESCOM.jpg" alt="" class="imagen">
+    <img src="./assets/escudoESCOM.jpg" alt="" class="background-image">
     <div class="denied__wrapper">
         <h1>404</h1>
         <h3>Si pudieramos crear una maquina del tiempo lo hariamos, pero la pagina a la que intentas acceder ya no existe.</h3>

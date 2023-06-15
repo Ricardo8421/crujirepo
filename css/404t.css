@@ -9,26 +9,22 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    
+    background-image: url('./../assets/escudoESCOM.png');
+    background-repeat: no-repeat;
+    background-size: 760 px auto; /* Ancho de 760px y alto automático */
+    background-position: center center;
+    background-attachment: fixed;
+
+
 
 }
-
-.imagen{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 8vh;
-    position: fixed;
-}
-
-@media (min-width: 768px) {
-    .imagen{
-        width: 700px;
-        height: auto;
+  
+  @media (max-width: 760px) {
+    .permission_denied {
+      background-size: 100% auto; /* Ancho completo y alto automático */
     }
-}
+  }
 
 .permission_denied a {
     text-decoration: none;
@@ -61,7 +57,7 @@
     max-width: 330px;
     margin: 0px auto 30px auto;
     font-family: "Dosis", sans-serif;
-    font-weight: 400;
+    font-weight: 400;    
 }
 
 .denied__link {
@@ -90,4 +86,3 @@
     cursor: pointer;
     opacity: 1;
 }
-  
