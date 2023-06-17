@@ -107,7 +107,7 @@ function checkSession(int $nivel) {
 function getRedirect(int $permiso) : String {
     switch ($permiso) {
         case 1: return "formulario";
-        case 2: return "profesores";
+        case 2: return "Seleccion_admin";
         default: return "";
     }
 }

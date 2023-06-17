@@ -1,0 +1,38 @@
+.btn-large {
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    height: 6rem;
+    width: 22rem;
+}
+
+.btn-large:hover {
+    animation: pulse 1s infinite;
+}
+
+.btn-large:active {
+    animation: scale-down 0.3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-down {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
