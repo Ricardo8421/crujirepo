@@ -1,7 +1,10 @@
 <?php
 require('../../libraries/fpdf185/fpdf.php');
 
-function createPdfAcademia($jsonData){
+if(isset($_GET['json'])){
+    $json = $_GET['json'];
+
+    $jsonData = json_decode($json, true);
 
     class PDF extends FPDF {
         function Header() {
@@ -54,10 +57,8 @@ function createPdfAcademia($jsonData){
             }
         }
     }
-
-    $jsonData = json_decode($jsonData);
-    $nombre = $jsonData->Academia;
-    $materias = $jsonData->Materias;
+    $nombre = utf8_decode($jsonData['NombreAcademia']);
+    $materias = $jsonData['Materias'];
 
     $pdf = new PDF('P', 'mm', 'Letter');
     $pdf->SetMargins(10, 30, 10); // Establecer los márgenes (izquierdo, superior, derecho)
@@ -82,18 +83,18 @@ function createPdfAcademia($jsonData){
         // Encabezado de Materias seleccionadas
         $pdf->Ln(10);
         $pdf->SetFont('Arial', 'B', 14);
-        $pdf->Cell(0, 10, $materia->Materia , 0, 1, 'C');
+        $pdf->Cell(0, 10, utf8_decode($materia['NombreMateria']) , 0, 1, 'C');
         $pdf->SetLineWidth(0);
 
         $maxLongitudNombre = 0;
         $maxLongitudProfesores = 0;
     
         // Iterar sobre las materias y encontrar la longitud máxima para el nombre y la academia
-        $profesores = $materia->Profesores;
+        $profesores = $materia['Profesores'];
     
         foreach ($profesores as $profesor) {
-            $longitudNombre = strlen($profesor->NombreCompleto);
-            $longitudProfesores = strlen($profesor->Departamento);
+            $longitudNombre = strlen($profesor['NombreCompleto']);
+            $longitudProfesores = strlen($profesor['Departamento']);
             if ($longitudNombre > $maxLongitudNombre) {
                 $maxLongitudNombre = $longitudNombre;
             }
@@ -106,9 +107,8 @@ function createPdfAcademia($jsonData){
         $celdaAcademia = $maxLongitudProfesores * 2.5;
 
         $celdaNombres = ($celdaNombres < 50) ? 45 : $celdaNombres;
+        $celdaAcademia = ($celdaAcademia < 50) ? 45 : $celdaAcademia;
 
-        
-        
         $cellWidth = array(25, $celdaNombres, $celdaAcademia); // Definir el ancho de las celdas
     
         $x = ($pdf->GetPageWidth() - array_sum($cellWidth)) / 2;
@@ -134,20 +134,23 @@ function createPdfAcademia($jsonData){
         $pdf->SetFillColor(255, 255, 255);
         $pdf->SetTextColor(0, 0, 0);
         
-        $profesores = $materia->Profesores;
 
         foreach ($profesores as $profesor) {
             $pdf->SetX($x);
-            $pdf->Cell($cellWidth[0], 10, $profesor->Matricula, 1, 0, 'C');
-            $pdf->Cell($cellWidth[1], 10, $profesor->NombreCompleto, 1, 0, 'C');
-            $pdf->Cell($cellWidth[2], 10, $profesor->Departamento, 1, 1, 'C');
+            $pdf->Cell($cellWidth[0], 10, utf8_decode($profesor['Matricula']), 1, 0, 'C');
+            $pdf->Cell($cellWidth[1], 10, utf8_decode($profesor['NombreCompleto']) , 1, 0, 'C');
+            $pdf->Cell($cellWidth[2], 10, utf8_decode($profesor['Departamento']), 1, 1, 'C');
         }
 
     }
 
     $pdf->Ln(10); // Espacio adicional después de la tabla
 
+    $NombrePDF = 'ResumenAcademia' . $nombre . '.pdf';
 
-    $pdf->Output('datosIngresados.pdf', 'I'); // Mostrar el PDF en el navegador
+    $pdf->Output('D', $NombrePDF);
+}
+else {
+    echo 'No se recibieron datos';
 }
 ?>
