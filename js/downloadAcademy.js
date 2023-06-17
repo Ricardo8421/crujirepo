@@ -56,10 +56,7 @@ $(document).ready(function () {
 				return res;
 			},
 		};
-
-        console.log(academiaSelect);
 		var formFields = [academiaSelect];
-        console.log(formFields);
 
 		var formContent = await generateFormFields(formFields); // Esperar a que se generen los campos del formulario
 
@@ -70,8 +67,18 @@ $(document).ready(function () {
 
 		$("#crudForm").off("submit").on("submit", function (event) {
 			event.preventDefault();
-
-			console.log("Descargando...");
+            var academia = $("#inputAcademia").val();
+            var url = "php/ajax/datosAcademiasProfesor.php?id=" + academia;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let academias = JSON.parse(this.responseText);
+                    
+                }
+            }
+            xhttp.open("GET", url, true);
+            xhttp.send();
+            
 		});
 
 		$("#crudModal").modal("show");
