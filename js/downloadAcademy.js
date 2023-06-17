@@ -72,8 +72,23 @@ $(document).ready(function () {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    let academias = JSON.parse(this.responseText);
-                    
+                    let json = this.responseText;
+                    console.log(json);
+                    let valid = JSON.parse(json);
+                    if (valid.NombreAcademia == ''){
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Aviso',
+                            text: 'Aún no hay datos para mostrar',
+                            showConfirmButton: false,
+                            timer: 2000
+                          });                          
+                        return ; 
+                    }
+                    else{ 
+                        var url = '/crujirepo/php/utils/createPdfAcademia.php?json=' + encodeURIComponent(json);
+                        window.location.href = url;
+                    }
                 }
             }
             xhttp.open("GET", url, true);
