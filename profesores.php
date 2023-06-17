@@ -30,10 +30,13 @@ if (!is_null($redirect)) {
 <body class="bg-lighter-escom">
 
 	<nav class="navbar bg-dark-escom">
+		
 		<div class="container-fluid">
+		<button class="btn btn-success" id="volver" type="button">Regresar</button>
 			<a class="navbar-brand text-light">Sistema de profesores</a>
 			<form action="logout" class="d-flex">
-				<button class="btn btn-success" type="submit">Cerrar sesión</button>
+				
+				<button class="btn btn-success" type="submit">Cerrar sesión</button> 
 			</form>
 		</div>
 	</nav>
@@ -80,11 +83,13 @@ if (!is_null($redirect)) {
 			</div>
 		</div>
 	</div>
-
+	
 	<div class="container-fluid pt-3">
 		<div class="row">
 			<div class="col-7" id="errorsongos"></div>
+			
 			<div class="col justify-content-end d-flex">
+				
 				<button class="btn btn-success btn-create" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-plus"></i> Agregar profesor</button>
 				<button class="btn btn-primary btn-read" data-bs-toggle="modal" data-bs-target="#crudModal"><i class="fa-solid fa-sliders"></i> Filtrar</button>
 			</div>
@@ -123,6 +128,7 @@ if (!is_null($redirect)) {
 		crossorigin="anonymous"></script>
 	<script src="js/crud/profesoresAjax.js"></script>
 	<script src="js/crud/modalForm.js"></script>
+	<script src="js/botones_redireccion.js"></script>
 </body>
 
 </html>

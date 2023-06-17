@@ -31,6 +31,7 @@ if (!is_null($redirect)) {
 
 	<nav class="navbar bg-dark-escom">
 		<div class="container-fluid">
+		<button class="btn btn-success" id="volver" type="button">Regresar</button>
 			<a class="navbar-brand text-light">Sistema de profesores</a>
 			<form action="logout" class="d-flex">
 				<button class="btn btn-success" type="submit">Cerrar sesión</button>
@@ -101,6 +102,7 @@ if (!is_null($redirect)) {
 		crossorigin="anonymous"></script>
 	<script src="js/crud/materiasAjax.js"></script>
 	<script src="js/crud/modalForm.js"></script>
+	<script src="js/botones_redireccion.js"></script>
 </body>
 
 </html>
