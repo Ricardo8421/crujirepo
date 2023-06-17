@@ -103,6 +103,7 @@ if (!is_null($redirect)) {
 		crossorigin="anonymous"></script>
 	<script src="js/crud/materiasAjax.js"></script>
 	<script src="js/crud/modalForm.js"></script>
+	<script src="js/downloadAcademy.js" ></script>
 	<script src="js/botones_redireccion.js"></script>
 </body>
 
