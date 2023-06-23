@@ -44,7 +44,7 @@ $(document).ready(() => {
 			xhttp.onreadystatechange = function() {
 				if (this.readyState === 4 && this.status === 200) {
 				var json = this.responseText;
-				var url = '/crujirepo/php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
+				var url = './php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
 				window.location.href = url;
 				}
 			};

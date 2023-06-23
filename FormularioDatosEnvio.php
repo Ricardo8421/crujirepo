@@ -44,12 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
     $mysql->real_escape_string($materiaV)
         );
     $queryMV=substr($queryMV,0,-1);
-    #$res = $mysql->query($queryMV);
-    
-    #if ($res->num_rows<=0){$flag=0;
-     # $redireccionar=true;}
-    
-
       $materia=$_POST["materia" . $i];
       if ($materia !== null && $materia !== "" && $materia !== "default"&&$i<5&&$flag==!0&& is_numeric($materia)==false && (int)$materia !==$materia&& (float)$materia !== $materia && is_string($materia)) {
         $queryM = $queryM.sprintf("('%s', '%s'),",
@@ -57,7 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
           $mysql->real_escape_string($materia),
         );
       }
-    } 
+    }
+    if(isset($_POST["materias_extra"])){
+      $extra = $_POST["materias_extra"];
+      $queryME = sprintf("UPDATE profesor SET materiasExtra=%d WHERE id=%s",
+        $mysql->real_escape_string($extra),
+        $mysql->real_escape_string($profesor));
+    }
   }
   if($redireccionar){
     header:("location:formulario.php");
@@ -76,7 +76,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
   } else {
     $resultado = "Error en el registro";
   }
+  $mysql->query($queryME);
+  if($mysql->affected_rows == 0){
+    $b=false;
+    $resultado="Error en el registro";
+  }
 }
+
 
 $r["success"]=$b;
 $r["resultado"]=$resultado;

@@ -111,7 +111,7 @@ const insertButton = () => {
 						xhttp2.onreadystatechange = function() {
 							if (this.readyState === 4 && this.status === 200) {
 							var json = this.responseText;
-							var url = '/crujirepo/php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
+							var url = './php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
 							window.location.href = url;
 							}
 						};
@@ -130,7 +130,7 @@ const insertButton = () => {
 				var button = '<button class="btn btn-warning px-4" id = "Contestar-Encuesta">Contestar Encuesta</button>';
 				$('#PdfOption').append(button);
 				document.getElementById("Contestar-Encuesta").addEventListener("click", function(){
-					window.location.href = '/crujirepo/formulario';
+					window.location.href = './formulario';
 				});
 			}
 		}

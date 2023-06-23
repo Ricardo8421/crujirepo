@@ -14,7 +14,7 @@
         <h1>404</h1>
         <h3>Si pudieramos crear una maquina del tiempo lo hariamos, pero la pagina a la que intentas acceder ya no existe.</h3>
         <h3>Te invitamos mejor a la pagina de inicio.</h3>
-        <a href="/crujirepo/"><button class="denied__link">Ir al inicio</button></a>
+        <a href="./"><button class="denied__link">Ir al inicio</button></a>
     </div>
 </body>
 </html>

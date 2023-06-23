@@ -13,7 +13,7 @@ fetch("php/ajax/datosMaterias")
 					method: "POST",
 					data: {},
 					success: function(resultado) {
-						//let rsp=JSON.parse(resultado);
+						let rsp=((resultado));
 
 						
 function dividirString(inputString) {
@@ -34,19 +34,23 @@ function dividirString(inputString) {
   
 						  
 						  // Ejemplo de uso:
-						  const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
-						  const resultArray = dividirString(inputString);
-						  //console.log(resultArray[1]);
+//						 const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
+						  const resultArray = dividirString(rsp);
 								// Agregar el evento change a la etiqueta select
 		
 			// Obtener la academia seleccionada
-			var academiaSeleccionada = String(resultArray[1]);
-			//console.log(rsp);
-			// Filtrar los objetos del JSON por la academia seleccionada
-			var objetosFiltrados = datos.filter(function (objeto) {
-				return objeto.Academia == academiaSeleccionada;
-			});
+			var objetosFiltrados =[];
+			for(let o=0;o<(resultArray.length);o++){
 
+			var academiaSeleccionada =String (resultArray[o]);
+			//console.log(rsp);
+			console.log(academiaSeleccionada);
+
+			// Filtrar los objetos del JSON por la academia seleccionada
+			objetosFiltrados.push( datos.filter(function (objeto) {
+				return objeto.Academia == academiaSeleccionada;
+			}))
+					}
 			var selectsMaterias_q = document.querySelectorAll("#materia");
 			let breakMaterias = document.querySelectorAll("#break");
 			let labelMaterias = document.querySelectorAll("#materia_label");
@@ -118,8 +122,7 @@ function dividirString(inputString) {
 			}
 			peticion();
 		});
-		// Agregar un evento change a la casilla de verificación
-		materias_extra.addEventListener('change', function () {
+		$(document).ready(() => {
 			var materias_pp = document.getElementById("materias_pp");
 			var materias_ll = document.getElementById("materias_ll");
 			var materias_pp_label = document.getElementById("materias_pp_label");
@@ -127,7 +130,6 @@ function dividirString(inputString) {
 			var selectnumber = 2;
 			var restanumber = 0;
 			// Si la casilla de verificación está marcada
-			if (this.checked) {
 				materias_pp.style.display = "block";
 				materias_pp_label.style.display = "block";
 				materias_ll.style.display = "block";
@@ -165,24 +167,11 @@ function dividirString(inputString) {
 						console.log(selectnumber);
 					});
 				}
-			}
-			else {
-				selectnumber = 2;
-				materias_pp.style.display = "none";
-				materias_pp_label.style.display = "none";
-				materias_ll.style.display = "none";
-				materias_ll_label.style.display = "none";
-
-				// Ocultar el div de etiquetas select y eliminar las etiquetas select existentes
-				let labelMaterias = document.querySelectorAll("#materia_label");
-
-				//console.log(selectsMaterias_q);
-				for (var i = 2; i < (labelMaterias.length + 1); i++) {
-					let previous_divs = document.querySelectorAll("#materias_div" + i);
-					previous_divs[0].style.display = "none";
-				}
-			}
+			
+			
 			selectnumber = 2;
-		});
+		}	
+		);
+		
 	})
 	.catch(error => console.error(error));

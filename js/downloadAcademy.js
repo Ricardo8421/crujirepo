@@ -86,7 +86,7 @@ $(document).ready(function () {
                         return ; 
                     }
                     else{ 
-                        var url = '/crujirepo/php/utils/createPdfAcademia.php?json=' + encodeURIComponent(json);
+                        var url = './php/utils/createPdfAcademia.php?json=' + encodeURIComponent(json);
                         window.location.href = url;
                     }
                 }

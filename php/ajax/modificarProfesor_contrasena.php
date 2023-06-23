@@ -28,7 +28,7 @@ if(isset($_SESSION["usuario"]) && isset($_POST["contrasenaAntigua"]) && isset($_
 }
     
 if(!$b){
-    $r["msg"] = "Algo salió relativamente mal";
+    $r["msg"] = "Algo salió mal";
 }
 
 $r["success"]=$b;

@@ -109,12 +109,14 @@ $(document).ready(function() {
 	  // Procesar los datos si la suma es válida
 	  if (completado == 0) {
 		completado = completado + 1;
+		let datos = $("#form").serializeArray();
+		datos.push({name: "materias_extra", value: (document.getElementById("materias_extra").checked?"1":"0")});
 		// Por ejemplo, puedes mostrar un mensaje de éxito
 		async function registro(seleccionado) {
 		  let response = await $.ajax({
 			url: "FormularioDatosEnvio.php",
 			type: "POST",
-			data: $("#form").serialize(),
+			data: $.param(datos),
 			success: function(resultado) {
 			  try {
 				objetoj = JSON.parse(resultado);
