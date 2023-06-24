@@ -146,7 +146,7 @@ if(isset($_POST['json'])){
 
     $pdf->Ln(10); // Espacio adicional después de la tabla
 
-    $NombrePDF = 'ResumenAcademia' . $nombre . '.pdf';
+    $NombrePDF = 'ResumenAcademia.pdf';
 
     $pdf->Output('F', $NombrePDF);
 
