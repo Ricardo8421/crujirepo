@@ -1,8 +1,8 @@
 <?php
 require('../../libraries/fpdf185/fpdf.php');
 
-if(isset($_GET['json'])){
-    $json = $_GET['json'];
+if(isset($_POST['json'])){
+    $json = $_POST['json'];
 
     $jsonData = json_decode($json, true);
 
@@ -148,9 +148,12 @@ if(isset($_GET['json'])){
 
     $NombrePDF = 'ResumenAcademia' . $nombre . '.pdf';
 
-    $pdf->Output('D', $NombrePDF);
+    $pdf->Output('F', $NombrePDF);
+
+    // Devolver la ubicación del archivo PDF en la respuesta JSON
+    echo json_encode(['pdf_location' => $NombrePDF]);
 }
 else {
-    echo 'No se recibieron datos';
+    echo json_encode(['error' => 'No se recibieron datos']);
 }
 ?>

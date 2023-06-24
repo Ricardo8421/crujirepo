@@ -73,22 +73,29 @@ $(document).ready(function () {
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     let json = this.responseText;
-                    console.log(json);
-                    let valid = JSON.parse(json);
-                    if (valid.NombreAcademia == ''){
-                        Swal.fire({
-                            icon: 'info',
-                            title: 'Aviso',
-                            text: 'Aún no hay datos para mostrar',
-                            showConfirmButton: false,
-                            timer: 2000
-                          });                          
-                        return ; 
-                    }
-                    else{ 
-                        var url = './php/utils/createPdfAcademia.php?json=' + encodeURIComponent(json);
-                        window.location.href = url;
-                    }
+					var xhr = new XMLHttpRequest();
+					xhr.open("POST", './php/utils/createPdfAcademia.php', true);
+					xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState == 4 && xhr.status == 200) {
+							let response = JSON.parse(xhr.responseText);
+							if (response.error) {
+									Swal.fire({
+										icon: 'info',
+										title: 'Aviso',
+										text: 'Aún no hay datos para mostrar',
+										showConfirmButton: false,
+										timer: 2000
+									});                          
+									return ; 
+							} else {
+								var pdfLocation = response.pdf_location;
+								var downloadUrl = './php/utils/downloadPdf.php?file=' + encodeURIComponent(pdfLocation);
+								window.location.href = downloadUrl;
+							}
+						}
+					}
+					xhr.send("json=" + encodeURIComponent(json));
                 }
             }
             xhttp.open("GET", url, true);
