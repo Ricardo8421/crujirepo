@@ -7,7 +7,7 @@ $b=false;
 
 if(isset($_POST['usuario'])){
     $usuario = $_POST['usuario'];
-    $query=sprintf("SELECT p.id AS Matricula, p.nombreCompleto AS NombreCompleto, d.nombre AS Departamento 
+    $query=sprintf("SELECT p.id AS Matricula, p.nombreCompleto AS NombreCompleto, d.nombre AS Departamento, p.materiasExtra AS masMaterias
                 FROM profesor p, departamento d 
                 WHERE p.id='%s' AND p.departamento = d.clave;",
         $mysql->real_escape_string($usuario));
@@ -18,6 +18,7 @@ if(isset($_POST['usuario'])){
         $r["NombreCompleto"]=$f["NombreCompleto"];
         $r["Matricula"]=$f["Matricula"];
         $r["Departamento"]=$f["Departamento"];
+        $r["MasMaterias"]=$f["masMaterias"];
         $query = sprintf(
             "SELECT 
                 m.nombre AS Materia,

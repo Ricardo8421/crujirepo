@@ -56,6 +56,7 @@ $data = json_decode($json, true);
     $departamento = utf8_decode($departamento);
     $materias = $jsonData['Materias'];
     $actividades = $jsonData['Actividades'];
+    $masMaterias = $jsonData['MasMaterias'];
 
     $pdf = new PDF('P', 'mm', 'Letter');
     $pdf->AliasNbPages();
@@ -78,6 +79,16 @@ $data = json_decode($json, true);
 
     $pdf->Cell(50, 10, 'Departamento:', 0, 0, 'L');
     $pdf->Cell(0, 10, $departamento, 0, 1, 'L');
+
+    if ($masMaterias == '1') {
+        $pdf->SetTextColor(27, 99, 149);
+        $pdf->SetFont('Arial', 'B', 12); // Establecer la fuente en Arial, estilo negritas, tamaño 12
+        $pdf->Cell(50, 10, 'Con disposicion para impartir mas materias', 0, 0, 'L');
+        $pdf->SetTextColor(0, 0, 0); // Restaurar el color de texto original (negro)
+        $pdf->SetFont('Arial', '', 12); // Restaurar la fuente original (sin negritas)
+        $pdf->Cell(0, 10, '', 0, 1, 'L');
+    }
+    
 
     // Línea horizontal
     $pdf->SetDrawColor(27, 99, 149); // Establecer color de línea en azul
