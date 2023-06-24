@@ -1,7 +1,7 @@
 <?php
 //action="FormularioDatosEnvio.php"
 session_start();
-header('Content-type: application/json; charset=UTF-8');
+header('Content-type: charset=UTF-8');
 #$id = session_id();
 
 include "conexion.php";
