@@ -34,12 +34,12 @@ function dividirString(inputString) {
   
 						  
 						  // Ejemplo de uso:
-						 const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
-						  const resultArray = dividirString(inputString);
+						 
+						  const resultArray = dividirString(rsp);
 
 									// Agregar el evento change a la etiqueta select
 
-  			console.log(inputString);
+  			
 			// Obtener la academia seleccionada
 			var objetosFiltrados =[];
 			for(let o=0;o<(resultArray.length);o++){
