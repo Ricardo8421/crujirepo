@@ -10,8 +10,8 @@ $redirect = checkSession(1);
 if (!is_null($redirect)) {
     header("Location: ./" . $redirect);
 }
-
 ?>
+
 
 
 <head>
@@ -28,6 +28,7 @@ if (!is_null($redirect)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/a0a5eb5331.js" crossorigin="anonymous"></script>
+    <script src="js/validateUser.js" type="text/JavaScript"></script>
 
 </head>
 
