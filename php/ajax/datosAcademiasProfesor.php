@@ -6,7 +6,7 @@ header('Content-type: application/json; charset=UTF-8');
 $b = false;
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $query = sprintf("SELECT academia.nombre AS NombreAcademia, materia.Nombre AS NombreMateria, profesor.nombreCompleto AS NombreProfesor, profesor.departamento AS Departamento, profesor.id AS Matricula FROM profesor 
+    $query = sprintf("SELECT academia.nombre AS NombreAcademia, materia.Nombre AS NombreMateria, materia.plan AS Plan, materia.carrera AS Carrera, profesor.nombreCompleto AS NombreProfesor, profesor.departamento AS Departamento, profesor.id AS Matricula FROM profesor 
                     JOIN materiaregistradas ON profesor.id = materiaregistradas.idProfesor
                     JOIN materia ON materiaregistradas.idMateria = materia.clave
                     JOIN academia ON materia.academia = academia.Id
@@ -21,6 +21,8 @@ if (isset($_GET['id'])) {
         while ($row = $res->fetch_assoc()) {
             $academia = $row['NombreAcademia'];
             $materia = $row['NombreMateria'];
+            $plan = $row['Plan'];
+            $carrera = $row['Carrera'];
             $profesor = $row['NombreProfesor'];
             $departamento = $row['Departamento'];
             $matricula = $row['Matricula'];
@@ -33,13 +35,23 @@ if (isset($_GET['id'])) {
                 $result['Materias'] = array();
             }
             
-            if (!isset($result['Materias'][$materia])) {
-                $result['Materias'][$materia] = array();
-                $result['Materias'][$materia]['NombreMateria'] = $materia;
-                $result['Materias'][$materia]['Profesores'] = array();
+            // Reestructurar el nombre de la materia según la carrera
+            $nombreMateria = '';
+            if ($carrera === 'A') {
+                $nombreMateria = $materia . " - LCD (" . $plan . ")";
+            } elseif ($carrera === 'B') {
+                $nombreMateria = $materia . " - IIA (" . $plan . ")";
+            } elseif ($carrera === 'C') {
+                $nombreMateria = $materia . " - ISC (" . $plan . ")";
             }
             
-            $result['Materias'][$materia]['Profesores'][] = array(
+            if (!isset($result['Materias'][$nombreMateria])) {
+                $result['Materias'][$nombreMateria] = array();
+                $result['Materias'][$nombreMateria]['NombreMateria'] = $nombreMateria;
+                $result['Materias'][$nombreMateria]['Profesores'] = array();
+            }
+            
+            $result['Materias'][$nombreMateria]['Profesores'][] = array(
                 'NombreCompleto' => $profesor,
                 'Matricula' => $matricula,
                 'Departamento' => $departamento

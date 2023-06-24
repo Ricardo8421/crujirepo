@@ -113,12 +113,10 @@ $data = json_decode($json, true);
         }
     }
 
-    $numeroMateria = 1; // Variable para almacenar el número de materia
-
     $celdaMaterias = $maxLongitudNombre * 2.5;
     $celdaAcademia = $maxLongitudAcademia * 2.5;
 
-    $cellWidth = array(15, $celdaMaterias, $celdaAcademia); // Definir el ancho de las celdas
+    $cellWidth = array(25, $celdaMaterias, $celdaAcademia); // Definir el ancho de las celdas
 
     $x = ($pdf->GetPageWidth() - array_sum($cellWidth)) / 2;
 
@@ -128,7 +126,7 @@ $data = json_decode($json, true);
     $pdf->SetFillColor(27, 99, 149);
     $pdf->SetTextColor(255, 255, 255);
 
-    $pdf->Cell($cellWidth[0], 10, 'No.', 1, 0, 'C', true);
+    $pdf->Cell($cellWidth[0], 10, 'Clave', 1, 0, 'C', true);
     $pdf->Cell($cellWidth[1], 10, 'Nombre', 1, 0, 'C', true);
     $pdf->Cell($cellWidth[2], 10, 'Academia', 1, 1, 'C', true);
 
@@ -141,7 +139,7 @@ $data = json_decode($json, true);
 
         // Mostrar el número de materia
         $pdf->SetFont('Arial', '', 10); // Restablecer fuente y tamaño normal
-        $pdf->Cell($cellWidth[0], 10, $numeroMateria, 1, 0, 'C', true);
+        $pdf->Cell($cellWidth[0], 10, utf8_decode($materia['Clave']), 1, 0, 'C', true);
     
         // Mostrar el nombre de la materia en varias líneas
         $pdf->Cell($cellWidth[1], 10, utf8_decode($materia['Materia']), 1, 0, 'C', true);
@@ -149,7 +147,7 @@ $data = json_decode($json, true);
         // Mostrar el nombre de la academia
         $pdf->Cell($cellWidth[2], 10, utf8_decode($materia['Academia']), 1, 1, 'C', true);
 
-        $numeroMateria++; // Incrementar el número de materia en cada iteración
+
     }
 
     $pdf->Ln(10); // Espacio adicional después de la tabla

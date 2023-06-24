@@ -7,7 +7,9 @@ $b=false;
 
 if(isset($_POST['usuario'])){
     $usuario = $_POST['usuario'];
-    $query=sprintf("SELECT p.id AS Matricula, p.nombreCompleto AS NombreCompleto, d.nombre AS Departamento FROM profesor p, departamento d WHERE p.id='%s' AND p.departamento = d.clave;",
+    $query=sprintf("SELECT p.id AS Matricula, p.nombreCompleto AS NombreCompleto, d.nombre AS Departamento 
+                FROM profesor p, departamento d 
+                WHERE p.id='%s' AND p.departamento = d.clave;",
         $mysql->real_escape_string($usuario));
     $res = $mysql->query($query);
     if($res->num_rows > 0){
@@ -19,7 +21,8 @@ if(isset($_POST['usuario'])){
         $query = sprintf(
             "SELECT 
                 m.nombre AS Materia,
-                a.nombre AS Academia
+                a.nombre AS Academia,
+                m.clave AS Clave
             FROM materia m, academia a, materiaregistradas mr, profesor p
             WHERE
                 p.id = mr.idProfesor AND
