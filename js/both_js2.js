@@ -34,23 +34,27 @@ function dividirString(inputString) {
   
 						  
 						  // Ejemplo de uso:
-//						 const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
-						  const resultArray = dividirString(rsp);
-								// Agregar el evento change a la etiqueta select
-		
+						 const inputString = 'DCIC"Ciencias de la Computaci\u00f3n""Ciencia de Datos""Inteligencia Artificial"';
+						  const resultArray = dividirString(inputString);
+
+									// Agregar el evento change a la etiqueta select
+
+  			console.log(inputString);
 			// Obtener la academia seleccionada
 			var objetosFiltrados =[];
 			for(let o=0;o<(resultArray.length);o++){
 
-			var academiaSeleccionada =String (resultArray[o]);
+			var academiaSeleccionada =String(resultArray[o]);
 			//console.log(rsp);
-			console.log(academiaSeleccionada);
-
+			
 			// Filtrar los objetos del JSON por la academia seleccionada
+			if(academiaSeleccionada!=""&&academiaSeleccionada!="]"&&academiaSeleccionada!="["&&academiaSeleccionada!=","){
+				console.log(academiaSeleccionada);
 			objetosFiltrados.push( datos.filter(function (objeto) {
 				return objeto.Academia == academiaSeleccionada;
 			}))
-					}
+					console.log(objetosFiltrados)}
+				}
 			var selectsMaterias_q = document.querySelectorAll("#materia");
 			let breakMaterias = document.querySelectorAll("#break");
 			let labelMaterias = document.querySelectorAll("#materia_label");
@@ -91,7 +95,8 @@ function dividirString(inputString) {
 				def.text="Seleccionar materia";
 				selectMaterias.add(def);
 				// Recorrer los objetos filtrados y agregar opciones al nuevo select
-				objetosFiltrados.forEach(function (objeto) {
+				objetosFiltrados.forEach(function (objetofiltrsdo) {
+					objetofiltrsdo.forEach(function(objeto){
 					// Verificar si la materia del objeto no está en el select de materias
 					if (!selectMaterias.querySelector('option[value="' + objeto.Clave + '"]')) {
 						// Crear la opción para la materia del objeto
@@ -101,7 +106,7 @@ function dividirString(inputString) {
 
 						// Agregar la opción al nuevo select
 						selectMaterias.add(opcion);
-					}
+					}});
 				});
 				// Agregar el nuevo select al documento
 				materia_div.appendChild(selectMaterias);
