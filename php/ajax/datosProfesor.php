@@ -15,6 +15,7 @@ $query = sprintf(
 		d.clave AS ClaveDepartamento,
 		d.nombre AS Departamento,
 		p.accesoCongelado AS AccesoCongelado,
+		u.login AS NombreUsuario,
         COUNT(arg.idActividad) > 1 AS HaContestado
     FROM (profesor p LEFT OUTER JOIN actividadregistrada arg ON p.id=arg.idProfesor), usuario u, departamento d
     WHERE p.idUsuario = u.id AND p.departamento = d.clave AND

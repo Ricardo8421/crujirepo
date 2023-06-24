@@ -195,7 +195,7 @@ const generateCardHTML = (profe) => `
 					<p class="mb-0"><i class="fa-solid fa-user"></i> Usuario</p>
 				</div>
 				<div class="col-sm-8">
-					<p class="text-muted mb-0" display="Usuario">${profe.Usuario}</p>
+					<p class="text-muted mb-0" display="Usuario">${profe.NombreUsuario}</p>
 				</div>
 			</div>
 			<hr>
