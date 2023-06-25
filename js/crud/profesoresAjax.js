@@ -18,6 +18,9 @@ $(document).ready(() => {
 		$(".btn-reset-form").on("click", async function () {
 			values = $(this).parent().parent().children('[modal-form-target="matricula"]');
 			matricula = values.text(); // esto es la matricula 
+			$("#matriculaprofesor").text(matricula);
+			$('#resetConfirmationButton').on("click", async function () {
+			
 			let response = await $.ajax({
 				url: "php/ajax/reiniciarCuestionario.php",
 				type: "POST",
@@ -34,7 +37,7 @@ $(document).ready(() => {
 					}
 				}
 			});
-		});
+	});});
 		$('.table').on('click', '.btn-pdf', function() {
 			// Encuentra el elemento padre de tipo fila (tr)
 			var fila = $(this).closest('tr');
@@ -77,7 +80,7 @@ const filtrar = (data, form) => {
 
 const generateRowHTML = (profe) =>
 	`
-	<tr class="info-container">
+	<tr class="info-container"></tr>
 		<td class="d-none" modal-form-target="idUsuario">${profe.IdUsuario}</td>
 		<td class="d-none" modal-form-target="accesoCongelado">${profe.AccesoCongelado == 1}</td>
 		<td class="text-center align-middle" modal-form-target="matricula">${profe.Matricula}</td>
@@ -114,7 +117,7 @@ generatePDFButtons = (haContestado) => {
 			</button>
 		</td>
 		<td class="text-center align-middle">
-			<button type="button" class="btn btn-danger btn-sm px-3 btn-reset-form">
+			<button type="button" class="btn btn-danger btn-sm px-3 btn-reset-form"data-bs-toggle="modal" data-bs-target="#resetConfirmationModal">
 				<i class="fa-solid fa-arrow-rotate-left"></i>
 			</button>
 		</td> `;
