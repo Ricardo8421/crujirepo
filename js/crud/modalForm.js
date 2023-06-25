@@ -25,6 +25,11 @@
 
 // Funcionalidad general
 
+const alert = (msg) =>
+	`<div class="alert alert-danger alert-dismissible fade show" role="alert">
+	<strong>Error: </strong> ${msg}
+  </div>`;
+
 const retrieveData = async () => {
 	return await $.ajax({ url: readUrl });
 };
@@ -38,13 +43,14 @@ submitForm = (url) => {
 	let form = $("#crudForm");
 
 	form.off();
-	
+
 	form.on('submit', async (event) => {
 		event.preventDefault();
 		let response = await $.ajax({
 			url: url,
 			type: "POST",
 			data: form.serialize(),
+			/*
 			success: function (resultado) {
 				const successMessage = document.createElement('div');
 				try{
@@ -60,15 +66,14 @@ submitForm = (url) => {
 				}
 				document.getElementById("errorsongos").appendChild(successMessage);
 			}
+			*/
 		});
-
-		console.log(response);
 
 		if (response.success) {
 			$('#crudModal').modal('hide')
 			read(retrieveData);
 		} else {
-			renderMsg(response.msg);
+			renderMsg(response.resultado);
 		}
 	});
 }
@@ -92,7 +97,7 @@ addClickListeners = () => {
 	$(".btn-read").on("click", async function () {
 		renderForm(readConfig);
 		filterdata(data);
-		
+
 	});
 	$(".btn-update").on("click", async function () {
 		await renderForm(updateConfig);
@@ -139,7 +144,7 @@ renderTextField = async (config) => {
 	let div = "";
 	let disabled = "";
 	let type = "text";
-	let required = config.required === false? '' : 'required';
+	let required = config.required === false ? '' : 'required';
 
 	switch (config.type) {
 		case "hidden":
@@ -159,7 +164,7 @@ renderTextField = async (config) => {
 };
 
 renderNumberField = async (config) => {
-	let required = config.required === false? '' : 'required';
+	let required = config.required === false ? '' : 'required';
 	return `
 		<div class="mb-3">
 			<label for="${config.id}" class="form-label">${config.label}</label>
@@ -170,7 +175,7 @@ renderNumberField = async (config) => {
 renderSelectField = async (config) => {
 	let options = await config.getOptions();
 	let optionsHtml = "";
-	let required = config.required === false? '' : 'required';
+	let required = config.required === false ? '' : 'required';
 
 	for (let i = 0; i < options.length; i++) {
 		const option = options[i];
@@ -184,7 +189,7 @@ renderSelectField = async (config) => {
 			<label for="${config.id}" class="form-label">${config.label}</label>
 			<div id="dropdown${config.id}" class="input-group">
 				<select ${required} id="${config.id}" class="form-control chosen-select" style="width:350px;" name="${config.name}">
-					<option value="" selected ${required?"disabled":""}>${config.placeholder}</option>
+					<option value="" selected ${required ? "disabled" : ""}>${config.placeholder}</option>
 					${optionsHtml}
 				</select>
 			</div>
@@ -193,8 +198,7 @@ renderSelectField = async (config) => {
 };
 
 renderCheckboxField = async (config) => {
-	console.log(config);
-	let required = config.required === false? '' : 'required';
+	let required = config.required === false ? '' : 'required';
 	return `
 	<div class="mb-3 form-check">
 		<label for="${config.id}" class="form-check-label" >${config.label}</label>
@@ -203,7 +207,7 @@ renderCheckboxField = async (config) => {
 };
 
 renderMsg = async (msg) => {
-	$('#crudMsg').text(msg);
+	$('#crudMsg').html(alert(msg));
 }
 
 renderForm = async (config) => {

@@ -58,8 +58,16 @@ $(document).ready(() => {
 	};
 });
 
-const generateRowHTML = (profe) =>
-	`
+const generateRowHTML = (p) => {
+	let profe = {...p}
+
+	let keys = Object.keys(profe);
+
+	keys.forEach(key => {
+		profe[key] = escapeHtml(profe[key]);
+	});
+
+	return `
 	<tr class="info-container"></tr>
 		<td class="d-none" modal-form-target="idUsuario">${profe.IdUsuario}</td>
 		<td class="d-none" modal-form-target="accesoCongelado">${profe.AccesoCongelado == 1}</td>
@@ -85,7 +93,8 @@ const generateRowHTML = (profe) =>
 			</button>
 		</td>
 	</tr>
-	`;
+	`
+};
 
 
 generatePDFButtons = (haContestado) => {

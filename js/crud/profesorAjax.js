@@ -31,8 +31,8 @@ $(document).ready(async () => {
 	insertButton();
 
 	let teacherForm = $('#teacherForm');
-	
-	teacherForm.on('submit', async (e)=>{
+
+	teacherForm.on('submit', async (e) => {
 		e.preventDefault();
 
 		let datos = teacherForm.serializeArray();
@@ -43,7 +43,7 @@ $(document).ready(async () => {
 			data: $.param(datos)
 		});
 
-		
+
 		if (response.success) {
 			profe.Matricula = datos[0].value;
 			profe.NombreCompleto = datos[1].value;
@@ -55,17 +55,17 @@ $(document).ready(async () => {
 			console.log("Tardes las buenas");
 			$('#teacherAlert').html(alert(response.msg));
 		}
-		
+
 	});
 
 	let userForm = $('#userForm');
-	
-	userForm.on('submit', async (e)=>{
+
+	userForm.on('submit', async (e) => {
 		e.preventDefault();
 
 		let datos = $("#userForm").serializeArray();
 
-		if(datos[1].value==datos[2].value){
+		if (datos[1].value == datos[2].value) {
 			let response = await $.ajax({
 				url: "php/ajax/modificarProfesor_contrasena.php",
 				type: "POST",
@@ -76,10 +76,10 @@ $(document).ready(async () => {
 			} else {
 				$('#userAlert').html(alert(response.msg));
 			}
-		}else{
+		} else {
 			$('#userAlert').html(alert("La confirmación de contraseña no coincide con la nueva contraseña"));
 		}
-		
+
 
 
 	});
@@ -90,39 +90,39 @@ const displayData = (profe) => {
 
 	for (let i = 0; i < keys.length; i++) {
 		const key = keys[i];
-		
+
 		$(`[display=${key}]`).text(profe[key]);
 	}
 }
 
 const insertButton = () => {
 	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
+	xhttp.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
 			var objeto = JSON.parse(this.responseText)[0];
 			usuario = objeto['Matricula'];
-			if (objeto['HaContestado'] == '1'){
+			if (objeto['HaContestado'] == '1') {
 				var button = '<button class="btn btn-warning px-4" id = "generar-pdf">Generar PDF</button>';
 				$('#PdfOption').append(button);
-				document.getElementById("generar-pdf").addEventListener("click", function(){
+				document.getElementById("generar-pdf").addEventListener("click", function () {
 					var xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function() {
+					xhttp.onreadystatechange = function () {
 						if (this.readyState === 4 && this.status === 200) {
-						var objeto = JSON.parse(this.responseText)[0];
-						var usuario = objeto['Matricula'];
+							var objeto = JSON.parse(this.responseText)[0];
+							var usuario = objeto['Matricula'];
 
-						var xhttp2 = new XMLHttpRequest();
-						xhttp2.onreadystatechange = function() {
-							if (this.readyState === 4 && this.status === 200) {
-							var json = this.responseText;
-							var url = './php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
-							window.location.href = url;
-							}
-						};
+							var xhttp2 = new XMLHttpRequest();
+							xhttp2.onreadystatechange = function () {
+								if (this.readyState === 4 && this.status === 200) {
+									var json = this.responseText;
+									var url = './php/utils/createPdfProfesor.php?json=' + encodeURIComponent(json);
+									window.location.href = url;
+								}
+							};
 
-						xhttp2.open("POST", "php/ajax/datosActividadesRegistradas.php", true);
-						xhttp2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-						xhttp2.send("usuario=" + encodeURIComponent(usuario));
+							xhttp2.open("POST", "php/ajax/datosActividadesRegistradas.php", true);
+							xhttp2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+							xhttp2.send("usuario=" + encodeURIComponent(usuario));
 						}
 					};
 
@@ -130,10 +130,10 @@ const insertButton = () => {
 					xhttp.send();
 				});
 			}
-			else{
+			else {
 				var button = '<button class="btn btn-warning px-4" id = "Contestar-Encuesta">Contestar Encuesta</button>';
 				$('#PdfOption').append(button);
-				document.getElementById("Contestar-Encuesta").addEventListener("click", function(){
+				document.getElementById("Contestar-Encuesta").addEventListener("click", function () {
 					window.location.href = './formulario';
 				});
 			}
@@ -143,7 +143,17 @@ const insertButton = () => {
 	xhttp.send();
 }
 
-const generateCardHTML = (profe) => `
+const generateCardHTML = (p) => {
+	let profe = {...p}
+
+	let keys = Object.keys(profe);
+
+	keys.forEach(key => {
+		profe[key] = escapeHtml(profe[key]);
+	});
+
+
+	return `
 	<div class="text-center">
 		<img src="assets/escudoPerfil.png" width="100" class="rounded-circle">
 	</div>
@@ -220,4 +230,5 @@ const generateCardHTML = (profe) => `
 
 		<div class="buttons mt-4" id="PdfOption">
 		</div>
-	</div>`;
+	</div>`
+};

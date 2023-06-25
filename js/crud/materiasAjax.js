@@ -11,8 +11,16 @@ const loadingRing = `
 		<div class="lds-dual-ring"></div>
 	</th></tr>`;
 
-const generateRowHTML = (materia) =>
-	`<tr>
+const generateRowHTML = (m) => {
+	let materia = {...m}
+
+	let keys = Object.keys(materia);
+
+	keys.forEach(key => {
+		materia[key] = escapeHtml(materia[key]);
+	});
+
+	return `<tr>
 		<td class="d-none" modal-form-target="clave">${materia.Clave}</td>
 		<td class="text-center align-middle" modal-form-target="nombre">${materia.Materia}</td>
 		<td class="text-center align-middle" modal-form-target="academia">${materia.Academia}</td>
@@ -31,7 +39,8 @@ const generateRowHTML = (materia) =>
 				<i class="fas fa-trash"></i>
 			</button>
 		</td>
-	</tr>`;
+	</tr>`
+};
 
 const crudFields = () => [
 	{

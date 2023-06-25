@@ -50,6 +50,7 @@ if (!is_null($redirect)) {
 				</div>
 				<form id="crudForm">
 					<div class="modal-body">
+						<div id="crudMsg"></div>
 						<fieldset id="generatedForm">
 						</fieldset>
 					</div>
@@ -147,6 +148,7 @@ if (!is_null($redirect)) {
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
+	<script src="js/escapeHtml.js"></script>
 	<script src="js/crud/profesoresAjax.js"></script>
 	<script src="js/crud/modalForm.js"></script>
 	<script src="js/botones_redireccion.js"></script>
