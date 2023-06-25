@@ -71,9 +71,9 @@ const filtrar = (data, form) => {
 
 	for (let i = 0; i < data.length; i++) {
 		let profe = data[i];
-		if ((matricula === '' || profe.Matricula === matricula) && (nombre === '' || profe.NombreCompleto === nombre) && (departamento === '' || profe.Departamento === departamento)){
+		if ((matricula === '' || profe.Matricula.toLowerCase().includes(matricula.toLowerCase())) && (nombre === '' || profe.NombreCompleto.toLowerCase().includes(nombre.toLowerCase())) && (departamento === '' || profe.Departamento === departamento)){
 			newData.push(profe);
-		}
+		}		  
 	}  
 	return newData;
 };  

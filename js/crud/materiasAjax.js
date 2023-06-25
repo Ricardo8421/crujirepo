@@ -186,6 +186,7 @@ const filtrar = (data, form) => {
 	let plan = form[3].value;
 	let academia = '';
 	let carrera = '';	
+	console.log(nombre)
 	if(form.length == 5 && form[4].name == 'academia'){
 		academia = form[4].value;
 	}
@@ -200,8 +201,8 @@ const filtrar = (data, form) => {
 	for (let i = 0; i < data.length; i++) {
 		const materia = data[i];
 		if (
-			(clave === '' || materia.Clave === clave) &&
-			(nombre === '' || materia.Materia === nombre) &&
+			(clave === '' || materia.Clave.toLowerCase() === clave.toLowerCase()) &&
+			(nombre === '' || materia.Materia.toLowerCase().includes(nombre.toLowerCase()) ) &&
 			(semestre === '' || materia.Semestre === semestre) &&
 			(plan === '' || materia.Plan === plan) &&
 			(academia === '' || materia.Academia === academia) &&
