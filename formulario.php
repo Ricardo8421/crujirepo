@@ -54,7 +54,6 @@ if (!is_null($redirect)) {
             <form method="POST" action="php/ajax/FormularioDatosEnvio.php" class="formulario flex flex--column" autocomplete="off" id="form">
                 <section class="bg-lighter-escom py-5 carta d-flex" style="background-color:#fff" ;>
 
-                   
                     <div class=" container container-formulario">
                         
                 <section class="bg-lighter-escom py-5 carta">
@@ -67,8 +66,9 @@ if (!is_null($redirect)) {
                             </div>
                         </div>
                     </div>
-                    <label for="materias_extra">¿Desea registra mas materias?</label>
-                    <input type="checkbox" id="materias_extra" name="materias_extra">
+                    <br>
+                    <label for="materias_extra">Marque la casilla si tiene disposicion para impartir mas materias de las permitidas</label>
+                    <input class="form-check-input border-2" type="checkbox" id="materias_extra" name="materias_extra">
 
                     <label for="materias_pp" id="materias_pp_label" style="display: none;"> </label>
 
