@@ -34,22 +34,26 @@ $(document).ready(async () => {
 	
 	teacherForm.on('submit', async (e)=>{
 		e.preventDefault();
-		
-		/* TODO: Debe jalar el php para poder descomentar eso, se ocupa validar
+
+		let datos = teacherForm.serializeArray();
+
 		let response = await $.ajax({
-			url: "php/ajax/modificarProfesor_profesor",
+			url: "php/ajax/modificarProfesor_personales.php",
 			type: "POST",
-			data: form.serialize()
+			data: $.param(datos)
 		});
-		*/
-		
-		response = {success: true, msg: 'Si jaló paps'};
-		//response = {success: false, msg: 'Algo de no sé qué y no sé cuanto error ble'};
+
 		
 		if (response.success) {
+			profe.Matricula = datos[0].value;
+			profe.NombreCompleto = datos[1].value;
+			datos = await $.ajax({ url: "php/ajax/datosProfesor" });
+			profe.Departamento = datos[0].Departamento;
+			console.log(profe);
 			displayData(profe);
 			$("#editTeacherModal").modal('hide');
 		} else {
+			console.log("Tardes las buenas");
 			$('#teacherAlert').html(alert(response.msg));
 		}
 		
@@ -59,24 +63,25 @@ $(document).ready(async () => {
 	
 	userForm.on('submit', async (e)=>{
 		e.preventDefault();
-		
-		/* TODO: Debe jalar el php para poder descomentar eso, se ocupa validar
-		let response = await $.ajax({
-			url: "php/ajax/modificarUsuario_profesor",
-			type: "POST",
-			data: form.serialize()
-		});
-		*/
 
-		response = {success: true, msg: 'Si jaló paps'};
-		//response = {success: false, msg: 'Algo de no sé qué y no sé cuanto error ble'};
+		let datos = $("#userForm").serializeArray();
 
-		if (response.success) {
-			displayData(profe);
-			$("#editTeacherModal").modal('hide');
-		} else {
-			$('#teacherAlert').html(alert(response.msg));
+		if(datos[1].value==datos[2].value){
+			let response = await $.ajax({
+				url: "php/ajax/modificarProfesor_contrasena.php",
+				type: "POST",
+				data: $.param(datos)
+			});
+			if (response.success) {
+				window.location.replace("logout.php");
+			} else {
+				$('#userAlert').html(alert(response.msg));
+			}
+		}else{
+			$('#userAlert').html(alert("La confirmación de contraseña no coincide con la nueva contraseña"));
 		}
+		
+
 
 	});
 });
@@ -195,7 +200,7 @@ const generateCardHTML = (profe) => `
 					<p class="mb-0"><i class="fa-solid fa-user"></i> Usuario</p>
 				</div>
 				<div class="col-sm-8">
-					<p class="text-muted mb-0" display="Usuario">${profe.NombreUsuario}</p>
+					<p class="text-muted mb-0" display="NombreUsuario">${profe.NombreUsuario}</p>
 				</div>
 			</div>
 			<hr>
@@ -217,53 +222,3 @@ const generateCardHTML = (profe) => `
 		<div class="buttons mt-4" id="PdfOption">
 		</div>
 	</div>`;
-
-let form = document.getElementById('teacherForm');
-form.addEventListener('submit', async function(event){
-	event.preventDefault();
-	let response = await $.ajax({
-		url: "php/ajax/modificarProfesor_personales.php",
-		type: "POST",
-		data: $("#teacherForm").serialize(),
-		success: function (resultado) {
-			const successMessage = document.createElement('div');
-			try{
-				if(resultado.success){
-					location.reload();
-				}else{
-					successMessage.classList.add('alert', 'alert-danger');
-				}
-				successMessage.textContent = resultado.msg;
-			}catch(e){
-				successMessage.classList.add('alert', 'alert-danger');
-				successMessage.textContent = "Algo salió mal";
-			}
-			document.getElementById("generatedContainer").appendChild(successMessage);
-		}
-	});
-});
-
-let formU = document.getElementById('userForm');
-formU.addEventListener('submit', async function(event){
-	event.preventDefault();
-	let response = await $.ajax({
-		url: "php/ajax/modificarProfesor_contrasena.php",
-		type: "POST",
-		data: $("#userForm").serialize(),
-		success: function (resultado) {
-			const successMessage = document.createElement('div');
-			try{
-				if(resultado.success){
-					location.reload();
-				}else{
-					successMessage.classList.add('alert', 'alert-danger');
-				}
-				successMessage.textContent = resultado.msg;
-			}catch(e){
-				successMessage.classList.add('alert', 'alert-danger');
-				successMessage.textContent = "Algo salió mal";
-			}
-			document.getElementById("generatedContainer").appendChild(successMessage);
-		}
-	});
-});

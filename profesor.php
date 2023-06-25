@@ -92,11 +92,7 @@ if (!is_null($redirect)) {
 				<form id="userForm">
 					<div class="modal-body">
 						<fieldset>
-							<div class="mb-3">
-								<label for="inputLogin" class="form-label">Usuario</label>
-								<input required type="text" id="inputLogin" class="form-control" name="usuario"
-									placeholder="Nombre de usuario">
-							</div>
+							<div id="userAlert"></div>
 							<div class="mb-3">
 								<label for="inputPrevPass" class="form-label">Contraseña actual</label>
 								<input required type="password" id="inputPrevPass" class="form-control"
@@ -110,7 +106,7 @@ if (!is_null($redirect)) {
 							<div class="mb-3">
 								<label for="inputConfirmationPass" class="form-label">Confirmar contraseña</label>
 								<input required type="password" id="inputConfirmationPass" class="form-control"
-									name="contrasenaNueva" placeholder="Confirme su contraseña">
+									name="contrasenaConfirmacion" placeholder="Confirme su contraseña">
 							</div>
 						</fieldset>
 					</div>
