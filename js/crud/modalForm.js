@@ -184,7 +184,7 @@ renderSelectField = async (config) => {
 			<label for="${config.id}" class="form-label">${config.label}</label>
 			<div id="dropdown${config.id}" class="input-group">
 				<select ${required} id="${config.id}" class="form-control chosen-select" style="width:350px;" name="${config.name}">
-					<option value="" selected disabled>${config.placeholder}</option>
+					<option value="" selected ${required?"disabled":""}>${config.placeholder}</option>
 					${optionsHtml}
 				</select>
 			</div>
