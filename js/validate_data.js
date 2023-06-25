@@ -4,8 +4,7 @@ $(document).ready(function() {
 	  $("select[name='actividad" + i + "']").change(function() {
 		// Obtener el valor seleccionado
 		var seleccionado = $(this).val();
-		let resultado = peticion(seleccionado);
-  
+
 		// Hacer una solicitud AJAX a tu script PHP
 		async function peticion(seleccionado) {
 		  let response = await $.ajax({
@@ -13,8 +12,8 @@ $(document).ready(function() {
 			method: "POST",
 			data: { valor: seleccionado },
 			success: function(resultado) {
-			  let rsp = JSON.parse(resultado);
-			  console.log(rsp);
+				let rsp = JSON.parse(resultado);
+
 			  if (parseInt(rsp) >= 0 && parseInt(rsp) < 22 && !isNaN(rsp)) {
 				if (rsp <= 0) {
 				  rsp = 1;
@@ -63,7 +62,6 @@ $(document).ready(function() {
 	  try {
 		validateMateriaValues();
 	  } catch (error) {
-		console.error(error);
 		// Manejar el error de validación de las materias
 		return;
 	  }
@@ -118,7 +116,6 @@ $(document).ready(function() {
 			type: "POST",
 			data: $.param(datos),
 			success: function(resultado) {
-				console.log(resultado);
 			  try {
 				objetoj = JSON.parse(resultado);
 				if (objetoj.success) {

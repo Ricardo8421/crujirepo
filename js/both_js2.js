@@ -15,7 +15,6 @@ fetch("php/ajax/datosMaterias")
 					success: function (resultado) {
 						let rsp = ((resultado));
 
-
 						/*function dividirString(inputString) {
 							// Encontrar el índice del primer '[' en el string
 							var startIndex = inputString.indexOf('[');
@@ -40,14 +39,8 @@ fetch("php/ajax/datosMaterias")
 							return partes;
 						  }
 						  */
-						
 
 						const resultArray = rsp[0].academias.split(",");
-						console.log(resultArray);
-						
-						// Agregar el evento change a la etiqueta select
-
-
 						// Obtener la academia seleccionada
 						var objetosFiltrados = [];
 						for (let o = 0; o < (resultArray.length); o++) {
@@ -57,12 +50,9 @@ fetch("php/ajax/datosMaterias")
 
 							// Filtrar los objetos del JSON por la academia seleccionada
 							if (academiaSeleccionada != "" && academiaSeleccionada != "]" && academiaSeleccionada != "[" && academiaSeleccionada != ",") {
-								console.log(academiaSeleccionada);
 								objetosFiltrados.push(datos.filter(function (objeto) {
-									console.log(objeto);
 									return objeto.Academia == academiaSeleccionada;
 								}))
-								console.log(objetosFiltrados)
 							}
 						}
 						var selectsMaterias_q = document.querySelectorAll("#materia");
@@ -154,7 +144,6 @@ fetch("php/ajax/datosMaterias")
 			if (document.querySelectorAll("#materias_pp").length != 0) {
 
 				materias_pp.addEventListener('click', function () {
-					console.log(selectnumber);
 					// Variable para llevar la cuenta de la cantidad
 					let previous_divs = document.getElementById("materias_div" + selectnumber)
 
@@ -166,7 +155,6 @@ fetch("php/ajax/datosMaterias")
 				});
 				materias_ll.addEventListener('click', function () {
 					if (restanumber == 4) { selectnumber = 4; restanumber = 0; }
-					console.log(selectnumber);
 					// Variable para llevar la cuenta de la cantidad
 					let previous_divs = document.getElementById("materias_div" + selectnumber)
 					if (previous_divs.style.display == "none" && selectnumber > 2) selectnumber = selectnumber - 1;
@@ -178,9 +166,6 @@ fetch("php/ajax/datosMaterias")
 						selectnumber = selectnumber - 1;
 					}
 					else selectnumber = 2;
-
-
-					console.log(selectnumber);
 				});
 			}
 
