@@ -58,26 +58,6 @@ $(document).ready(() => {
 	};
 });
 
-const filtrar = (data, form) => {
-	let newData = [];
-	
-	let matricula = form[0].value;
-	let nombre = form[1].value;
-	let departamento = '';
-	
-	if (form.length > 2) {
-		departamento = form[2].value;
-	}
-
-	for (let i = 0; i < data.length; i++) {
-		let profe = data[i];
-		if ((matricula === '' || profe.Matricula.toLowerCase().includes(matricula.toLowerCase())) && (nombre === '' || profe.NombreCompleto.toLowerCase().includes(nombre.toLowerCase())) && (departamento === '' || profe.Departamento === departamento)){
-			newData.push(profe);
-		}		  
-	}  
-	return newData;
-};  
-
 const generateRowHTML = (profe) =>
 	`
 	<tr class="info-container"></tr>
@@ -210,7 +190,7 @@ readFields = () => {
 		required: false,
 		getOptions: async () => [
 			{ value: 1, text: "Ha contestado" },
-			{ value: 1, text: "No ha contestado" }
+			{ value: 0, text: "No ha contestado" }
 		],
 	})
 	return fields;
@@ -255,3 +235,34 @@ const deleteConfig = {
 		},
 	]
 };
+
+const filtrar = (data, form) => {
+	let newData = [];
+
+	let matricula = form[0].value;
+	let nombre = form[1].value;
+	let departamento = '';
+	let haContestado = '';
+	
+	if (form.length == 3 && form[2].name == 'departamento') {
+		departamento = form[2].value;
+	}else if (form.length == 3 && form[2].name == 'contestado') {
+		haContestado = form[2].value;
+	}else if (form.length == 4) {
+		departamento = form[2].value;
+		haContestado = form[3].value;
+	}
+
+	for (let i = 0; i < data.length; i++) {
+		let profe = data[i];
+		
+		if ((matricula === '' || profe.Matricula.toLowerCase().includes(matricula.toLowerCase())) && 
+		(nombre === '' || profe.NombreCompleto.toLowerCase().includes(nombre.toLowerCase())) && 
+		(departamento === '' || profe.Departamento === departamento) &&
+		(haContestado === '' || profe.HaContestado == haContestado)
+		){
+			newData.push(profe);
+		}		  
+	}  
+	return newData;
+};  

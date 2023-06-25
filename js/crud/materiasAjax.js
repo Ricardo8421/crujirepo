@@ -186,7 +186,7 @@ const filtrar = (data, form) => {
 	let plan = form[3].value;
 	let academia = '';
 	let carrera = '';	
-	console.log(nombre)
+
 	if(form.length == 5 && form[4].name == 'academia'){
 		academia = form[4].value;
 	}
