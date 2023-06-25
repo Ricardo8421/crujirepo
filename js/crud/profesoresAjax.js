@@ -12,7 +12,7 @@ const loadingRing = `
 	</th></tr>`;
 
 $(document).ready(() => {
-	temp=addClickListeners;
+	let temp=addClickListeners;
 	addClickListeners=()=>{
 		temp();
 		$(".btn-reset-form").on("click", async function () {
@@ -52,9 +52,27 @@ $(document).ready(() => {
 			xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhttp.send("usuario=" + encodeURIComponent(usuario));
 		});
-	}
+	};
 });
+
+const filtrar = (data, form) => {
+	let newData = [];
+	let matricula = form[0].value;
+	let nombre = form[1].value;
+	let departamento = '';
 	
+	if (form.length > 2) {
+		departamento = form[2].value;
+	}
+
+	for (let i = 0; i < data.length; i++) {
+		let profe = data[i];
+		if ((matricula === '' || profe.Matricula === matricula) && (nombre === '' || profe.NombreCompleto === nombre) && (departamento === '' || profe.Departamento === departamento)){
+			newData.push(profe);
+		}
+	}  
+	return newData;
+};  
 
 const generateRowHTML = (profe) =>
 	`
@@ -166,6 +184,19 @@ readFields = () => {
 		const field = fields[i];
 		field.required = false;
 	}
+	let getOptions = async () => {
+		let departamentos = await $.ajax({
+			url: "php/ajax/datosDepartamentos.php",
+		});
+
+		let res = [];
+		for (let i = 0; i < departamentos.length; i++) {
+			const departamento = departamentos[i];
+			res[i] = { value: departamento.Departamento, text: departamento.Departamento };
+		}
+		return res;
+	}
+	fields[fields.length - 1].getOptions = getOptions;
 	return fields;
 }
 

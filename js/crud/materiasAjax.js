@@ -1,6 +1,20 @@
 /**
  * Constantes para usar en materias.php con modalForm.js
  */
+const filtrar = (data, form) => {
+	let newData = [];
+	
+	for (let i = 0; i < data.length; i++) {
+		const materia = data[i];
+		if (materia.Clave === "000000") continue;
+		newData.push(materia);
+	}
+	console.log(data);
+	console.log(form);
+	console.log('xd');
+	return [newData[0]];
+};
+
 
 const createUrl = "php/ajax/insertarMateria.php";
 const readUrl = "php/ajax/datosMaterias.php";
@@ -123,6 +137,30 @@ const readFields = () => {
 		field.label = "Buscar por " + field.label.toLowerCase();
 		field.required = false;
 	}
+	let getOptions1 = async () => {
+		let academias = await $.ajax({
+			url: "php/ajax/datosAcademias.php",
+		});
+
+		let res = [];
+		for (let i = 0; i < academias.length; i++) {
+			const academia = academias[i];
+			res[i] = { value: academia.Academia, text: academia.Academia };
+		}
+
+		return res;
+	}
+	let getOptions2 = async () => {
+		return [
+			{ value: "Ing. Sistemas Computacionales", text: "Ing. Sistemas Computacionales" },
+			{ value: "Ing. Inteligencia Artificial", text: "Ing. Inteligencia Artificial" },
+			{ value: "Lic. Ciencia de Datos", text: "Lic. Ciencia de Datos" },
+		];
+	}
+	fields[2].getOptions = getOptions1;
+	fields[5].getOptions = getOptions2;
+
+
 	return fields;
 }
 

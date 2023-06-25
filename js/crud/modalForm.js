@@ -28,21 +28,19 @@
 const retrieveData = async () => {
 	return await $.ajax({ url: readUrl });
 };
+let data = [];
 
-$(document).ready(() => {
-	read(retrieveData);
+$(document).ready(async () => {
+	data = await read(retrieveData);
 });
 
 submitForm = (url) => {
 	let form = $("#crudForm");
 
-	console.log(form);
-
 	form.off();
 	
 	form.on('submit', async (event) => {
 		event.preventDefault();
-
 		let response = await $.ajax({
 			url: url,
 			type: "POST",
@@ -74,6 +72,17 @@ submitForm = (url) => {
 		}
 	});
 }
+let filterdata = (data) => {
+	let form = $("#crudForm");
+
+	form.off();
+
+	form.on("submit", async (event) => {
+		event.preventDefault();
+		let filteredData = filtrar(data, await form.serializeArray());
+		read(async () => filteredData);
+	});
+};
 
 addClickListeners = () => {
 	$(".btn-create").on("click", async function () {
@@ -82,8 +91,8 @@ addClickListeners = () => {
 	});
 	$(".btn-read").on("click", async function () {
 		renderForm(readConfig);
-		submitForm(readUrl);
-		read(retrieveData);
+		filterdata(data);
+		
 	});
 	$(".btn-update").on("click", async function () {
 		await renderForm(updateConfig);
@@ -121,6 +130,7 @@ read = async (getData) => {
 
 	// Agregar listeners a los botones de edicion
 	addClickListeners();
+	return data;
 };
 
 // Renderers
