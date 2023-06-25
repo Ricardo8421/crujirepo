@@ -1,5 +1,5 @@
 <?php
-include "php/utils/login.php";
+include "../utils/login.php";
 session_start();
 $redirect = checkSession(1);
 $b=false;
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
     }
   }
   if($redireccionar){
-    header:("location:formulario.php");
+    header("Location: ./" . getRedirect($redirect));
   }
   $queryA=substr($queryA,0,-1);
   if ($mysql->query($queryA)) {
@@ -82,7 +82,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
     $resultado="Error en el registro";
   }
 }
-
 
 $r["success"]=$b;
 $r["resultado"]=$resultado;

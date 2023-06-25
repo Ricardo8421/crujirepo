@@ -51,7 +51,7 @@ if (!is_null($redirect)) {
     <div class="container-scroll">
         <div class="container ">
 
-            <form method="POST" action="FormularioDatosEnvio.php" class="formulario flex flex--column" autocomplete="off" id="form">
+            <form method="POST" action="php/ajax/FormularioDatosEnvio.php" class="formulario flex flex--column" autocomplete="off" id="form">
                 <section class="bg-lighter-escom py-5 carta d-flex" style="background-color:#fff" ;>
 
                    

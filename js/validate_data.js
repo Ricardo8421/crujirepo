@@ -114,10 +114,11 @@ $(document).ready(function() {
 		// Por ejemplo, puedes mostrar un mensaje de éxito
 		async function registro(seleccionado) {
 		  let response = await $.ajax({
-			url: "FormularioDatosEnvio.php",
+			url: "php/ajax/FormularioDatosEnvio.php",
 			type: "POST",
 			data: $.param(datos),
 			success: function(resultado) {
+				console.log(resultado);
 			  try {
 				objetoj = JSON.parse(resultado);
 				if (objetoj.success) {

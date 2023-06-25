@@ -29,6 +29,9 @@ function checkCredentials(String $username = null, String $password = null) : in
 
     if ($result -> num_rows > 0) {
 		while ($row = $result -> fetch_assoc()) {
+            if($row['accesoCongelado']==1){
+                return 3;
+            }
             return $row['permiso'];
 		}
 	}
@@ -48,7 +51,7 @@ function checkCredentials(String $username = null, String $password = null) : in
 function login(String $username = null, String $password = null) : int {
     $permiso = checkCredentials($username, $password);
 
-    if ($permiso != 0) {
+    if ($permiso != 0 && $permiso != 3) {
         $_SESSION["usuario"] = $username;
         $_SESSION["contra"] = $password;
     }

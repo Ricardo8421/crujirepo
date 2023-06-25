@@ -14,7 +14,11 @@
         $json["error"] = "Usuario o contraseña incorrectos";
         $json["redirectTo"] = "";
         echo json_encode($json);
-    } else {
+    }elseif ($permiso == 3) {
+        $json["error"] = "Jajaks nel";
+        $json["redirectTo"] = "";
+        echo json_encode($json);
+    }else {
         $redirect = getRedirect($permiso);
         $json["error"] = null;
         $json["redirectTo"] = $redirect;

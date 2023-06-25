@@ -4,7 +4,7 @@ session_start();
 
 $accessLevel = checkLoggedIn();
 
-if ($accessLevel != 0) {
+if ($accessLevel != 0 && $accessLevel != 3) {
 	header("Location: ./" . getRedirect($accessLevel));
 }
 
@@ -33,7 +33,7 @@ if ($accessLevel != 0) {
 	<div class="container-fluid vh-100">
 		<div class="row align-items-center justify-content-center h-100">
 			<div class="col-md-5 col-sm-8 col-11 rounded-5 bg-light-escom align-items-center">
-				<div class="row align-items-center h-100">
+				<div class="row align-items-center">
 					<div class="col p-5">
 						<h3>Sistema profesores</h3>
 						<form class="col-12" id="login_form">
