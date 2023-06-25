@@ -201,6 +201,18 @@ readFields = () => {
 		return res;
 	}
 	fields[fields.length - 1].getOptions = getOptions;
+	fields.push({
+		type: "select",
+		label: "Cuestionario contestado",
+		id: "inputHaContestado",
+		name: "contestado",
+		placeholder: "Seleccione si ha contestado o no",
+		required: false,
+		getOptions: async () => [
+			{ value: 1, text: "Ha contestado" },
+			{ value: 1, text: "No ha contestado" }
+		],
+	})
 	return fields;
 }
 
