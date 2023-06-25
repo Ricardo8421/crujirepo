@@ -49,7 +49,6 @@ $(document).ready(async () => {
 			profe.NombreCompleto = datos[1].value;
 			datos = await $.ajax({ url: "php/ajax/datosProfesor" });
 			profe.Departamento = datos[0].Departamento;
-			console.log(profe);
 			displayData(profe);
 			$("#editTeacherModal").modal('hide');
 		} else {

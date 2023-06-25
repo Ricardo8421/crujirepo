@@ -13,6 +13,9 @@ if(isset($_POST["matricula"])){
     $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor=%d",
         $mysql->real_escape_string($matricula));
     $mysql->query($query);
+    $query=sprintf("UPDATE profesor SET materiasExtra=NULL WHERE id='%s'",
+        $mysql->real_escape_string($matricula));
+    $mysql->query($query);
     if($mysql->affected_rows > 0){
         $r["resultado"]="Sí jaló paps";
         $b=true;
