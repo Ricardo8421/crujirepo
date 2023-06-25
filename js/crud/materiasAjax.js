@@ -1,21 +1,6 @@
 /**
  * Constantes para usar en materias.php con modalForm.js
  */
-const filtrar = (data, form) => {
-	let newData = [];
-	
-	for (let i = 0; i < data.length; i++) {
-		const materia = data[i];
-		if (materia.Clave === "000000") continue;
-		newData.push(materia);
-	}
-	console.log(data);
-	console.log(form);
-	console.log('xd');
-	return [newData[0]];
-};
-
-
 const createUrl = "php/ajax/insertarMateria.php";
 const readUrl = "php/ajax/datosMaterias.php";
 const updateUrl = "php/ajax/modificarMateria.php";
@@ -64,26 +49,6 @@ const crudFields = () => [
 		placeholder: "Nombre de la materia",
 	},
 	{
-		type: "select",
-		label: "Academia",
-		id: "inputAcademia",
-		name: "academia",
-		placeholder: "Seleccione la academia",
-		getOptions: async () => {
-			let academias = await $.ajax({
-				url: "php/ajax/datosAcademias.php",
-			});
-
-			let res = [];
-			for (let i = 0; i < academias.length; i++) {
-				const academia = academias[i];
-				res[i] = { value: academia.Id, text: academia.Academia };
-			}
-
-			return res;
-		},
-	},
-	{
 		type: "number",
 		min: 1,
 		max: 8,
@@ -100,6 +65,26 @@ const crudFields = () => [
 		id: "inputPlan",
 		name: "plan",
 		placeholder: "Año del plan académico",
+	},
+	{
+		type: "select",
+		label: "Academia",
+		id: "inputAcademia",
+		name: "academia",
+		placeholder: "Seleccione la academia",
+		getOptions: async () => {
+			let academias = await $.ajax({
+				url: "php/ajax/datosAcademias.php",
+			});
+
+			let res = [];
+			for (let i = 0; i < academias.length; i++) {
+				const academia = academias[i];
+				res[i] = { value: academia.Academia, text: academia.Academia };
+			}
+
+			return res;
+		},
 	},
 	{
 		type: "select",
@@ -190,4 +175,40 @@ const deleteConfig = {
 			name: "nombre",
 		},
 	],
+};
+
+const filtrar = (data, form) => {
+	let newData = [];
+
+	let clave = form[0].value;
+	let nombre = form[1].value;
+	let semestre = form[2].value;
+	let plan = form[3].value;
+	let academia = '';
+	let carrera = '';	
+	if(form.length == 5 && form[4].name == 'academia'){
+		academia = form[4].value;
+	}
+	else if(form.length == 5 && form[4].name == 'carrera'){
+		carrera = form[4].value;
+	}
+	else if(form.length == 6){
+		academia = form[4].value;
+		carrera = form[5].value;
+	}
+	
+	for (let i = 0; i < data.length; i++) {
+		const materia = data[i];
+		if (
+			(clave === '' || materia.Clave === clave) &&
+			(nombre === '' || materia.Materia === nombre) &&
+			(semestre === '' || materia.Semestre === semestre) &&
+			(plan === '' || materia.Plan === plan) &&
+			(academia === '' || materia.Academia === academia) &&
+			(carrera === '' || materia.Carrera === carrera)
+		){
+			newData.push(materia);
+		}
+	}
+	return newData;
 };

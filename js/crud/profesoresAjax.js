@@ -57,6 +57,7 @@ $(document).ready(() => {
 
 const filtrar = (data, form) => {
 	let newData = [];
+	
 	let matricula = form[0].value;
 	let nombre = form[1].value;
 	let departamento = '';
