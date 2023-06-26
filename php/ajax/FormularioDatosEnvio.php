@@ -82,33 +82,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
     header("Location: ./" . getRedirect($redirect));
   }
   if($actT==0){
-    $queryA=substr($queryA,0,-1);
-    if ($mysql->query($queryA)) {
+    $mysql->begin_transaction();
+    try{
+      $queryA=substr($queryA,0,-1);
+      $mysql->query($queryA);
       $queryM=substr($queryM,0,-1);
-      if ($mysql->query($queryM)) {
-        $resultado = "Registro correcto";
-        $b=true;
-      } else {
-        $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor='%s'",
-          $mysql->real_escape_string($profesor));
-        $mysql->query($query);
-        $resultado = "Error en el registro";
+      $mysql->query($queryM);
+      $resultado = "Registro correcto";
+      $b=true;
+      $mysql->query($queryME);
+      if($mysql->affected_rows == 0){
+        $b=false;
+        $resultado="Error en el registro";
+        $mysql->rollback();
+        
       }
-    } else {
+      $mysql->commit();
+    }catch(mysqli_sql_exception $e){
       $resultado = "Error en el registro";
-    }
-    $mysql->query($queryME);
-    if($mysql->affected_rows == 0){
-      $b=false;
-      $resultado="Error en el registro";
-
-      $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor='%s'",
-        $mysql->real_escape_string($profesor));
-      $mysql->query($query);
-      $query = sprintf("DELETE FROM materiaRegistradas WHERE idProfesor='%s'",
-        $mysql->real_escape_string($profesor));
-      $mysql->query($query);
-
+      $mysql->rollback();
     }
   }else{
     $resultado = "Actividad requeridas invalidas";
