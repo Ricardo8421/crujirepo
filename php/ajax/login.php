@@ -15,7 +15,7 @@
         $json["redirectTo"] = "";
         echo json_encode($json);
     }elseif ($permiso == 3) {
-        $json["error"] = "Jajaks nel";
+        $json["error"] = "Su acceso ha sido bloqueado por un administrador, comuníquese con gestión para descongelárselo";
         $json["redirectTo"] = "";
         echo json_encode($json);
     }else {

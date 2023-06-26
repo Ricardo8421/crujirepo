@@ -89,7 +89,7 @@ const crudFields = () => [
 			let res = [];
 			for (let i = 0; i < academias.length; i++) {
 				const academia = academias[i];
-				res[i] = { value: academia.Academia, text: academia.Academia };
+				res[i] = { value: academia.Id, text: academia.Academia };
 			}
 
 			return res;
@@ -151,8 +151,8 @@ const readFields = () => {
 			{ value: "Lic. Ciencia de Datos", text: "Lic. Ciencia de Datos" },
 		];
 	}
-	fields[2].getOptions = getOptions1;
-	fields[5].getOptions = getOptions2;
+	fields[fields.length - 2].getOptions = getOptions1;
+	fields[fields.length - 1].getOptions = getOptions2;
 
 
 	return fields;
