@@ -4,7 +4,7 @@ $(document).ready(function() {
 	  $("select[name='actividad" + i + "']").change(function() {
 		// Obtener el valor seleccionado
 		var seleccionado = $(this).val();
-
+		peticion(seleccionado);
 		// Hacer una solicitud AJAX a tu script PHP
 		async function peticion(seleccionado) {
 		  let response = await $.ajax({
@@ -130,6 +130,7 @@ $(document).ready(function() {
 				const successMessage = document.createElement('div');
 				successMessage.classList.add('alert', 'alert-danger');
 				successMessage.textContent = "Algo salió mal";
+				console.log(resultado);
 				form.appendChild(successMessage);
 			  }
 			}

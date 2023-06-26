@@ -9,11 +9,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
   $usuario = $_SESSION["usuario"];
 
   $query = sprintf("SELECT p.id FROM profesor p, usuario u WHERE u.`login`='%s' AND u.id=p.idUsuario",
-  $mysql->real_escape_string($usuario));
+    $mysql->real_escape_string($usuario));
   $res = $mysql->query($query);
   if($res->num_rows > 0){
     $f = $res->fetch_assoc();
     $profesor = $f["id"];
+  }
+
+  $query = "SELECT id, horasMinimas FROM actividad WHERE horasMinimas>0;";
+  $resR = $mysql->query($query);
+  $actR = [];
+  $actR["id"] = [];
+  $actR["horas"] = [];
+  $actT = 0;
+  while($f = $resR->fetch_assoc()){
+    array_push($actR["id"], $f["id"]);
+    array_push($actR["horas"], $f["horasMinimas"]);
+    $actT++;
   }
 
   $queryA = "INSERT INTO actividadRegistrada (idProfesor, idActividad, cantidadHoras) VALUES ";
@@ -28,6 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
 
       if ($actividad !== null && $actividad !== "" && $actividad !== "default" && $horas !== null && $horas !== "" && $horas !== "0") {
          if (is_numeric($actividad)&& (int)$actividad == $actividad && is_numeric($horas) && (int)$horas == $horas){
+          if(in_array($actividad, $actR["id"])){
+            if($horas<$actR["horas"][array_search($actividad, $actR["id"])]){
+              break;
+            }else{
+              $actT--;
+            }
+          }
         $queryA = $queryA.sprintf("('%s', %d, %d),",
           $mysql->real_escape_string($profesor),
           $mysql->real_escape_string($actividad),
@@ -62,24 +81,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["usuario"])) {
   if($redireccionar){
     header("Location: ./" . getRedirect($redirect));
   }
-  $queryA=substr($queryA,0,-1);
-  if ($mysql->query($queryA)) {
-    $queryM=substr($queryM,0,-1);
-    if ($mysql->query($queryM)) {
-      $resultado = "Registro correcto";
-      $b=true;
+  if($actT==0){
+    $queryA=substr($queryA,0,-1);
+    if ($mysql->query($queryA)) {
+      $queryM=substr($queryM,0,-1);
+      if ($mysql->query($queryM)) {
+        $resultado = "Registro correcto";
+        $b=true;
+      } else {
+        $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor='%s'",
+          $mysql->real_escape_string($profesor));
+        $mysql->query($query);
+        $resultado = "Error en el registro";
+      }
     } else {
-      $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor='%s'",
-        $mysql->real_escape_string($profesor));
       $resultado = "Error en el registro";
     }
-  } else {
-    $resultado = "Error en el registro";
-  }
-  $mysql->query($queryME);
-  if($mysql->affected_rows == 0){
-    $b=false;
-    $resultado="Error en el registro";
+    $mysql->query($queryME);
+    if($mysql->affected_rows == 0){
+      $b=false;
+      $resultado="Error en el registro";
+
+      $query = sprintf("DELETE FROM actividadRegistrada WHERE idProfesor='%s'",
+        $mysql->real_escape_string($profesor));
+      $mysql->query($query);
+      $query = sprintf("DELETE FROM materiaRegistradas WHERE idProfesor='%s'",
+        $mysql->real_escape_string($profesor));
+      $mysql->query($query);
+
+    }
+  }else{
+    $resultado = "Actividad requeridas invalidas";
   }
 }
 
