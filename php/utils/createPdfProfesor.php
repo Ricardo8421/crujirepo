@@ -124,12 +124,14 @@ $data = json_decode($json, true);
         }
     }
 
-    $celdaMaterias = $maxLongitudNombre * 2.5;
-    $celdaAcademia = $maxLongitudAcademia * 2.5;
+    $celdaMaterias = $maxLongitudNombre * 2;
+    $celdaAcademia = $maxLongitudAcademia * 2;
+    $celdaMaterias = ($celdaMaterias > 100) ? 100 : $celdaMaterias;
 
     $cellWidth = array(25, $celdaMaterias, $celdaAcademia); // Definir el ancho de las celdas
 
     $x = ($pdf->GetPageWidth() - array_sum($cellWidth)) / 2;
+    $x = ($x > 0) ? $x : 4;
 
     $pdf->SetX($x);
     // Encabezados de la tabla
@@ -166,7 +168,7 @@ $data = json_decode($json, true);
     // Encabezado de Materias seleccionadas
     $pdf->Ln(10);
     $pdf->SetFont('Arial', 'B', 14);
-    $pdf->Cell(0, 10, 'Materias seleccionadas', 0, 1, 'C');
+    $pdf->Cell(0, 10, 'Actividades seleccionadas', 0, 1, 'C');
     // Tabla de Actividades seleccionadas
     $pdf->SetFont('Arial', '', 12);
     $pdf->SetFillColor(255, 255, 255);
@@ -186,9 +188,14 @@ $data = json_decode($json, true);
 
     $celdaActividades = $maxLongitudNombre * 2.0;
 
+    $celdaActividades = ($celdaActividades > 100) ? 100 : $celdaActividades;
+
     $cellWidth = array(15, $celdaActividades, 20); // Definir el ancho de las celdas
+    
 
     $x = ($pdf->GetPageWidth() - array_sum($cellWidth)) / 2;
+    $x = ($x > 0) ? $x : 4;
+
 
     $pdf->SetX($x);
     // Encabezados de la tabla
