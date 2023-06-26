@@ -2,7 +2,7 @@
 include "../utils/conexion.php";
 
 header('Content-type: application/json; charset=UTF-8');
-$b=false;
+$b=false;	
 
 if(isset($_POST["nombre"]) && isset($_POST["departamento"]) && isset($_POST["matricula"])){
     $nombre = $_POST["nombre"];
@@ -26,7 +26,7 @@ if(isset($_POST["nombre"]) && isset($_POST["departamento"]) && isset($_POST["mat
 }
     
 if(!$b){
-    $r["resultado"] = "Algo salió mal";
+    $r["resultado"] = "Algo salió mal, inténtelo de nuevo más tarde";
 }
 $r["success"]=$b;
 $json = json_encode($r, JSON_UNESCAPED_UNICODE);

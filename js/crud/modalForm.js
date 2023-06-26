@@ -39,7 +39,7 @@ $(document).ready(async () => {
 	data = await read(retrieveData);
 });
 
-submitForm = (url) => {
+submitForm = async (url) => {
 	let form = $("#crudForm");
 
 	form.off();
@@ -69,9 +69,12 @@ submitForm = (url) => {
 			*/
 		});
 
+		
 		if (response.success) {
+			console.log(response);
+			clearMsg();
 			$('#crudModal').modal('hide')
-			read(retrieveData);
+			data = await read(retrieveData);
 		} else {
 			renderMsg(response.resultado);
 		}
@@ -208,6 +211,10 @@ renderCheckboxField = async (config) => {
 
 renderMsg = async (msg) => {
 	$('#crudMsg').html(alert(msg));
+}
+
+clearMsg = async () => {
+	$('#crudMsg').html('');
 }
 
 renderForm = async (config) => {
